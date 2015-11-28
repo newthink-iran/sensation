@@ -369,12 +369,12 @@ sensationApp.factory('PluginsData', function(){
             title: 'Geolocation Plugin',
             icon: 'location-arrow',
             page: 'geolocation.html'
-        },
+        }/*,
         { 
             title: 'Barcode Scanner',
             icon: 'barcode',
             page: 'barcodescanner.html'
-        }
+        }*/
     ]; 
     
     return data;
