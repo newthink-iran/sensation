@@ -1,15 +1,15 @@
 <ons-page ng-controller="AboutController">
     
     <ons-toolbar>
-    <div class="left"><ons-back-button>Back</ons-back-button></div>
-    <div class="center">About Us</div>
+    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+    <div class="center">درباره ما</div>
     </ons-toolbar>
 
-    <section style="padding: 10px;">
+    <section style="padding: 10px; direction:rtl">
         <div ng-repeat="member in about">
         <ons-row style="padding: 0 0 10px 0;">
             <ons-col size="33">
-                <section style="padding: 0 10px 0 0;">
+                <section style="padding: 0 10px 0 10px;">
                 <img ng-src="{{member.picture}}" alt="{{member.title}}" ng-click="showDetail($index)"/>
                 </section>
             </ons-col>

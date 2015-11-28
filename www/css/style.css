@@ -36,7 +36,7 @@
 }
 
 *, .navigation-bar, input, .text-input, .textarea, input[type=email], input[type=password], .button, .button--quiet, .search-input, .modal__content {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  font-family: 'Yekan', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
 .subtitle { margin:0 0 10px 0; font-size:14px }
@@ -347,3 +347,28 @@ audio { margin-top:10px; }
 .navigation-bar--android__center { max-width: 50%; overflow: hidden; text-overflow: ellipsis; }
 
 .row-center { text-align:center; }
+
+
+/*---------------------------------------------------*/
+@font-face {
+  font-family: "Yekan";
+  src: url("../font/Yekan.ttf");
+}
+
+
+.list__header{
+	text-align: right !important;
+	padding: 0 10px 0 10px !important;
+}
+
+.list{
+	text-align: right !important;
+}
+
+.list__item--chevron:before{
+	text-align: left !important;
+	left : 16px !important;
+	right : 0 !important;
+	content: "\f104" !important;
+}
+
