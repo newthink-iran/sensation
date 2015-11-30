@@ -6,14 +6,15 @@
     Sensation is a PhoneGap/Cordova Full Hybrid App with AngularJS + Onsen UI.
     </description>
     
-    	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+	<gap:plugin name="com.pushwoosh.plugins.pushwoosh" />
 	<gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
 	<gap:plugin name="nl.x-services.plugins.socialsharing"/>
 	<gap:plugin name="org.apache.cordova.device"/>
 	<gap:plugin name="org.apache.cordova.dialogs"/>
 	<gap:plugin name="org.apache.cordova.geolocation" />
 	<gap:plugin name="org.apache.cordova.inappbrowser"/>
-	<gap:plugin name="com.pushwoosh.plugins.pushwoosh" />
+
     
     <content src="index.html" />
     <access origin="*" />
