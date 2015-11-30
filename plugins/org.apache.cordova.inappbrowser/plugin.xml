@@ -19,8 +19,7 @@
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-           id="org.apache.cordova.inappbrowser"
-      version="0.6.0">
+           id="org.apache.cordova.inappbrowser">
 
     <name>InAppBrowser</name>
     <description>Cordova InAppBrowser Plugin</description>
