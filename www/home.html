@@ -3,19 +3,21 @@
     <ons-page ng-controller="HomeController">
         
         <ons-toolbar fixed-style>
-            <div class="left">
+            <div class="right">
             <ons-toolbar-button onclick="menu.toggleMenu()">
             <ons-icon icon="bars">
             </ons-toolbar-button>
             </div>
             
-            <div class="center">Sensation</div>
+            <div class="center">اپلیکیشن موبایل</div>
             
-            <div class="right">
+            <!--
+            <div class="left">
             <ons-toolbar-button onclick="appNavigator.pushPage('settings.html',{title: 'Settings', animation: 'slide'})">
             <ons-icon icon="gears">
             </ons-toolbar-button>
             </div>
+            -->
         </ons-toolbar>
         
         <ons-scroller>
@@ -29,6 +31,7 @@
                     </div>
                 </div>
 
+                <!--
                 <ons-list class="list-top">
                     <ons-list-header>Onsen UI Framework</ons-list-header>
                     <ons-list-item modifier="chevron" ng-click="appNavigator.pushPage('parameters-master.html')">
@@ -56,6 +59,7 @@
                         </ons-row> 
                     </ons-list-item>
                 </ons-list>
+                -->
             </section>
 
         </ons-scroller>

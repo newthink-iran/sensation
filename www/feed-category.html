@@ -1,9 +1,10 @@
 <ons-page ng-controller="FeedPluginCategoryController">
-    <ons-toolbar>
-    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <ons-toolbar fixed-style>
+    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
     <div class="center">{{title}}</div>
     </ons-toolbar>
 
+    <div style="direction:rtl;">
     <ons-list>
         <ons-list-item modifier="chevron" class="item" ng-repeat="item in items" ng-click="showDetail($index)">
             <ons-row>
@@ -16,5 +17,6 @@
             </ons-row>                          
         </ons-list-item>
     </ons-list>
+    </div>
     
 </ons-page>

@@ -1,21 +1,22 @@
 <ons-page>
-    <ons-toolbar>
-    <div class="left"><ons-back-button>Back</ons-back-button></div>
-    <div class="center">Sensation Feed</div>
+    <ons-toolbar fixed-style>
+    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+    <div class="center">Feed</div>
     </ons-toolbar>
 
 
     <div class="profile-card">
 
         <ons-icon icon="rss" class="profile-logo"></ons-icon>
-        <div class="profile-name">Sensation Feed</div>
-        <div class="profile-id">@AppsHybrid</div>
-        <div class="profile-desc">Get Feeds with the Google Feed API.</div>
+        <div class="profile-name">شرکت ویستا پرداز نواندیش</div>
+        <div class="profile-id">newthink.ir</div>
+        <div class="profile-desc">طراحی وب سایت و اپلیکیشن موبایل</div>
 
     </div>
 
-    <ons-list-header>Categories</ons-list-header>
+    <ons-list-header>دسته بندی ها</ons-list-header>
 
+    <div style="direction:rtl;">
     <ons-list ng-controller="FeedPluginCategoriesController">
         <ons-list-item modifier="chevron" class="item" ng-repeat="category in categories" ng-click="showDetail($index)">
             <ons-row>
@@ -34,5 +35,6 @@
             </ons-row>                          
         </ons-list-item>
     </ons-list>
+    </div>
 
 </ons-page>

@@ -1,11 +1,11 @@
 <ons-page ng-controller="GalleryController" sliding-menu-ignore="true" class="gallery-page">
 
-    <ons-toolbar>
-    <div class="left"><ons-back-button>Back</ons-back-button></div>
-    <div class="center">Gallery</div>
+    <ons-toolbar fixed-style>
+    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+    <div class="center">گالری</div>
     </ons-toolbar>
         
-    <ul rn-carousel rn-carousel-indicator>
+    <ul rn-carousel rn-carousel-indicator style="direction:rtl;">
         <li ng-repeat="slide in slides">
         <img ng-src="{{slide.picture}}"/>
         <div class="content">

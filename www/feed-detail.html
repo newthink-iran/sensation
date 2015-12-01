@@ -1,7 +1,7 @@
 <ons-page ng-controller="FeedPluginDetailController" sliding-menu-ignore="true">
     
-    <ons-toolbar>
-    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <ons-toolbar fixed-style>
+    <div class="dight"><ons-back-button>بازگشت</ons-back-button></div>
     <div class="center" ng-bind-html="item.title"></div>
     <div class="right">
     <ons-toolbar-button ng-click="shareFeed()"><ons-icon icon="share-alt" style="vertical-align: -4px; font-size: 26px;"></ons-icon></ons-toolbar-button>
@@ -15,12 +15,12 @@
     
     <img ng-src="{{getTrustedResourceUrl(mediaObject(item).url)}}" ng-if="!hasVideo(item) && !hasAudio(item)"></img>
 
-    <section style="padding: 10px;">
+    <section style="padding: 10px; direction:rtl;">
 
         <h2 class="title" ng-bind-html="item.title"></h2>
 
         <div class="feed-date">
-        <ons-icon icon="clock-o"></ons-icon> Posted {{item.publishedDate }}
+        <ons-icon icon="clock-o"></ons-icon> ارسال شده در تاریخ: {{item.publishedDate }}
         </div>
         <p class="feed-content" ng-bind-html="content"></p>
         
@@ -29,12 +29,12 @@
         </p>
         
         <ons-button modifier="outline" class="button-share" ng-click="shareFeed()">
-        <ons-icon icon="share-alt"></ons-icon> Share this feed
+        <ons-icon icon="share-alt"></ons-icon> اشتراک گذاری
         </ons-button>
 
         <!-- Open the post using the InAppBrowser plugin (org.apache.cordova.inappbrowser) -->
         <ons-button modifier="large" ng-click="loadURL()">
-        View post
+        نمایش
         </ons-button>
 
     </section>
