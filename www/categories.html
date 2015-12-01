@@ -2,7 +2,7 @@
 
     <ons-toolbar>
     <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
-    <div class="center">WP Categories</div>
+    <div class="center" style="right:auto; left:auto;">دسته بندی ها</div>
     </ons-toolbar>
 
     <div class="right">
@@ -18,20 +18,22 @@
     </ons-list>
     </div>
     
+    <div class="right">
     <section style="padding: 10px;">
         
         <ons-row align="center" style="padding: 0 0 10px 0;">
             <ons-col>
-            <span class="loading"><i class="fa fa-spin fa-circle-o-notch"></i> Loading</span>
+            <span class="loading"><i class="fa fa-spin fa-circle-o-notch"></i> در حال بارگزاری</span>
             <span ng-bind="msg"></span>
             </ons-col>
         </ons-row>
         
         <ons-row align="center">
             <ons-col>
-            <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="post-show-more"><i class="fa fa-angle-double-down more-icon"></i>Show more</ons-button>
+            <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="post-show-more"><i class="fa fa-angle-double-down more-icon"></i>نمایش بیشتر</ons-button>
             </ons-col>
         </ons-row>
     </section>
+    </div>
 
 </ons-page>
