@@ -1,18 +1,18 @@
 <ons-page ng-controller="ContactController">
     
-    <ons-toolbar>
-    <div class="left"><ons-back-button>Back</ons-back-button></div>
-    <div class="center">Contact</div>
+    <ons-toolbar fixed-style>
+    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+    <div class="center">ارتباط با ما</div>
     </ons-toolbar>
 
-    <section style="padding: 10px">
+    <section style="padding: 10px; direction:rtl">
 
-        <input type="text" class="text-input" placeholder="Subject" ng-model="subject" style="width:100%; margin-bottom:10px;">
+        <input type="text" class="text-input" placeholder="موضوع" ng-model="subject" style="width:100%; margin-bottom:10px;">
 
-        <textarea class="textarea" rows="10" placeholder="Message" ng-model="message" style="width:100%; margin-bottom:10px;"></textarea>
+        <textarea class="textarea" rows="10" placeholder="پیام" ng-model="message" style="width:100%; margin-bottom:10px;"></textarea>
 
         <ons-button modifier="large" ng-click="submitForm()">
-        Send Message
+        ارسال
         </ons-button>
     </section>  
 

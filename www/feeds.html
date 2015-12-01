@@ -1,29 +1,29 @@
 <ons-page ng-controller="FeedsController">
     
-    <ons-toolbar>
-    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <ons-toolbar fixed-style>
+    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
     <div class="center">RSS</div>
     </ons-toolbar>
 
     <ons-pull-hook ng-action="load($done)" var="loader">
         <span ng-switch="loader.getCurrentState()">
-        <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> Pull down to refresh</span>
-        <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> Release to refresh</span>
-        <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon> Loading data...</span>
+        <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon>جهت بروز رسانی به سمت پایین بکشید</span>
+        <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon>جهت بروز رسانی رها کنید</span>
+        <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon>در حال بارگزاری..</span>
         </span>
     </ons-pull-hook>
 
-    <section style="padding: 0 10px 10px 10px;">
+    <section style="padding: 0 10px 10px 10px;direction:rtl;">
 
         <ons-list class="status-bar feeds">
         <ons-list-header>{{title}}</ons-list-header>
-        <ons-list-item><strong>Description:</strong> {{description}}</ons-list-item>
-        <ons-list-item><strong>Feed URL:</strong> {{link}}</ons-list-item>
+        <ons-list-item><strong>توضیحات: </strong> {{description}}</ons-list-item>
+        <ons-list-item><strong>آدرس: </strong> {{link}}</ons-list-item>
         </ons-list>
 
-        <ons-row align="center" class="status-message">
+        <ons-row align="center" class="status-message" fixed-style>
             <ons-col>
-            <span class="loading"><i class="fa fa-spin fa-circle-o-notch"></i> Loading</span>
+            <span class="loading"><i class="fa fa-spin fa-circle-o-notch"></i>در حال بارگزاری</span>
             <span ng-bind="msg"></span>
             </ons-col>
         </ons-row>
@@ -40,14 +40,14 @@
                     <h3 class="title" ng-bind-html="feed.title" ng-click="showDetail($index)"></h3>
 
                     <p class="post-excerpt" ng-bind-html="feed.contentSnippet"></p>
-                    <ons-button class="post-teaser" modifier="quiet" ng-click="showDetail($index)">Read more</ons-button>
+                    <ons-button class="post-teaser" modifier="quiet" ng-click="showDetail($index)">بیشتر..</ons-button>
                 </ons-col>
             </ons-row>
         </div>
 
-        <ons-row align="center">
+        <ons-row align="center" fixed-style>
             <ons-col>
-            <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="post-show-more"><i class="fa fa-angle-double-down more-icon"></i>Show more</ons-button>
+            <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="post-show-more"><i class="fa fa-angle-double-down more-icon"></i>نمایش بیشتر</ons-button>
             </ons-col>
         </ons-row>
 
