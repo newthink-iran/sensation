@@ -6,60 +6,60 @@ sensationApp.factory('Data', function(){
     
     data.items = [
         { 
-            title: 'News',
+            title: 'اخبار',
             icon: 'calendar',
             page: 'news.html'
         },
         { 
-            title: 'Products',
+            title: 'محصولات',
             icon: 'shopping-cart',
             page: 'products.html'
         },
         { 
-            title: 'Gallery',
+            title: 'گالری',
             icon: 'camera',
             page: 'gallery.html'
         },
         { 
-            title: 'Map',
+            title: 'نقشه',
             icon: 'map-marker',
             page: 'map.html'
         },
         { 
-            title: 'About Us',
+            title: 'درباره ما',
             icon: 'user',
             page: 'about.html'
         },
         { 
-            title: 'Contact',
+            title: 'تماس با ما',
             icon: 'envelope-o',
             page: 'contact.html'
         },
         { 
-            title: 'WP JSON',
+            title: 'وردپرس',
             icon: 'code-fork',
             page: 'posts.html'
         },
-        { 
+        /*{ 
             title: 'Pagination',
             icon: 'sort-numeric-asc',
             page: 'serverposts.html'
-        },
+        },*/
         { 
-            title: 'Categories',
+            title: 'دسته بندی ها',
             icon: 'tags',
             page: 'categories.html'
         },
         { 
-            title: 'Search News',
+            title: 'جستجوی خبرها',
             icon: 'search',
             page: 'news-search.html'
         },
-        { 
+        /*{ 
             title: 'Chart',
             icon: 'bar-chart-o',
             page: 'discretebar-chart.html'
-        },
+        },*/
         { 
             title: 'RSS',
             icon: 'rss',
@@ -70,11 +70,11 @@ sensationApp.factory('Data', function(){
             icon: 'columns',
             page: 'tab-bar.html'
         },
-        { 
+        /*{ 
             title: 'Elements',
             icon: 'code',
             page: 'elements.html'
-        },
+        },*/
         { 
             title: 'Feed API',
             icon: 'rss-square',
@@ -92,10 +92,10 @@ sensationApp.factory('MenuData', function(){
     
     data.items = [
         { 
-            title: 'Home',
+            title: 'خانه',
             icon: 'home',
             page: 'home.html'
-        },
+        }/*,
         { 
             title: 'Modal View',
             icon: 'square-o',
@@ -110,7 +110,7 @@ sensationApp.factory('MenuData', function(){
             title: 'Login',
             icon: 'sign-in',
             page: 'login.html'
-        }
+        }*/
 
     ]; 
     

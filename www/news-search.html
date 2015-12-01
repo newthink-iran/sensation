@@ -1,28 +1,28 @@
 <ons-page ng-controller="NewsController">
     
-    <ons-toolbar>
-    <div class="left"><ons-back-button>Back</ons-back-button></div>
-    <div class="center">News</div>
+    <ons-toolbar fixed-style>
+    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+    <div class="center">اخبار</div>
     </ons-toolbar>
     
     <ons-pull-hook ng-action="load($done)" var="loader" disabled>
         <span ng-switch="loader.getCurrentState()">
-        <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> Pull down to refresh</span>
-        <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> Release to refresh</span>
-        <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon> Loading data...</span>
+        <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon>جهت بروز رسانی به سمت پایین بکشید</span>
+        <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon>جهت بروز رسانی رها کنید</span>
+        <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon>در حال بارگزاری..</span>
         </span>
     </ons-pull-hook>
     
-    <section style="padding: 10px;">
+    <section style="padding: 10px; direction:rtl">
         
         <ons-row style="padding: 0 0 10px 0;">
-        <input type="search" placeholder="Search" class="search-input" ng-model="search">
+        <input type="search" placeholder="جستجو" class="search-input" ng-model="search">
         </ons-row>
         
         <div ng-repeat="new in getNews()">
         <ons-row style="padding: 0 0 10px 0;">
             <ons-col>
-                <section style="padding: 0 10px 0 0;">
+                <section style="padding: 0 10px 0 10px;">
                 <img ng-src="{{new.picture}}"alt="{{new.title}}" ng-click="showSearchDetail($index)"/>
                 </section>
             </ons-col>

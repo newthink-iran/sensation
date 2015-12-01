@@ -1,23 +1,23 @@
 <ons-page ng-controller="PostsController">
     
-    <ons-toolbar>
-    <div class="left"><ons-back-button>Back</ons-back-button></div>
-    <div class="center">WP JSON</div>
+    <ons-toolbar fixed-style>
+    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+    <div class="center">وردپرس</div>
     </ons-toolbar>
     
     <ons-pull-hook ng-action="load($done)" var="loader">
         <span ng-switch="loader.getCurrentState()">
-        <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> Pull down to refresh</span>
-        <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> Release to refresh</span>
-        <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon> Loading data...</span>
+        <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon>جهت بروز رسانی به سمت پایین بکشید</span>
+        <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon>جهت بروز رسانی رها کنید</span>
+        <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon>در حال بارگزاری..</span>
         </span>
     </ons-pull-hook>
 
-    <section style="padding: 10px;">
+    <section style="padding: 10px; direction:rtl;">
 
-        <ons-row align="center">
+        <ons-row align="center" fixed-style>
             <ons-col>
-            <span class="loading"><i class="fa fa-spin fa-circle-o-notch"></i> Loading</span>
+            <span class="loading"><i class="fa fa-spin fa-circle-o-notch"></i>در حال بارگزاری</span>
             <span ng-bind="msg"></span>
             </ons-col>
         </ons-row>
@@ -32,15 +32,15 @@
                 </a>
 
                 <p class="post-excerpt" ng-bind-html="post.excerpt"></p>
-                <ons-button class="post-teaser" modifier="quiet" ng-click="showDetail($index)">Read more</ons-button>
+                <ons-button class="post-teaser" modifier="quiet" ng-click="showDetail($index)">مشاهده مطالب بیشتر</ons-button>
 
             </ons-col>
         </ons-row>
         </div>
 
-        <ons-row align="center">
+        <ons-row align="center" fixed-style>
             <ons-col>
-            <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="post-show-more"><i class="fa fa-angle-double-down more-icon"></i>Show more</ons-button>
+            <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="post-show-more"><i class="fa fa-angle-double-down more-icon"></i>مشاهده مطالب بیشتر</ons-button>
             </ons-col>
         </ons-row>
 
