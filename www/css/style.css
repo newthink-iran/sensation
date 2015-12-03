@@ -352,7 +352,9 @@ audio { margin-top:10px; }
 /*---------------------------------------------------*/
 @font-face {
   font-family: "Yekan";
-  src: url("../font/Yekan.ttf");
+  src: url('fonts/BYekan.eot?#iefix') format('embedded-opentype'),  url('fonts/BYekan.woff') format('woff'), url('fonts/BYekan.ttf')  format('truetype'), url('fonts/BYekan.svg#BYekan') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
@@ -371,4 +373,21 @@ audio { margin-top:10px; }
 	right : 0 !important;
 	content: "\f104" !important;
 }
+
+.ui-mobile .ui-page ,.page ,.page__content{
+
+/*background: -webkit-linear-gradient(top, #f4f3ff, rgba(93, 177, 223, 0.75)) !important;*/
+    
+    
+    
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) !important;
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) !important;
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) !important;
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) !important;
+  -webkit-background-size: 3px 3px !important;
+  -moz-background-size: 3px 3px !important;
+  background-size: 3px 3px !important;
+  }
+
+
 
