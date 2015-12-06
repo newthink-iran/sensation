@@ -1,31 +1,50 @@
-<ons-page ng-controller="ProductsController" class="products">
-    
-    <ons-toolbar fixed-style>
-    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
-    <div class="center">محصولات</div>
-    </ons-toolbar>
-    
-    <ons-pull-hook ng-action="load($done)" var="loader" disabled>
-        <span ng-switch="loader.getCurrentState()">
-        <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon>جهت بروز رسانی به سمت پایین بکشید</span>
-        <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon>جهت بروز رسانی رها کنید</span>
-        <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon>در حال بارگزاری..</span>
-        </span>
-    </ons-pull-hook>
+<ons-page ng-controller="ProductsCategoriesController">
 
-    <section style="padding: 10px; direction:rtl;">
+    <ons-scroller>
+        <section class="home-grid">
+            <div class="grid-menu">
+                <div class="centering-and-alignment" ng-repeat="row in items | partition:3">
+                  <div class="grid-menu-item list__item list__item--tappable" ng-repeat="item in row" ng-click="showDetail(($parent.$index*row.length)+$index);">
+                    <ons-icon icon="{{item.icon}}" ng-show="item.icon"></ons-icon>
+                    <img ng-src="{{item.image}}" ng-show="item.image" style="width:80%;height:auto;"/>
 
-        <div class="row" ng-repeat="row in products | partition:2">
-            <ons-col class="views-row" size="50" ng-repeat="product in row">
-                <img ng-src="{{product.thumb}}"alt="{{product.title}}" ng-click="showDetail(($parent.$index*row.length)+$index)"/>
-                <h3 class="title" ng-click="showDetail(($parent.$index*row.length)+$index)">{{product.title}}</h3>
-                <p ng-model="letterLimit">{{product.body | limitTo:letterLimit  }}...</p>
-                <p class="tags"><ons-icon icon="tags" fixed-width="true"></ons-icon>
-                <span ng-repeat="tag in product.tags">{{tag}}{{$last ? '' : ', '}}</span>
-                </p>
-            </ons-col>
-        </div>
+                    <div class="grid-menu-item-label">{{item.title}}</div>
+                  </div>
+                </div>
+            </div>
 
-    </section>
-    
+            <!--
+            <ons-list class="list-top">
+                <ons-list-header>Onsen UI Framework</ons-list-header>
+                <ons-list-item modifier="chevron" ng-click="appNavigator.pushPage('parameters-master.html')">
+                    <ons-row>
+                        <ons-col width="15%"> 
+                        <ons-icon icon="level-up" fixed-width="true"></ons-icon>
+                        </ons-col>
+                        <ons-col class="left">
+                        Parameters
+                        </ons-col>
+                    </ons-row> 
+                </ons-list-item>
+            </ons-list>
+
+            <ons-list class="list-top">
+                <ons-list-header>Mobile</ons-list-header>
+                <ons-list-item modifier="chevron" ng-click="appNavigator.pushPage('plugins.html', {title: 'Plugins', animation: 'slide'})">
+                    <ons-row>
+                        <ons-col width="15%">
+                        <ons-icon icon="mobile" fixed-width="true"></ons-icon>
+                        </ons-col>
+                        <ons-col class="left">
+                        Mobile Plugins
+                        </ons-col>
+                    </ons-row> 
+                </ons-list-item>
+            </ons-list>
+            -->
+        </section>
+
+    </ons-scroller>
+
 </ons-page>
+

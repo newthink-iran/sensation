@@ -19,15 +19,15 @@
     <content src="index.html" />
     <access origin="*" />
     
-    <platform name="android">
+    <gap:platform name="android">
         <allow-intent href="market:*" />
         <access origin="*" />
-    </platform>
-    <platform name="ios">
+    </gap:platform>
+    <gap:platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <access origin="*" />
-    </platform>
+    </gap:platform>
     
     
     <preference name="webviewbounce" value="false" />

@@ -110,6 +110,19 @@ var app = {
         
     });
     
+    // Home Products Controller
+    app.controller('ProductsCategoriesController', function($scope, DataProducts) {
+        
+        $scope.items = DataProducts.items;
+
+        $scope.showDetail = function(index){
+            var selectedItem = $scope.items[index];
+            DataProducts.selectedItem = selectedItem;
+            $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
+        }
+        
+    });
+    
     // Menu Controller
     app.controller('MenuController', function($scope, MenuData) {
         

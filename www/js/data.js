@@ -65,6 +65,89 @@ sensationApp.factory('Data', function(){
     return data;
 });
 
+// Products Data: Product categories
+sensationApp.factory('DataProducts', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            title: '',
+            icon: '',
+            image: 'img/marmar.png',
+            page: 'news.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/marmarit.png',
+            page: 'products.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/travertine.png',
+            page: 'about.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/tazeeni.png',
+            page: 'map.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/chini.png',
+            page: 'travertan.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/granit.png',
+            page: 'gallery.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/antik.png',
+            page: 'categories.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/varedati.png',
+            page: 'feeds.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/giotine.png',
+            page: 'contact.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/malon.png',
+            page: 'categories.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/limestone.png',
+            page: 'feeds.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/travenix.png',
+            page: 'contact.html'
+        },
+       
+    ]; 
+    
+    return data;
+});
+
 // Menu Data: Menu configuration
 sensationApp.factory('MenuData', function(){
     var data = {};
