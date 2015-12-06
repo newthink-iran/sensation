@@ -51,7 +51,7 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/gavahi.png',
-            page: 'news-search.html'
+            page: 'feeds.html'
         },
         { 
             title: '',
