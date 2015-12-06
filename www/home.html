@@ -1,7 +1,8 @@
 <ons-navigator title="Sensation" var="appNavigator">
     
+    
     <ons-page ng-controller="HomeController">
-        
+        <!--
         <ons-toolbar fixed-style>
             <div class="right">
             <ons-toolbar-button onclick="menu.toggleMenu()">
@@ -9,7 +10,7 @@
             </ons-toolbar-button>
             </div>
             
-            <div class="center">اپلیکیشن موبایل</div>
+            <!--<div class="center">اپلیکیشن موبایل</div>-->
             
             <!--
             <div class="left">
@@ -18,7 +19,12 @@
             </ons-toolbar-button>
             </div>
             -->
-        </ons-toolbar>
+            <!--</ons-toolbar>-->
+        
+            
+        <div data-role="header" style="width:100%;top:0;">
+            <img src="img/top.png" style="width:100%; height:auto;" />
+        </div> 
         
         <ons-scroller>
             <section class="home-grid">
@@ -65,6 +71,10 @@
             </section>
 
         </ons-scroller>
+            
+        <div data-role="footer" style="width:100%;bottom:0;">
+            <img src="img/bottom.png" style="width:100%; height:auto; margin-bottom:-10px;" />
+        </div>
         
     </ons-page>
 

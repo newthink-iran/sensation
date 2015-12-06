@@ -383,3 +383,7 @@ audio { margin-top:10px; }
     
     background-color: rgb(255, 255, 255) !important;
 }
+
+.grid-menu-item{
+    border-color: #ffffff !important;
+}

@@ -1,9 +1,15 @@
 <ons-page ng-controller="AboutController">
     
+    <!--
     <ons-toolbar fixed-style>
     <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
     <div class="center">درباره ما</div>
     </ons-toolbar>
+    -->
+    
+    <div data-role="header" style="width:100%;top:0;">
+        <img src="img/top.png" style="width:100%; height:auto;" />
+    </div> 
 
     <section style="padding: 10px; direction:rtl">
         <div ng-repeat="member in about">
@@ -25,5 +31,9 @@
         </ons-row>
         </div>
     </section>
+    
+    <div data-role="footer" style="width:100%;bottom:0;">
+        <img src="img/bottom.png" style="width:100%; height:auto; margin-bottom:-10px;" />
+    </div>
 
 </ons-page>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.sensation" version="1.15.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>صنایع سنگ مهرگان</name>
+    <name>سنگ مهرگان</name>
 
     <description>
     مهرگان نماد زیبایی
@@ -14,6 +14,7 @@
 	<gap:plugin name="org.apache.cordova.dialogs"  />
 	<gap:plugin name="org.apache.cordova.geolocation" />
 	<gap:plugin name="org.apache.cordova.inappbrowser"/>
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
 
     
     <content src="index.html" />
