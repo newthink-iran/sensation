@@ -6,81 +6,60 @@ sensationApp.factory('Data', function(){
     
     data.items = [
         { 
-            title: 'اخبار',
-            icon: 'calendar',
+            title: '',
+            icon: '',
+            image: 'img/akhbar.png',
             page: 'news.html'
         },
         { 
-            title: 'محصولات',
-            icon: 'shopping-cart',
+            title: '',
+            icon: '',
+            image: 'img/mahsolat.png',
             page: 'products.html'
         },
         { 
-            title: 'گالری',
-            icon: 'camera',
-            page: 'gallery.html'
-        },
-        { 
-            title: 'نقشه',
-            icon: 'map-marker',
-            page: 'map.html'
-        },
-        { 
-            title: 'درباره ما',
-            icon: 'user',
+            title: '',
+            icon: '',
+            image: 'img/darbare.png',
             page: 'about.html'
         },
         { 
-            title: 'تماس با ما',
-            icon: 'envelope-o',
-            page: 'contact.html'
+            title: '',
+            icon: '',
+            image: 'img/takhfifat.png',
+            page: 'map.html'
         },
         { 
-            title: 'وردپرس',
-            icon: 'code-fork',
-            page: 'posts.html'
+            title: '',
+            icon: '',
+            image: 'img/khadamat.png',
+            page: 'travertan.html'
         },
-        /*{ 
-            title: 'Pagination',
-            icon: 'sort-numeric-asc',
-            page: 'serverposts.html'
-        },*/
         { 
-            title: 'دسته بندی ها',
-            icon: 'tags',
+            title: '',
+            icon: '',
+            image: 'img/gallery.png',
+            page: 'gallery.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/mofid.png',
             page: 'categories.html'
         },
         { 
-            title: 'جستجوی خبرها',
-            icon: 'search',
+            title: '',
+            icon: '',
+            image: 'img/gavahi.png',
             page: 'news-search.html'
         },
-        /*{ 
-            title: 'Chart',
-            icon: 'bar-chart-o',
-            page: 'discretebar-chart.html'
-        },*/
         { 
-            title: 'RSS',
-            icon: 'rss',
-            page: 'feeds.html'
+            title: '',
+            icon: '',
+            image: 'img/ertebat.png',
+            page: 'contact.html'
         },
-        { 
-            title: 'Tab-Bar',
-            icon: 'columns',
-            page: 'tab-bar.html'
-        },
-        /*{ 
-            title: 'Elements',
-            icon: 'code',
-            page: 'elements.html'
-        },*/
-        { 
-            title: 'Feed API',
-            icon: 'rss-square',
-            page: 'feed-categories.html'
-        }
-
+       
     ]; 
     
     return data;
@@ -416,6 +395,14 @@ sensationApp.factory('SettingsData', function(){
 sensationApp.factory('FeedData', function(){
     
     var data = { url: 'http://www.huffingtonpost.com/feeds/news.xml' };
+    
+    return data;
+});
+
+// RSS Data: Travertan Feeds configuration
+sensationApp.factory('FeedData_travertan', function(){
+    
+    var data = { url: /*'http://mehregansang.com/api/get_post/?post_id=211'*/ 'http://mehregansang.com/feed/?cat=45' };
     
     return data;
 });

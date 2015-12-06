@@ -17,3 +17,21 @@ angular.module('appLocalStorage', [])
     }
   }
 })
+
+.factory('FeedStorage_travertan', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_travertan'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_travertan'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_travertan');
+    }
+  }
+})

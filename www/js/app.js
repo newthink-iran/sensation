@@ -772,6 +772,96 @@ var app = {
         
      });
     
+    // RSS: Travertan Controller
+    app.controller('TravertanController', function($scope, $http, FeedData_travertan, FeedStorage_travertan) {
+        
+        $('.loading').show();
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_travertan.url)}).
+            success(function(data, status, headers, config) {
+
+                $('.loading').hide();
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_travertan.get();
+                    $scope.msg = "Offline Mode - The device is unable to get the data.";
+
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    //alert("salam");
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    $scope.link = $scope.data.feed.link;
+                    $scope.feeds = $scope.data.feed.entries;
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    //alert("salam");
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    $scope.link = data.responseData.feed.link;
+                    $scope.feeds = data.responseData.feed.entries;
+
+                    // Save feeds to the local storage
+                    FeedStorage_travertan.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            $('.loading').hide();
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_travertan.get();
+            $scope.msg = 'Offline Mode - An error occured:' + status;
+                //alert("salam");
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            $scope.link = $scope.data.feed.link;
+            $scope.feeds = $scope.data.feed.entries; 
+
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+        
+        var page = 1;
+        // Define the number of the feed results in the page
+        var pageSize = 5;
+
+        $scope.paginationLimit = function(data) {
+        return pageSize * page;
+        };
+
+        $scope.hasMoreItems = function() {
+        return page < ($scope.feeds.length / pageSize);
+        };
+
+        $scope.showMoreItems = function() {
+        page = page + 1;       
+        }; 
+
+        $scope.showDetail = function(index) {
+        var selectedItem = $scope.feeds[index];
+        FeedData_travertan.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('travertan.html', selectedItem);
+        }
+
+        $scope.getImage = function(index) {
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+
+    });
+    
     // About: About Controller
     app.controller('AboutController', function($scope, $http, AboutData) {
         
