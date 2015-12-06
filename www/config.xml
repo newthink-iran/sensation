@@ -14,7 +14,7 @@
 	<gap:plugin name="org.apache.cordova.dialogs"  />
 	<gap:plugin name="org.apache.cordova.geolocation" />
 	<gap:plugin name="org.apache.cordova.inappbrowser"/>
-    <gap:plugin name="org.apache.cordova.cordova-plugin-whitelist" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
  
     <content src="index.html" />
