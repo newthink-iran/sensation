@@ -352,9 +352,8 @@ audio { margin-top:10px; }
 /*---------------------------------------------------*/
 @media only screen{
 @font-face {
-  font-family: 'Yekan';
-    src: 
-    url('Yekan.ttf'); /*
+  font-family: 'Yekan'; 
+     src: url('Yekan.svg') format('svg'); /*
     url('Yekan.woff') format('woff'),
     url('Yekan.ttf') format('truetype'),
     url('Yekan.svg') format('svg');*/
