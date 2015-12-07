@@ -792,6 +792,12 @@ var app = {
         $scope.feeds = "";
         
         var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_travertan.url) + String("&t=") + String(randomNum);
+            FeedData_travertan.url = newURL;
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_travertan.url)}).
             success(function(data, status, headers, config) {
@@ -800,18 +806,16 @@ var app = {
                 if ($done) { $done(); }
 
                 if (!data.responseData) {
-                    //$scope.data = FeedStorage_travertan.get();
-                    $scope.msg = "Offline Mode - The device is unable to get the data.";
+                    $scope.data = FeedStorage_travertan.get();
                     $scope.title = $scope.data.feed.entries[0].title;
                     $scope.description = $scope.data.feed.entries[0].content;
                     
                 } else {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
-                    $scope.msg = "salam";
                     // Save feeds to the local storage
-                    //FeedStorage_travertan.clear();
-                    //FeedStorage_travertan.save(data.responseData);
+                    FeedStorage_travertan.clear();
+                    FeedStorage_travertan.save(data.responseData);
                 }
 
             }).
@@ -820,8 +824,7 @@ var app = {
             $('.loading').hide();
             if ($done) { $done(); }
 
-            //$scope.data = FeedStorage_travertan.get();
-            $scope.msg = 'Offline Mode - An error occured:' + status;
+            $scope.data = FeedStorage_travertan.get();
             $scope.title = $scope.data.feed.entries[0].title;
             $scope.description = $scope.data.feed.entries[0].content;
             });
