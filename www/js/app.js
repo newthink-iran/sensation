@@ -800,23 +800,18 @@ var app = {
                 if ($done) { $done(); }
 
                 if (!data.responseData) {
-                    $scope.data = FeedStorage_travertan.get();
+                    //$scope.data = FeedStorage_travertan.get();
                     $scope.msg = "Offline Mode - The device is unable to get the data.";
-
-                    $scope.title = data.responseData.feed.entries[0].title;
-                    //alert("salam");
-                    $scope.description = data.responseData.feed.entries[0].content;
-                    $scope.link = $scope.data.feed.link;
-                    $scope.feeds = $scope.data.feed.entries;
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
                 } else {
                     $scope.title = data.responseData.feed.entries[0].title;
-                    //alert("salam");
                     $scope.description = data.responseData.feed.entries[0].content;
-                    $scope.link = data.responseData.feed.link;
-                    $scope.feeds = data.responseData.feed.entries;
-
+                    $scope.msg = "salam";
                     // Save feeds to the local storage
-                    FeedStorage_travertan.save(data.responseData);
+                    //FeedStorage_travertan.clear();
+                    //FeedStorage_travertan.save(data.responseData);
                 }
 
             }).
@@ -825,14 +820,10 @@ var app = {
             $('.loading').hide();
             if ($done) { $done(); }
 
-            $scope.data = FeedStorage_travertan.get();
+            //$scope.data = FeedStorage_travertan.get();
             $scope.msg = 'Offline Mode - An error occured:' + status;
-                //alert("salam");
             $scope.title = $scope.data.feed.entries[0].title;
             $scope.description = $scope.data.feed.entries[0].content;
-            $scope.link = $scope.data.feed.link;
-            $scope.feeds = $scope.data.feed.entries; 
-
             });
         }
         
@@ -843,27 +834,6 @@ var app = {
             getData($done);
         };
         
-        var page = 1;
-        // Define the number of the feed results in the page
-        var pageSize = 5;
-
-        $scope.paginationLimit = function(data) {
-        return pageSize * page;
-        };
-
-        $scope.hasMoreItems = function() {
-        return page < ($scope.feeds.length / pageSize);
-        };
-
-        $scope.showMoreItems = function() {
-        page = page + 1;       
-        }; 
-
-        $scope.showDetail = function(index) {
-        var selectedItem = $scope.feeds[index];
-        FeedData_travertan.selectedItem = selectedItem;
-        $scope.appNavigator.pushPage('travertan.html', selectedItem);
-        }
 
         $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
