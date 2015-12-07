@@ -36,7 +36,7 @@
 }
 
 *, .navigation-bar, input, .text-input, .textarea, input[type=email], input[type=password], .button, .button--quiet, .search-input, .modal__content {
-  font-family: 'Yekan', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  font-family: 'Yekan'/*, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif*/;
 }
 
 .subtitle { margin:0 0 10px 0; font-size:14px }
@@ -350,36 +350,28 @@ audio { margin-top:10px; }
 
 
 /*---------------------------------------------------*/
+@media only screen{
 @font-face {
-  font-family: "Yekan";
-  src: url("Yekan.ttf");
+  font-family: 'Yekan';
+    src: 
+    url('Yekan.ttf'); /*
+    url('Yekan.woff') format('woff'),
+    url('Yekan.ttf') format('truetype'),
+    url('Yekan.svg') format('svg');*/
+    font-weight: normal;
+    font-style: normal;
+}
 }
 
-@media only screen and (max-width: 320px) {
+/*@media only screen{
 @font-face {
     font-family: 'Yekan';
     src: url('Yekan.svg#Yekan') format('svg');
     font-weight: normal;
     font-style: normal;
-}
-}
-@media only screen and (max-device-width: 720px) and (orientation:portrait) {
-    @font-face {
-        font-family: 'Yekan';
-        src: url('Yekan.svg#Yekan') format('svg');
-        font-weight: normal;
-        font-style: normal;
     }
+}*/
 
-}
-@media only screen and (max-device-width: 1280px) and (orientation:landscape) {
-    @font-face {
-        font-family: 'Yekan';
-        src: url('Yekan.svg#Yekan') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-}
 
 
 .list__header{
