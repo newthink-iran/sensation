@@ -26,11 +26,13 @@
         <access origin="*" />
     </gap:platform>
     
-    <gap:platform name="ios">
+    <!--
+	<gap:platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <access origin="*" />
     </gap:platform>
+	-->
     
     
     <gap:splash src="splash.png"/>
