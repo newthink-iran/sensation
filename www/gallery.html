@@ -1,4 +1,4 @@
-<ons-page ng-controller="GalleryController" sliding-menu-ignore="true" class="gallery-page">
+<ons-page ng-controller="GalleryRssController" sliding-menu-ignore="true" class="gallery-page">
 
     <ons-toolbar fixed-style>
     <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
@@ -6,12 +6,12 @@
     </ons-toolbar>
         
     <ul rn-carousel rn-carousel-indicator style="direction:rtl;">
-        <li ng-repeat="slide in slides">
-        <img ng-src="{{slide.picture}}"/>
-        <div class="content">
-        <div><ons-icon icon="info" fixed-width="true"></ons-icon>{{slide.label}} ({{slide.item}}/{{slides.length}})</div>
-        <div><ons-icon icon="map-marker" fixed-width="true"></ons-icon>{{slide.location}}</div>
-        </div>
+        <li ng-repeat="feed in feeds">
+            <img ng-src="{{getImage($index)}}"/>
+            <div class="content" style="text-align:center;">
+                <!--<ons-icon icon="info" fixed-width="true"></ons-icon>{{feed.title}}-->
+                {{feed.title}}
+            </div>
         </li>
     </ul>
     

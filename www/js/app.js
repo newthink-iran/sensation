@@ -37,13 +37,14 @@ var app = {
         app.receivedEvent('deviceready');
         
         ons.setDefaultDeviceBackButtonListener(function() {
-            if (navigator.notification.confirm("Are you sure to close the app?", 
+            /*if (navigator.notification.confirm("Are you sure to close the app?", 
                 function(index) {
-                    if (index == 1) { // OK button
+                    if (index == 1) { // OK button*/
                         navigator.app.exitApp(); // Close the app
-                    }
+                    /*}
                 }
-            ));
+            ));*/
+			//window.plugins.sim.getSimInfo(function(result){ alert(result);}, function(error){ alert(error);});
         });
 
         // Open any external link with InAppBrowser Plugin
@@ -60,7 +61,7 @@ var app = {
         // Initialize Push Notifications
         // Uncomment the following initialization when you have made the appropriate configuration for iOS - http://goo.gl/YKQL8k and for Android - http://goo.gl/SPGWDJ
         app.initPushwoosh();
-        
+        console.log("salam");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -846,35 +847,36 @@ var app = {
     });
     
     
-    // RSS: Gallery Controller
-    app.controller('TravertanController', function($scope, $http, FeedData_travertan, FeedStorage_travertan) {
+    // RSS: Galleries Controller
+    app.controller('GalleryRssController', function($scope, $http, FeedData_gallery, FeedStorage_gallery) {
         
         $scope.feeds = "";
+        $scope.slides = "";
         
         var getData = function ($done) {
             
             //add datetime for refreshing google api
             var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
-            newURL = String(FeedData_travertan.url) + String("&t=") + String(randomNum);
-            FeedData_travertan.url = newURL;
+            
+            newURL = String(FeedData_gallery.url) + String("&t=") + String(randomNum);
+            FeedData_gallery.url = newURL;
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_travertan.url)}).
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_gallery.url)}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
                 if (!data.responseData) {
-                    $scope.data = FeedStorage_travertan.get();
-                    $scope.title = $scope.data.feed.entries[0].title;
-                    $scope.description = $scope.data.feed.entries[0].content;
+                    $scope.data = FeedStorage_gallery.get();
+                    $scope.feeds = $scope.data.feed.entries;
                     
                 } else {
-                    $scope.title = data.responseData.feed.entries[0].title;
-                    $scope.description = data.responseData.feed.entries[0].content;
+                    $scope.feeds = data.responseData.feed.entries;
+                    
                     // Save feeds to the local storage
-                    FeedStorage_travertan.clear();
-                    FeedStorage_travertan.save(data.responseData);
+                    FeedStorage_gallery.clear();
+                    FeedStorage_gallery.save(data.responseData);
                 }
 
             }).
@@ -882,9 +884,8 @@ var app = {
 
             if ($done) { $done(); }
 
-            $scope.data = FeedStorage_travertan.get();
-            $scope.title = $scope.data.feed.entries[0].title;
-            $scope.description = $scope.data.feed.entries[0].content;
+            $scope.data = FeedStorage_gallery.get();
+            $scope.feeds = $scope.data.feed.entries;
             });
         }
         
