@@ -15,7 +15,7 @@
 	<gap:plugin name="org.apache.cordova.geolocation" />
 	<gap:plugin name="org.apache.cordova.inappbrowser"/>
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
-    <!--<gap:plugin name="org.apache.cordova.splashscreen"/>-->
+    <gap:plugin name="org.apache.cordova.splashscreen"/>
 
     
     <content src="index.html" />
@@ -33,6 +33,9 @@
         <access origin="*" />
     </gap:platform>
 	-->
+    
+    <preference name="SplashScreen" value="screen"/>
+    <preference name="SplashScreenDelay" value="3000"/>
     
     <gap:splash src="splash.png"/>
 	<gap:splash src="res/screen/android/screen-ldpi-landscape.png" gap:platform="android" gap:qualifier="land-ldpi" />
