@@ -485,7 +485,7 @@ sensationApp.factory('FeedData', function(){
 // RSS Data: Travertan Feeds configuration
 sensationApp.factory('FeedData_travertan', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=45' };
+    var data = { url: 'http://mehregansang.com/feed/?cat=7' };
     
     return data;
 });
