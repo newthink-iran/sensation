@@ -110,7 +110,7 @@ sensationApp.factory('DataProducts', function(){
             title: '',
             icon: '',
             image: 'img/antik.png',
-            page: 'categories.html'
+            page: 'Antique.html'
         },
         { 
             title: '',
@@ -478,6 +478,14 @@ sensationApp.factory('SettingsData', function(){
 sensationApp.factory('FeedData', function(){
     
     var data = { url: 'http://www.huffingtonpost.com/feeds/news.xml' };
+    
+    return data;
+});
+
+// RSS Data: Antique Feeds configuration
+sensationApp.factory('FeedData_antique', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=7' };
     
     return data;
 });

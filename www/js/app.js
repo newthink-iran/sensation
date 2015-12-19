@@ -786,6 +786,56 @@ var app = {
         
      });
     
+    // RSS: Antique Controller
+    app.controller('AntiqueController', function($scope, $http, FeedData_antique, FeedStorage_antique) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_antique.url) + String("&t=") + String(randomNum);
+            FeedData_antique.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_antique.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_antique.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_antique.clear();
+                    FeedStorage_antique.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_antique.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
     // RSS: Travertan Controller
     app.controller('TravertanController', function($scope, $http, FeedData_travertan, FeedStorage_travertan) {
         
@@ -834,16 +884,6 @@ var app = {
         $scope.load = function($done) {
             getData($done);
         };
-        
-
-        $scope.getImage = function(index) {
-        var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
-        }
-
     });
     
     
