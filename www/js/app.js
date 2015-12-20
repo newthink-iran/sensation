@@ -886,6 +886,506 @@ var app = {
         };
     });
     
+    // RSS: Travonix Controller
+    app.controller('TravonixController', function($scope, $http, FeedData_travonix, FeedStorage_travonix) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_travonix.url) + String("&t=") + String(randomNum);
+            FeedData_travonix.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_travonix.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_travonix.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_travonix.clear();
+                    FeedStorage_travonix.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_travonix.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
+    // RSS: Tazini Controller
+    app.controller('TaziniController', function($scope, $http, FeedData_tazini, FeedStorage_tazini) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_tazini.url) + String("&t=") + String(randomNum);
+            FeedData_tazini.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_tazini.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_tazini.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_tazini.clear();
+                    FeedStorage_tazini.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_tazini.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
+    // RSS: Chini Controller
+    app.controller('ChiniController', function($scope, $http, FeedData_chini, FeedStorage_chini) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_chini.url) + String("&t=") + String(randomNum);
+            FeedData_chini.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_chini.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_chini.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_chini.clear();
+                    FeedStorage_chini.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_chini.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
+    // RSS: Granit Controller
+    app.controller('GranitController', function($scope, $http, FeedData_granit, FeedStorage_granit) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_granit.url) + String("&t=") + String(randomNum);
+            FeedData_granit.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_granit.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_granit.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_granit.clear();
+                    FeedStorage_granit.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_granit.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
+    // RSS: Giotin Controller
+    app.controller('GiotinController', function($scope, $http, FeedData_giotin, FeedStorage_giotin) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_giotin.url) + String("&t=") + String(randomNum);
+            FeedData_giotin.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_giotin.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_giotin.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_giotin.clear();
+                    FeedStorage_giotin.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_giotin.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
+    // RSS: Limestone Controller
+    app.controller('LimestoneController', function($scope, $http, FeedData_limestone, FeedStorage_limestone) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_limestone.url) + String("&t=") + String(randomNum);
+            FeedData_limestone.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_limestone.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_limestone.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_limestone.clear();
+                    FeedStorage_limestone.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_limestone.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
+    // RSS: Malon Controller
+    app.controller('MalonController', function($scope, $http, FeedData_malon, FeedStorage_malon) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_malon.url) + String("&t=") + String(randomNum);
+            FeedData_malon.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_malon.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_malon.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_malon.clear();
+                    FeedStorage_malon.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_malon.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
+    // RSS: Marmar Controller
+    app.controller('MarmarController', function($scope, $http, FeedData_marmar, FeedStorage_marmar) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_marmar.url) + String("&t=") + String(randomNum);
+            FeedData_marmar.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_marmar.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_marmar.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_marmar.clear();
+                    FeedStorage_marmar.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_marmar.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
+    // RSS: Marmarit Controller
+    app.controller('MarmaritController', function($scope, $http, FeedData_marmarit, FeedStorage_marmarit) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_marmarit.url) + String("&t=") + String(randomNum);
+            FeedData_marmarit.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_marmarit.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_marmarit.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_marmarit.clear();
+                    FeedStorage_marmarit.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_marmarit.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
+    // RSS: Varedati Controller
+    app.controller('VaredatiController', function($scope, $http, FeedData_varedati, FeedStorage_varedati) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_varedati.url) + String("&t=") + String(randomNum);
+            FeedData_varedati.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_varedati.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_varedati.get();
+                    $scope.title = $scope.data.feed.entries[0].title;
+                    $scope.description = $scope.data.feed.entries[0].content;
+                    
+                } else {
+                    $scope.title = data.responseData.feed.entries[0].title;
+                    $scope.description = data.responseData.feed.entries[0].content;
+                    // Save feeds to the local storage
+                    FeedStorage_varedati.clear();
+                    FeedStorage_varedati.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_varedati.get();
+            $scope.title = $scope.data.feed.entries[0].title;
+            $scope.description = $scope.data.feed.entries[0].content;
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+    });
+    
     
     // RSS: Galleries Controller
     app.controller('GalleryRssController', function($scope, $http, FeedData_gallery, FeedStorage_gallery) {

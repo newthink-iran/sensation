@@ -86,7 +86,7 @@ sensationApp.factory('DataProducts', function(){
             title: '',
             icon: '',
             image: 'img/travertine.png',
-            page: 'about.html'
+            page: 'Travertan.html'
         },
         { 
             title: '',
@@ -485,7 +485,7 @@ sensationApp.factory('FeedData', function(){
 // RSS Data: Antique Feeds configuration
 sensationApp.factory('FeedData_antique', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=7' };
+    var data = { url: 'http://mehregansang.com/feed/?cat=8' };
     
     return data;
 });
@@ -494,6 +494,86 @@ sensationApp.factory('FeedData_antique', function(){
 sensationApp.factory('FeedData_travertan', function(){
     
     var data = { url: 'http://mehregansang.com/feed/?cat=7' };
+    
+    return data;
+});
+
+// RSS Data: Travonix Feeds configuration
+sensationApp.factory('FeedData_travonix', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=9' };
+    
+    return data;
+});
+
+// RSS Data: Tazini Feeds configuration
+sensationApp.factory('FeedData_tazini', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=10' };
+    
+    return data;
+});
+
+// RSS Data: Chini Feeds configuration
+sensationApp.factory('FeedData_chini', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=11' };
+    
+    return data;
+});
+
+// RSS Data: Granit Feeds configuration
+sensationApp.factory('FeedData_granit', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=12' };
+    
+    return data;
+});
+
+// RSS Data: Giotin Feeds configuration
+sensationApp.factory('FeedData_giotin', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=13' };
+    
+    return data;
+});
+
+// RSS Data: Limestone Feeds configuration
+sensationApp.factory('FeedData_limestone', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=14' };
+    
+    return data;
+});
+
+// RSS Data: Malon Feeds configuration
+sensationApp.factory('FeedData_malon', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=15' };
+    
+    return data;
+});
+
+// RSS Data: Marmar Feeds configuration
+sensationApp.factory('FeedData_marmar', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=16' };
+    
+    return data;
+});
+
+// RSS Data: Marmarit Feeds configuration
+sensationApp.factory('FeedData_marmarit', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=17' };
+    
+    return data;
+});
+
+// RSS Data: Varedati Feeds configuration
+sensationApp.factory('FeedData_varedati', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=18' };
     
     return data;
 });
