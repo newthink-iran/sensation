@@ -74,13 +74,13 @@ sensationApp.factory('DataProducts', function(){
             title: '',
             icon: '',
             image: 'img/marmar.png',
-            page: 'news.html'
+            page: 'Marmar.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/marmarit.png',
-            page: 'products.html'
+            page: 'Marmarit.html'
         },
         { 
             title: '',
@@ -92,19 +92,19 @@ sensationApp.factory('DataProducts', function(){
             title: '',
             icon: '',
             image: 'img/tazeeni.png',
-            page: 'map.html'
+            page: 'Tazini.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/chini.png',
-            page: 'travertan.html'
+            page: 'Chini.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/granit.png',
-            page: 'gallery.html'
+            page: 'granit.html'
         },
         { 
             title: '',
@@ -116,31 +116,31 @@ sensationApp.factory('DataProducts', function(){
             title: '',
             icon: '',
             image: 'img/varedati.png',
-            page: 'feeds.html'
+            page: 'Varedati.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/giotine.png',
-            page: 'contact.html'
+            page: 'Giotin.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/malon.png',
-            page: 'categories.html'
+            page: 'Malon.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/limestone.png',
-            page: 'feeds.html'
+            page: 'Limestone.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/travenix.png',
-            page: 'contact.html'
+            page: 'Travonix.html'
         },
        
     ]; 
