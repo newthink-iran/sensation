@@ -234,6 +234,186 @@ angular.module('appLocalStorage', [])
   }
 })
 
+.factory('FeedStorage_sotoon', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_sotoon'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_sotoon'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_sotoon');
+    }
+  }
+})
+
+.factory('FeedStorage_shomine', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_shomine'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_shomine'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_shomine');
+    }
+  }
+})
+
+.factory('FeedStorage_abnama', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_abnama'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_abnama'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_abnama');
+    }
+  }
+})
+
+.factory('FeedStorage_sayer', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_sayer'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_sayer'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_sayer');
+    }
+  }
+})
+
+.factory('FeedStorage_akhbar', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_akhbar'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_akhbar'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_akhbar');
+    }
+  }
+})
+
+.factory('FeedStorage_darbare', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_darbare'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_darbare'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_darbare');
+    }
+  }
+})
+
+.factory('FeedStorage_takhfif', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_takhfif'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_takhfif'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_takhfif');
+    }
+  }
+})
+
+.factory('FeedStorage_ertebat', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_ertebat'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_ertebat'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_ertebat');
+    }
+  }
+})
+
+.factory('FeedStorage_gavahi', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_gavahi'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_gavahi'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_gavahi');
+    }
+  }
+})
+
+.factory('FeedStorage_mofid', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_mofid'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_mofid'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_mofid');
+    }
+  }
+})
+
 
 .factory('FeedStorage_gallery', function() {
   return {
@@ -249,6 +429,24 @@ angular.module('appLocalStorage', [])
     },
     clear: function() {
       window.localStorage.removeItem('feeds_gallery');
+    }
+  }
+})
+
+.factory('FeedStorage_certs', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_certs'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_certs'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_certs');
     }
   }
 })

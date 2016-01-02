@@ -27,13 +27,13 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/takhfifat.png',
-            page: 'map.html'
+            page: 'Takhfifat.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/khadamat.png',
-            page: 'travertan.html'
+            page: 'Services.html'
         },
         { 
             title: '',
@@ -45,19 +45,19 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/mofid.png',
-            page: 'categories.html'
+            page: 'Mofid.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/gavahi.png',
-            page: 'feeds.html'
+            page: 'Certs.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/ertebat.png',
-            page: 'contact.html'
+            page: 'Ertebat.html'
         },
        
     ]; 
@@ -104,7 +104,7 @@ sensationApp.factory('DataProducts', function(){
             title: '',
             icon: '',
             image: 'img/granit.png',
-            page: 'granit.html'
+            page: 'Granit.html'
         },
         { 
             title: '',
@@ -143,6 +143,41 @@ sensationApp.factory('DataProducts', function(){
             page: 'Travonix.html'
         },
        
+    ]; 
+    
+    return data;
+});
+
+
+// Services Data: Services
+sensationApp.factory('DataServices', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            title: '',
+            icon: '',
+            image: 'img/Shomine.png',
+            page: 'Shomine.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/Boreshkari.png',
+            page: 'Sotoon.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/Sayer.png',
+            page: 'Sayer.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/Abnama.png',
+            page: 'Abnama.html'
+        }
     ]; 
     
     return data;
@@ -578,10 +613,98 @@ sensationApp.factory('FeedData_varedati', function(){
     return data;
 });
 
+// RSS Data: Sotoon Feeds configuration
+sensationApp.factory('FeedData_sotoon', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=20' };
+    
+    return data;
+});
+
+// RSS Data: Shomine Feeds configuration
+sensationApp.factory('FeedData_shomine', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=21' };
+    
+    return data;
+});
+
+// RSS Data: Abnama Feeds configuration
+sensationApp.factory('FeedData_abnama', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=22' };
+    
+    return data;
+});
+
+// RSS Data: Sayer Feeds configuration
+sensationApp.factory('FeedData_sayer', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=23' };
+    
+    return data;
+});
+
+// RSS Data: Akhbar Feeds configuration
+sensationApp.factory('FeedData_akhbar', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=19' };
+    
+    return data;
+});
+
+// RSS Data: Darbare Feeds configuration
+sensationApp.factory('FeedData_darbare', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=24' };
+    
+    return data;
+});
+
+// RSS Data: Takhfif Feeds configuration
+sensationApp.factory('FeedData_takhfif', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=26' };
+    
+    return data;
+});
+
+// RSS Data: Ertebat Feeds configuration
+sensationApp.factory('FeedData_ertebat', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=27' };
+    
+    return data;
+});
+
+// RSS Data: Gavahi Feeds configuration
+sensationApp.factory('FeedData_gavahi', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=18' };
+    
+    return data;
+});
+
+// RSS Data: Mofid Feeds configuration
+sensationApp.factory('FeedData_mofid', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=29' };
+    
+    return data;
+});
+
 // RSS Data: Gallery Feeds configuration
 sensationApp.factory('FeedData_gallery', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=45' };
+    var data = { url: 'http://mehregansang.com/feed/?cat=25' };
+    
+    return data;
+});
+
+// RSS Data: Certs Feeds configuration
+sensationApp.factory('FeedData_certs', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=28' };
     
     return data;
 });

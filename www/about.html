@@ -1,39 +1,14 @@
-<ons-page ng-controller="AboutController">
+<ons-page ng-controller="DarbareController">
     
-    <!--
-    <ons-toolbar fixed-style>
-    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
-    <div class="center">درباره ما</div>
-    </ons-toolbar>
-    -->
     
     <div data-role="header" style="width:100%;top:0;">
         <img src="img/top.png" style="width:100%; height:auto;" />
     </div> 
 
     <section style="padding: 10px; direction:rtl">
-        <div ng-repeat="member in about">
-        <ons-row style="padding: 0 0 10px 0;">
-            <ons-col size="33">
-                <section style="padding: 0 10px 0 10px;">
-                <img ng-src="{{member.picture}}" alt="{{member.title}}" ng-click="showDetail($index)"/>
-                </section>
-            </ons-col>
-            <ons-col>
-                <section>
-                <h3 class="title" ng-click="showDetail($index)">{{member.title}}</h3>
-                <div class="subtitle">{{member.subtitle}}</div>
-                <div class="social"><ons-icon icon="envelope" fixed-width="true"></ons-icon>{{member.email}}</div>
-                <div class="social"><ons-icon icon="linkedin" fixed-width="true"></ons-icon>{{member.linkedin}}</div>
-                <div class="social"><ons-icon icon="twitter" fixed-width="true"></ons-icon>{{member.twitter}}</div>
-                </section>
-            </ons-col>
-        </ons-row>
-        </div>
+        <h2 class="title" ng-bind-html="title" style="text-align:center;"></h2>
+        <p ng-bind-html="description" style="text-align:center;"></p>
     </section>
     
-    <div data-role="footer" style="width:100%;bottom:0;">
-        <img src="img/bottom.png" style="width:100%; height:auto; margin-bottom:-10px;" />
-    </div>
 
 </ons-page>

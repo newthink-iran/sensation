@@ -1,18 +1,15 @@
-<ons-page ng-controller="NewController">
+<ons-page ng-controller="KhabarController">
     
-    <ons-toolbar fixed-style>
-    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
-    <div class="center">{{item.title}}</div>
-    </ons-toolbar>
 
-    <img ng-src="{{item.picture}}" alt="{{item.title}}"/>
-
+    <div data-role="header" style="width:100%;top:0;">
+            <img src="img/top.png" style="width:100%; height:auto;" />
+    </div> 
+    
     <section style="padding: 10px;direction:rtl;">
-    <h2 class="title">{{item.title}}</h2>
-    <p>{{item.body}}</p>
-    <p class="tags"><ons-icon icon="tags" fixed-width="true"></ons-icon>
-    <span ng-repeat="tag in item.tags">{{tag}}{{$last ? '' : ', '}}</span>    
-    </p>
-    </section>
+    
+        <h2 class="title" ng-bind-html="item.title" style="text-align:center;"></h2>
+        <p ng-bind-html="content" style="text-align:center;"></p>
+        
+    </section> 
     
 </ons-page>
