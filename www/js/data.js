@@ -157,7 +157,7 @@ sensationApp.factory('DataServices', function(){
         { 
             title: '',
             icon: '',
-            image: 'img/Shomine.png',
+            image: 'img/shomine.png',
             page: 'Shomine.html'
         },
         { 
