@@ -826,7 +826,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_antique.clear();
+                    //FeedStorage_antique.clear();
                     FeedStorage_antique.save(data.responseData);
                 }
 
@@ -876,7 +876,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_trav.clear();
+                    //FeedStorage_trav.clear();
                     FeedStorage_trav.save(data.responseData);
                 }
 
@@ -926,7 +926,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_travonix.clear();
+                    //FeedStorage_travonix.clear();
                     FeedStorage_travonix.save(data.responseData);
                 }
 
@@ -976,7 +976,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_tazini.clear();
+                    //FeedStorage_tazini.clear();
                     FeedStorage_tazini.save(data.responseData);
                 }
 
@@ -1026,7 +1026,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_chini.clear();
+                    //FeedStorage_chini.clear();
                     FeedStorage_chini.save(data.responseData);
                 }
 
@@ -1076,7 +1076,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_granit.clear();
+                    //FeedStorage_granit.clear();
                     FeedStorage_granit.save(data.responseData);
                 }
 
@@ -1126,7 +1126,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_giotin.clear();
+                    //FeedStorage_giotin.clear();
                     FeedStorage_giotin.save(data.responseData);
                 }
 
@@ -1176,7 +1176,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_limestone.clear();
+                    //FeedStorage_limestone.clear();
                     FeedStorage_limestone.save(data.responseData);
                 }
 
@@ -1226,7 +1226,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_malon.clear();
+                    //FeedStorage_malon.clear();
                     FeedStorage_malon.save(data.responseData);
                 }
 
@@ -1276,7 +1276,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_marmar.clear();
+                    //FeedStorage_marmar.clear();
                     FeedStorage_marmar.save(data.responseData);
                 }
 
@@ -1326,7 +1326,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_marmarit.clear();
+                    //FeedStorage_marmarit.clear();
                     FeedStorage_marmarit.save(data.responseData);
                 }
 
@@ -1376,7 +1376,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_varedati.clear();
+                    //FeedStorage_varedati.clear();
                     FeedStorage_varedati.save(data.responseData);
                 }
 
@@ -1424,7 +1424,7 @@ var app = {
                 } else {
                     $scope.feeds = data.responseData.feed.entries;
                     // Save feeds to the local storage
-                    FeedStorage_gallery.clear();
+                    //FeedStorage_gallery.clear();
                     FeedStorage_gallery.save(data.responseData);
                 }
 
@@ -1483,7 +1483,7 @@ var app = {
                     $scope.feeds = data.responseData.feed.entries;
                     
                     // Save feeds to the local storage
-                    FeedStorage_certs.clear();
+                    //FeedStorage_certs.clear();
                     FeedStorage_certs.save(data.responseData);
                 }
 
@@ -1542,7 +1542,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_abnama.clear();
+                    //FeedStorage_abnama.clear();
                     FeedStorage_abnama.save(data.responseData);
                 }
 
@@ -1592,7 +1592,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_shomine.clear();
+                    //FeedStorage_shomine.clear();
                     FeedStorage_shomine.save(data.responseData);
                 }
 
@@ -1642,7 +1642,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_sotoon.clear();
+                    //FeedStorage_sotoon.clear();
                     FeedStorage_sotoon.save(data.responseData);
                 }
 
@@ -1692,7 +1692,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_sayer.clear();
+                    //FeedStorage_sayer.clear();
                     FeedStorage_sayer.save(data.responseData);
                 }
 
@@ -1740,7 +1740,7 @@ var app = {
                 } else {
                     $scope.feeds = data.responseData.feed.entries;
                     // Save feeds to the local storage
-                    FeedStorage_akhbar.clear();
+                    //FeedStorage_akhbar.clear();
                     FeedStorage_akhbar.save(data.responseData);
                 }
 
@@ -1821,7 +1821,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_darbare.clear();
+                    //FeedStorage_darbare.clear();
                     FeedStorage_darbare.save(data.responseData);
                 }
 
@@ -1871,7 +1871,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_takhfif.clear();
+                    //FeedStorage_takhfif.clear();
                     FeedStorage_takhfif.save(data.responseData);
                 }
 
@@ -1921,7 +1921,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_ertebat.clear();
+                    //FeedStorage_ertebat.clear();
                     FeedStorage_ertebat.save(data.responseData);
                 }
 
@@ -1971,7 +1971,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_gavahi.clear();
+                    //FeedStorage_gavahi.clear();
                     FeedStorage_gavahi.save(data.responseData);
                 }
 
@@ -2021,7 +2021,7 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_mofid.clear();
+                    //FeedStorage_mofid.clear();
                     FeedStorage_mofid.save(data.responseData);
                 }
 
