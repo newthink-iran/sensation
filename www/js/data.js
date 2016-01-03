@@ -86,7 +86,7 @@ sensationApp.factory('DataProducts', function(){
             title: '',
             icon: '',
             image: 'img/travertine.png',
-            page: 'Travertan.html'
+            page: 'Trav.html'
         },
         { 
             title: '',
@@ -526,9 +526,9 @@ sensationApp.factory('FeedData_antique', function(){
 });
 
 // RSS Data: Travertan Feeds configuration
-sensationApp.factory('FeedData_travertan', function(){
+sensationApp.factory('FeedData_trav', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=8' };
+    var data = { url: 'http://mehregansang.com/feed/?cat=7' };
     
     return data;
 });

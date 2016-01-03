@@ -36,20 +36,20 @@ angular.module('appLocalStorage', [])
   }
 })
 
-.factory('FeedStorage_travertan', function() {
+.factory('FeedStorage_trav', function() {
   return {
     get: function() {
-      var feeds = window.localStorage['feeds_travertan'];
+      var feeds = window.localStorage['feeds_trav'];
       if(feeds) {
         return angular.fromJson(feeds);
       }
       return {};
     },
     save: function(feeds) {
-      window.localStorage['feeds_travertan'] = angular.toJson(feeds);
+      window.localStorage['feeds_trav'] = angular.toJson(feeds);
     },
     clear: function() {
-      window.localStorage.removeItem('feeds_travertan');
+      window.localStorage.removeItem('feeds_trav');
     }
   }
 })

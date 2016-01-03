@@ -850,7 +850,7 @@ var app = {
     });
     
     // RSS: Travertan Controller
-    app.controller('TravertanController', function($scope, $http, FeedData_travertan, FeedStorage_travertan) {
+    app.controller('TravController', function($scope, $http, FeedData_trav, FeedStorage_trav) {
         
         $scope.feeds = "";
         
@@ -859,16 +859,16 @@ var app = {
             //add datetime for refreshing google api
             var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
-            newURL = String(FeedData_travertan.url) + String("&t=") + String(randomNum);
-            FeedData_travertan.url = newURL;
+            newURL = String(FeedData_trav.url) + String("&t=") + String(randomNum);
+            FeedData_trav.url = newURL;
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_travertan.url)}).
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_trav.url)}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
                 if (!data.responseData) {
-                    $scope.data = FeedStorage_travertan.get();
+                    $scope.data = FeedStorage_trav.get();
                     $scope.title = $scope.data.feed.entries[0].title;
                     $scope.description = $scope.data.feed.entries[0].content;
                     
@@ -876,8 +876,8 @@ var app = {
                     $scope.title = data.responseData.feed.entries[0].title;
                     $scope.description = data.responseData.feed.entries[0].content;
                     // Save feeds to the local storage
-                    FeedStorage_travertan.clear();
-                    FeedStorage_travertan.save(data.responseData);
+                    FeedStorage_trav.clear();
+                    FeedStorage_trav.save(data.responseData);
                 }
 
             }).
@@ -885,7 +885,7 @@ var app = {
 
             if ($done) { $done(); }
 
-            $scope.data = FeedStorage_travertan.get();
+            $scope.data = FeedStorage_trav.get();
             $scope.title = $scope.data.feed.entries[0].title;
             $scope.description = $scope.data.feed.entries[0].content;
             });
