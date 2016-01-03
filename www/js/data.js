@@ -86,14 +86,13 @@ sensationApp.factory('DataProducts', function(){
             title: '',
             icon: '',
             image: 'img/travertine.png',
-            page: 'Tazini.html'
+            page: 'Travertan.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/tazeeni.png',
-            page: 'Travertan.html'
-            
+            page: 'Tazini.html'
         },
         { 
             title: '',
