@@ -1,6 +1,10 @@
 <ons-page ng-controller="CertsController" sliding-menu-ignore="true" class="gallery-page">
 
         
+     <div data-role="header" style="width:100%;top:0;">
+            <img src="img/top.png" style="width:100%; height:auto;" />
+    </div> 
+    
     <ul rn-carousel rn-carousel-indicator>
         <li ng-repeat="feed in feeds">
             <img ng-src="{{getImage($index)}}"/>
