@@ -420,6 +420,7 @@ audio { margin-top:10px; }
 	content: "\f104" !important;
 }
 
+/*
 .page__background {   
     background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 4px, transparent 4px, transparent 100%);
     background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 4px, transparent 4px, transparent 100%);
@@ -431,6 +432,7 @@ audio { margin-top:10px; }
     
     background-color: rgb(255, 255, 255) !important;
 }
+*/
 
 .grid-menu-item{
     border-color: #ffffff !important;

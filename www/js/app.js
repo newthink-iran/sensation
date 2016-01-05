@@ -807,10 +807,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_antique.url) + String("&t=") + String(randomNum);
-            FeedData_antique.url = newURL;
+            FeedData_antique.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_antique.url)}).
             success(function(data, status, headers, config) {
@@ -857,10 +857,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_trav.url) + String("&t=") + String(randomNum);
-            FeedData_trav.url = newURL;
+            FeedData_trav.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_trav.url)}).
             success(function(data, status, headers, config) {
@@ -907,10 +907,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_travonix.url) + String("&t=") + String(randomNum);
-            FeedData_travonix.url = newURL;
+            FeedData_travonix.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_travonix.url)}).
             success(function(data, status, headers, config) {
@@ -957,10 +957,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_tazini.url) + String("&t=") + String(randomNum);
-            FeedData_tazini.url = newURL;
+            FeedData_tazini.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_tazini.url)}).
             success(function(data, status, headers, config) {
@@ -1007,10 +1007,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_chini.url) + String("&t=") + String(randomNum);
-            FeedData_chini.url = newURL;
+            FeedData_chini.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_chini.url)}).
             success(function(data, status, headers, config) {
@@ -1057,10 +1057,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_granit.url) + String("&t=") + String(randomNum);
-            FeedData_granit.url = newURL;
+            FeedData_granit.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_granit.url)}).
             success(function(data, status, headers, config) {
@@ -1107,10 +1107,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_giotin.url) + String("&t=") + String(randomNum);
-            FeedData_giotin.url = newURL;
+            FeedData_giotin.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_giotin.url)}).
             success(function(data, status, headers, config) {
@@ -1157,10 +1157,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_limestone.url) + String("&t=") + String(randomNum);
-            FeedData_limestone.url = newURL;
+            FeedData_limestone.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_limestone.url)}).
             success(function(data, status, headers, config) {
@@ -1207,10 +1207,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_malon.url) + String("&t=") + String(randomNum);
-            FeedData_malon.url = newURL;
+            FeedData_malon.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_malon.url)}).
             success(function(data, status, headers, config) {
@@ -1257,10 +1257,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_marmar.url) + String("&t=") + String(randomNum);
-            FeedData_marmar.url = newURL;
+            FeedData_marmar.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_marmar.url)}).
             success(function(data, status, headers, config) {
@@ -1307,10 +1307,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_marmarit.url) + String("&t=") + String(randomNum);
-            FeedData_marmarit.url = newURL;
+            FeedData_marmarit.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_marmarit.url)}).
             success(function(data, status, headers, config) {
@@ -1357,10 +1357,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_varedati.url) + String("&t=") + String(randomNum);
-            FeedData_varedati.url = newURL;
+            FeedData_varedati.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_varedati.url)}).
             success(function(data, status, headers, config) {
@@ -1407,10 +1407,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_gallery.url) + String("&t=") + String(randomNum);
-            FeedData_gallery.url = newURL;
+            FeedData_gallery.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_gallery.url)}).
             success(function(data, status, headers, config) {
@@ -1464,11 +1464,11 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             
             newURL = String(FeedData_certs.url) + String("&t=") + String(randomNum);
-            FeedData_certs.url = newURL;
+            FeedData_certs.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_certs.url)}).
             success(function(data, status, headers, config) {
@@ -1523,10 +1523,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_abnama.url) + String("&t=") + String(randomNum);
-            FeedData_abnama.url = newURL;
+            FeedData_abnama.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_abnama.url)}).
             success(function(data, status, headers, config) {
@@ -1573,10 +1573,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_shomine.url) + String("&t=") + String(randomNum);
-            FeedData_shomine.url = newURL;
+            FeedData_shomine.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_shomine.url)}).
             success(function(data, status, headers, config) {
@@ -1623,10 +1623,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_sotoon.url) + String("&t=") + String(randomNum);
-            FeedData_sotoon.url = newURL;
+            FeedData_sotoon.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_sotoon.url)}).
             success(function(data, status, headers, config) {
@@ -1673,10 +1673,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_sayer.url) + String("&t=") + String(randomNum);
-            FeedData_sayer.url = newURL;
+            FeedData_sayer.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_sayer.url)}).
             success(function(data, status, headers, config) {
@@ -1723,10 +1723,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
-            FeedData_akhbar.url = newURL;
+            FeedData_akhbar.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar.url)}).
             success(function(data, status, headers, config) {
@@ -1802,10 +1802,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_darbare.url) + String("&t=") + String(randomNum);
-            FeedData_darbare.url = newURL;
+            FeedData_darbare.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_darbare.url)}).
             success(function(data, status, headers, config) {
@@ -1852,10 +1852,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_takhfif.url) + String("&t=") + String(randomNum);
-            FeedData_takhfif.url = newURL;
+            FeedData_takhfif.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_takhfif.url)}).
             success(function(data, status, headers, config) {
@@ -1902,10 +1902,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_ertebat.url) + String("&t=") + String(randomNum);
-            FeedData_ertebat.url = newURL;
+            FeedData_ertebat.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_ertebat.url)}).
             success(function(data, status, headers, config) {
@@ -1952,10 +1952,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_gavahi.url) + String("&t=") + String(randomNum);
-            FeedData_gavahi.url = newURL;
+            FeedData_gavahi.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_gavahi.url)}).
             success(function(data, status, headers, config) {
@@ -2002,10 +2002,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
-            FeedData_mofid.url = newURL;
+            FeedData_mofid.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_mofid.url)}).
             success(function(data, status, headers, config) {
