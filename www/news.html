@@ -1,12 +1,13 @@
 <ons-page ng-controller="AkhbarController">
     
     
-    <div data-role="header" style="width:100%;top:0;">
-            <img src="img/top.png" style="width:100%; height:auto;" />
+    <div data-role="header" style="width:100%;top:0;direction: rtl;">
+        <img src="img/top.png" style="width:100%; height:auto;" />
+        <img src="img/akhbar_.png" style="width:30%;height:auto;" />
     </div> 
     
-    <section style="padding: 10px;direction:rtl;">
-        <h2 class="title" style="text-align:center;">اخبار</h2><br/>
+    <section style="padding: 0 10px 10px 10px;direction:rtl;">
+        <!--<h2 class="title" style="text-align:center;">اخبار</h2><br/>-->
         
         <div ng-repeat="feed in feeds">
         <ons-row style="padding: 0 0 10px 0;">

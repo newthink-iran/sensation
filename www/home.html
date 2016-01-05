@@ -24,11 +24,12 @@
             
         <div data-role="header" style="width:100%;top:0;">
             <img src="img/top.png" style="width:100%; height:auto;" />
+            <!--<img src="img/mehregan.png" style="width:100%; height:auto;" />-->
         </div> 
         
         <ons-scroller>
             <section class="home-grid">
-                <div class="grid-menu">
+                <div class="grid-menu" style="padding-top:20%">
                     <div class="centering-and-alignment" ng-repeat="row in items | partition:3">
                       <div class="grid-menu-item list__item list__item--tappable" ng-repeat="item in row" ng-click="showDetail(($parent.$index*row.length)+$index);">
                         <ons-icon icon="{{item.icon}}" ng-show="item.icon"></ons-icon>

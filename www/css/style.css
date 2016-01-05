@@ -435,3 +435,7 @@ audio { margin-top:10px; }
 .grid-menu-item{
     border-color: #ffffff !important;
 }
+
+p{
+    margin-top:0 !important;
+}
