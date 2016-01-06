@@ -45,7 +45,7 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/mofid.png',
-            page: 'Mofid.html'
+            page: 'Mofids.html'
         },
         { 
             title: '',
@@ -688,7 +688,7 @@ sensationApp.factory('FeedData_gavahi', function(){
 // RSS Data: Mofid Feeds configuration
 sensationApp.factory('FeedData_mofid', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=29' };
+    var data = { url: 'http://mehregansang.com/feed/?cat=5' };
     
     return data;
 });
