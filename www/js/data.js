@@ -27,7 +27,7 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/takhfifat.png',
-            page: 'Takhfifat.html'
+            page: 'takhfifs.html'
         },
         { 
             title: '',
