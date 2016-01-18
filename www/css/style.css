@@ -435,7 +435,8 @@ audio { margin-top:10px; }
 */
 
 
-.grid-menu-item, .grid-menu-item.list__item { border:none!important; }
+.grid-menu-item, .grid-menu-item.list__item { border:none!important; background-image:none; }
+
 
 p{
     margin-top:0 !important;
