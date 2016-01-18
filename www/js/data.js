@@ -693,7 +693,7 @@ sensationApp.factory('FeedData_gavahi', function(){
 // RSS Data: Mofid Feeds configuration
 sensationApp.factory('FeedData_mofid', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=5' };
+    var data = { url: 'http://mehregansang.com/feed/?cat=26' };
     
     return data;
 });
