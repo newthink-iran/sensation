@@ -1995,7 +1995,7 @@ var app = {
         $scope.showDetail = function(index) {
         var selectedItem = $scope.feeds[index];
         FeedData_mofid.selectedItem = selectedItem;
-        $scope.appNavigator.pushPage('mofid.html', selectedItem);
+        $scope.appNavigator.pushPage('Mofid.html', selectedItem);
         }
 
         $scope.getImage = function(index) {

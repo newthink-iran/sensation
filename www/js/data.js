@@ -192,6 +192,11 @@ sensationApp.factory('MenuData', function(){
             title: 'خانه',
             icon: 'home',
             page: 'home.html'
+        }
+        { 
+            title: 'تمامی حقوق محفوظ است',
+            icon: 'fa-copy',
+            page: 'copyright.html'
         }/*,
         { 
             title: 'Modal View',
@@ -688,7 +693,7 @@ sensationApp.factory('FeedData_gavahi', function(){
 // RSS Data: Mofid Feeds configuration
 sensationApp.factory('FeedData_mofid', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=26' };
+    var data = { url: 'http://mehregansang.com/feed/?cat=5' };
     
     return data;
 });

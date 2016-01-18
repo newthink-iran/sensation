@@ -212,6 +212,20 @@ input[type=email], input[type=password] {
   
 }
 
+.grid-menu-item1 {
+    width: 50%;
+    height: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #cecece!important;
+    border-bottom: 1px solid #cecece!important;
+    font-size: 48px;
+    text-align: center;
+  
+}
+
 .grid-menu-item:first-child {
     border-left: none !important;
 }
@@ -435,7 +449,7 @@ audio { margin-top:10px; }
 */
 
 
-.grid-menu-item, .grid-menu-item.list__item { border:none!important; background-image:none; }
+.grid-menu-item, .grid-menu-item1, .grid-menu-item.list__item { border:none!important; background-image:none; }
 
 
 p{
