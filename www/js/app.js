@@ -1954,10 +1954,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
-            FeedData_mofid.url = newURL;
+            FeedData_mofid.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_mofid.url)}).
             success(function(data, status, headers, config) {

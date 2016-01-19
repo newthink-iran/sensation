@@ -432,6 +432,7 @@ audio { margin-top:10px; }
 	left : 16px !important;
 	right : 0 !important;
 	content: "\f104" !important;
+    display: none !important;
 }
 
 /*
