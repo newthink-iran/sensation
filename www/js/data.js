@@ -192,7 +192,7 @@ sensationApp.factory('MenuData', function(){
             title: 'خانه',
             icon: 'home',
             page: 'home.html'
-        }
+        },
         { 
             title: 'تمامی حقوق محفوظ است',
             icon: 'fa-copy',
