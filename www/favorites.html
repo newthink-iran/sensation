@@ -1,4 +1,4 @@
-<ons-page ng-controller="FeedsController">
+<ons-page ng-controller="BookmarkController">
     
     <ons-toolbar fixed-style>
     <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
@@ -15,16 +15,16 @@
     
     <section style="padding: 10px; direction:rtl">
         
-        <ons-row style="padding: 0 0 10px 0;">
-        <input type="search" placeholder="جستجو" class="search-input" ng-model="search">
-        </ons-row>
         
-        <div ng-repeat="new in getFeeds()">
+        <div ng-repeat="new in feeds">
         <ons-row style="padding: 0 0 10px 0;">
             <ons-col>
                 <section style="padding: 0 10px 0 10px;">
                 <img ng-src="{{getImage($index)}}"alt="{{new.title}}" ng-click="showSearchDetail($index)"/>
 				 <h3 class="title" ng-click="showSearchDetail($index)">{{new.title}}</h3>
+				  <ons-button modifier="outline" class="button-share" ng-click="bookmarkPost()">
+					<ons-icon icon="share-alt"></ons-icon> علاقه مندی
+					</ons-button>
                 <!--<p ng-model="letterLimit">{{new.body | limitTo:letterLimit  }}</p>-->
 				<hr>
                 </section>

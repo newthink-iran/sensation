@@ -95,12 +95,12 @@ sensationApp.factory('MenuData', function(){
             title: 'خانه',
             icon: 'home',
             page: 'home.html'
-        }/*,
-        { 
-            title: 'Modal View',
-            icon: 'square-o',
-            page: 'modal.html'
         },
+        { 
+            title: 'علاقه مندی ها',
+            icon: 'square-o',
+            page: 'favorites.html'
+        }/*,
         { 
             title: 'Grid',
             icon: 'th',
@@ -415,7 +415,7 @@ sensationApp.factory('SettingsData', function(){
 // RSS Data: Feeds configuration
 sensationApp.factory('FeedData', function(){
     
-    var data = { url: 'http://www.huffingtonpost.com/feeds/news.xml' };
+    var data = { url: 'http://www.radioogle.ir/feed/' };
     
     return data;
 });

@@ -671,7 +671,7 @@ var app = {
 
                 if (!data.responseData) {
                     $scope.data = FeedStorage.get();
-                    $scope.msg = "Offline Mode - The device is unable to get the data.";
+                    $scope.msg = "اینترنت گوشی شما وصل نیست. در حال حاضر می توانید علاقه مندی های خود را مشاهده نمایید";
 
                     $scope.title = $scope.data.feed.title;
                     $scope.description = $scope.data.feed.description;
@@ -740,6 +740,37 @@ var app = {
         var source = element.find('img').attr("src");
         return source;
         }
+		
+		// getFeeds() function()
+        $scope.getFeeds = function() {
+            // Filter News by $scope.search
+            return $scope.feeds.filter(function(item) {
+                
+                // Filter News by Title
+                var itemDoesMatch = !$scope.search ||
+                item.title.toLowerCase().indexOf($scope.search.toLowerCase()) > -1;
+                
+                // Filter News by Title or Body
+                //var itemDoesMatch = !$scope.search ||
+                //item.title.toLowerCase().indexOf($scope.search.toLowerCase()) > -1 || 
+                //item.body.toLowerCase().indexOf($scope.search.toLowerCase()) > -1;
+                
+                return itemDoesMatch;
+            });
+        };
+		
+
+        // Search Detail function()
+        $scope.showSearchDetail = function(index) {
+        var items = $scope.getFeeds();
+        var selectedItem = items[index];
+        FeedData.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('feed.html', selectedItem);
+        }
+		
+		$scope.bookmarkPost = function() {
+			
+		}
 
     });
     
@@ -769,6 +800,7 @@ var app = {
             //window.plugins.socialsharing.share('Message', 'Subject', 'Image', 'Link');
             window.plugins.socialsharing.share(message, subject, null, link);
         }
+		
         
      });
     

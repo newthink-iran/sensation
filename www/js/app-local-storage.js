@@ -9,8 +9,8 @@ angular.module('appLocalStorage', [])
       }
       return {};
     },
-    save: function(feeds) {
-      window.localStorage['feeds'] = angular.toJson(feeds);
+    save: function(feed) {
+       window.localStorage['feeds'] = angular.toJson(feeds);
     },
     clear: function() {
       window.localStorage.removeItem('feeds');

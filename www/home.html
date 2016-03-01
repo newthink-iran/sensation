@@ -1,6 +1,6 @@
 <ons-navigator title="Sensation" var="appNavigator">
     
-    <ons-page ng-controller="HomeController">
+    <ons-page ng-controller="FeedsController">
         
         <ons-toolbar fixed-style>
             <div class="right">
@@ -20,49 +20,36 @@
             -->
         </ons-toolbar>
         
-        <ons-scroller>
-            <section class="home-grid">
-                <div class="grid-menu">
-                    <div class="centering-and-alignment" ng-repeat="row in items | partition:3">
-                      <div class="grid-menu-item list__item list__item--tappable" ng-repeat="item in row" ng-click="showDetail(($parent.$index*row.length)+$index);">
-                        <ons-icon icon="{{item.icon}}"></ons-icon>
-                        <div class="grid-menu-item-label">{{item.title}}</div>
-                      </div>
-                    </div>
-                </div>
-
-                <!--
-                <ons-list class="list-top">
-                    <ons-list-header>Onsen UI Framework</ons-list-header>
-                    <ons-list-item modifier="chevron" ng-click="appNavigator.pushPage('parameters-master.html')">
-                        <ons-row>
-                            <ons-col width="15%"> 
-                            <ons-icon icon="level-up" fixed-width="true"></ons-icon>
-                            </ons-col>
-                            <ons-col class="left">
-                            Parameters
-                            </ons-col>
-                        </ons-row> 
-                    </ons-list-item>
-                </ons-list>
-
-                <ons-list class="list-top">
-                    <ons-list-header>Mobile</ons-list-header>
-                    <ons-list-item modifier="chevron" ng-click="appNavigator.pushPage('plugins.html', {title: 'Plugins', animation: 'slide'})">
-                        <ons-row>
-                            <ons-col width="15%">
-                            <ons-icon icon="mobile" fixed-width="true"></ons-icon>
-                            </ons-col>
-                            <ons-col class="left">
-                            Mobile Plugins
-                            </ons-col>
-                        </ons-row> 
-                    </ons-list-item>
-                </ons-list>
-                -->
-            </section>
-
-        </ons-scroller>
+ <section style="padding: 10px; direction:rtl">
+        
+        <ons-row style="padding: 10px;">
+        <input type="search" placeholder="جستجو" class="search-input" ng-model="search">
+        </ons-row>
+        
+        <div ng-repeat="new in getFeeds()">
+        <ons-row style="padding: 0 0 10px 0;">
+            <ons-col>
+                <section style="padding: 0 10px 0 10px;">
+                <img ng-src="{{getImage($index)}}"alt="{{new.title}}" ng-click="showSearchDetail($index)"/>
+				 <h3 class="title" style="direction:ltr;" ng-click="showSearchDetail($index)">{{new.title}}</h3>
+                <!--<p ng-model="letterLimit">{{new.body | limitTo:letterLimit  }}</p>-->
+				<hr>
+                </section>
+            </ons-col>
+            <!--
+			<ons-col>
+                <section>
+                <h3 class="title" ng-click="showSearchDetail($index)">{{new.title}}</h3>
+                <p ng-model="letterLimit">{{new.body | limitTo:letterLimit  }}...</p>
+                <p class="tags"><ons-icon icon="tags" fixed-width="true"></ons-icon>
+                <span ng-repeat="tag in new.tags">{{tag}}{{$last ? '' : ', '}}</span>
+                </p>
+                </section>
+            </ons-col>
+			-->
+        </ons-row>
+        </div>
+    </section>
         
     </ons-page>
 

@@ -376,18 +376,25 @@ audio { margin-top:10px; }
 
 .ui-mobile .ui-page ,.page ,.page__content{
 
-/*background: -webkit-linear-gradient(top, #f4f3ff, rgba(93, 177, 223, 0.75)) !important;*/
+background: #ffffff !important;
     
     
     
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) !important;
+   /* background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) !important;
   background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) !important;
   background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) !important;
   background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) !important;
   -webkit-background-size: 3px 3px !important;
   -moz-background-size: 3px 3px !important;
-  background-size: 3px 3px !important;
+  background-size: 3px 3px !important;*/
   }
+
+.search-input{
+    padding: 10px !important;
+    line-height: 2 !important;
+    background: #ffffff !important;
+    border: 2px solid #5b2c7a !important;
+}
 
 
 
