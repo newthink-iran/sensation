@@ -670,13 +670,13 @@ var app = {
                 if ($done) { $done(); }
 
                 if (!data.responseData) {
-                    $scope.data = FeedStorage.get();
+                    //$scope.data = FeedStorage.get();
                     $scope.msg = "اینترنت گوشی شما وصل نیست. در حال حاضر می توانید علاقه مندی های خود را مشاهده نمایید";
 
-                    $scope.title = $scope.data.feed.title;
-                    $scope.description = $scope.data.feed.description;
-                    $scope.link = $scope.data.feed.link;
-                    $scope.feeds = $scope.data.feed.entries;
+                    //$scope.title = $scope.data.feed.title;
+                    //$scope.description = $scope.data.feed.description;
+                    //$scope.link = $scope.data.feed.link;
+                    //$scope.feeds = $scope.data.feed.entries;
                 } else {
                     $scope.title = data.responseData.feed.title;
                     $scope.description = data.responseData.feed.description;
@@ -684,7 +684,7 @@ var app = {
                     $scope.feeds = data.responseData.feed.entries;
 
                     // Save feeds to the local storage
-                    FeedStorage.save(data.responseData);
+                    //FeedStorage.save(data.responseData);
                 }
 
             }).
@@ -693,13 +693,13 @@ var app = {
             $('.loading').hide();
             if ($done) { $done(); }
 
-            $scope.data = FeedStorage.get();
+            //$scope.data = FeedStorage.get();
             $scope.msg = 'Offline Mode - An error occured:' + status;
 
-            $scope.title = $scope.data.feed.title;
-            $scope.description = $scope.data.feed.description;
-            $scope.link = $scope.data.feed.link;
-            $scope.feeds = $scope.data.feed.entries; 
+            //$scope.title = $scope.data.feed.title;
+            //$scope.description = $scope.data.feed.description;
+            //$scope.link = $scope.data.feed.link;
+            //$scope.feeds = $scope.data.feed.entries; 
 
             });
         }
