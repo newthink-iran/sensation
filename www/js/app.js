@@ -767,10 +767,6 @@ var app = {
         FeedData.selectedItem = selectedItem;
         $scope.appNavigator.pushPage('feed.html', selectedItem);
         }
-		
-		$scope.bookmarkPost = function() {
-			
-		}
 
     });
     
