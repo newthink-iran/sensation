@@ -32,6 +32,9 @@
                 <section style="padding: 0 10px 0 10px;">
                 <img ng-src="{{getImage($index)}}"alt="{{new.title}}" ng-click="showSearchDetail($index)"/>
 				 <h3 class="title" style="direction:ltr;" ng-click="showSearchDetail($index)">{{new.title}}</h3>
+                    <ons-button modifier="outline" class="button-share" ng-click="sharePost()">
+        <ons-icon icon="share-alt"></ons-icon> اشتراک گذاری
+        </ons-button>
                 <!--<p ng-model="letterLimit">{{new.body | limitTo:letterLimit  }}</p>-->
 				<hr>
                 </section>
