@@ -767,6 +767,24 @@ var app = {
         var source = element.find('img').attr("src");
         return source;
         }
+        
+        // getFeeds() function()
+        $scope.getFeeds = function() {
+            // Filter News by $scope.search
+            return $scope.feeds.filter(function(item) {
+                
+                // Filter News by Title
+                var itemDoesMatch = !$scope.search ||
+                item.title.toLowerCase().indexOf($scope.search.toLowerCase()) > -1;
+                
+                // Filter News by Title or Body
+                //var itemDoesMatch = !$scope.search ||
+                //item.title.toLowerCase().indexOf($scope.search.toLowerCase()) > -1 || 
+                //item.body.toLowerCase().indexOf($scope.search.toLowerCase()) > -1;
+                
+                return itemDoesMatch;
+            });
+        };
 
     });
     
