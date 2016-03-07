@@ -517,7 +517,7 @@ sensationApp.factory('SettingsData', function(){
 // RSS Data: Feeds configuration
 sensationApp.factory('FeedData', function(){
     
-    var data = { url: 'http://www.huffingtonpost.com/feeds/news.xml' };
+    var data = { url: 'http://radioogle.ir/feed' };
     
     return data;
 });
