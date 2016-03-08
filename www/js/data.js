@@ -194,15 +194,16 @@ sensationApp.factory('MenuData', function(){
             page: 'home.html'
         },
         { 
-            title: 'تمامی حقوق محفوظ است',
-            icon: 'fa-copy',
-            page: 'copyright.html'
-        },
-        { 
             title: 'علاقه مندی ها',
             icon: 'square-o',
             page: 'favorites.html'
-        }/*,
+        },
+        { 
+            title: 'تمامی حقوق محفوظ است',
+            icon: 'fa-copy',
+            page: 'copyright.html'
+        }
+        /*,
         { 
             title: 'Grid',
             icon: 'th',

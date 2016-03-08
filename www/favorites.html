@@ -1,11 +1,5 @@
 <ons-page ng-controller="FeedsController">
     
-    <ons-toolbar fixed-style>
-    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
-    <div class="center">علاقه مندی های من</div>
-    </ons-toolbar>
-    
-    
     <section style="padding: 0 10px 10px 10px;direction:rtl;">
         
         
@@ -17,7 +11,7 @@
                      <img ng-src="{{getImageFav($index)}}"alt="{{new.title}}"/>
                     <br/><br/>
                     <div style="margin:auto; display:block; text-align:center;">
-                        <ons-button modifier="outline" class="button-share" ng-click="sharePost($index)">
+                        <ons-button modifier="outline" class="button-share" ng-click="sharePostFav($index)">
                         <ons-icon icon="share-alt"></ons-icon> اشتراک گذاری
                         </ons-button>
                         
