@@ -1,0 +1,45 @@
+<ons-page ng-controller="FeedsController">
+    
+    <ons-toolbar fixed-style>
+    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+    <div class="center">RSS</div>
+    </ons-toolbar>
+
+ 
+
+    <section style="padding: 0 10px 10px 10px;direction:rtl;">
+
+
+        <ons-row align="center" class="status-message" fixed-style>
+            <ons-col>
+            <span class="loading"><i class="fa fa-spin fa-circle-o-notch"></i>در حال بارگزاری</span>
+            <span ng-bind="msg"></span>
+            </ons-col>
+        </ons-row>
+
+        <div ng-repeat="feed in getBookmarks() | limitTo: paginationLimit()">
+
+            <ons-row style="padding: 0 0 20px 0;">
+                
+                <ons-col ng-if="getImage($index)" width="95px" >
+                <img ng-src="{{getImage($index)}}" class="thumbnail"></img>
+                </ons-col>
+                
+                <ons-col>
+                    <h3 class="title" ng-bind-html="feed.title" ng-click="showDetail($index)"></h3>
+
+                    <p class="post-excerpt" ng-bind-html="feed.contentSnippet"></p>
+                    <ons-button class="post-teaser" modifier="quiet" ng-click="showDetail($index)">بیشتر..</ons-button>
+                </ons-col>
+            </ons-row>
+        </div>
+
+        <ons-row align="center" fixed-style>
+            <ons-col>
+            <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="post-show-more"><i class="fa fa-angle-double-down more-icon"></i>نمایش بیشتر</ons-button>
+            </ons-col>
+        </ons-row>
+
+    </section>
+    
+</ons-page>

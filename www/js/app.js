@@ -784,7 +784,7 @@ var app = {
                 
                 return itemDoesMatch;
             });
-        };
+        }
         
         $scope.sharePost = function (index) {
             
@@ -814,6 +814,25 @@ var app = {
             
             window.localStorage.myBookmarks = JSON.stringify(user_bookmarks);
         }
+        
+        $scope.getBookmarks = function () {
+            return JSON.parse(window.localStorage.myBookmarks || '[]');
+        }
+        
+        /*$scope.removeBookmark = function (index){
+            var user_bookmarks = !_.isUndefined(window.localStorage.myBookmarks) ? 
+                 JSON.parse(window.localStorage.myBookmarks) : [];
+            var remaining_posts = _.filter(user_bookmarks, function(bookmark){ return bookmark.id != id; });
+        };
+
+  this.remove = function(id){
+   
+
+    //check if this post is already saved
+    var remaining_posts = _.filter(user_bookmarks, function(bookmark){ return bookmark.id != id; });
+
+    window.localStorage.ionWordpress_bookmarks = JSON.stringify(remaining_posts);
+  };*/
             
 
     });
