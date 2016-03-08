@@ -785,6 +785,36 @@ var app = {
                 return itemDoesMatch;
             });
         };
+        
+        $scope.sharePost = function (index) {
+            
+            var selectedItem = $scope.feeds[index];
+            var subject = selectedItem.title;
+            var message = selectedItem.content;
+            message = message.replace(/(<([^>]+)>)/ig,"");
+
+            var link = selectedItem.link;
+            
+            //Documentation: https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin
+            //window.plugins.socialsharing.share('Message', 'Subject', 'Image', 'Link');
+            window.plugins.socialsharing.share(message, subject, null, link);
+        }
+        
+        $scope.bookmarkPost = function (index) {
+            
+            var selectedItem = $scope.feeds[index];
+            var user_bookmarks = !_.isUndefined(window.localStorage.myBookmarks) ?              JSON.parse(window.localStorage.myBookmarks) : [];         
+
+            //check if this post is already saved
+            var existing_post = _.find(user_bookmarks, function(post){ return post.id == selectedItem.id; });
+
+            if(!existing_post){
+                user_bookmarks.push(selectedItem);
+                }
+            
+            window.localStorage.myBookmarks = JSON.stringify(user_bookmarks);
+        }
+            
 
     });
     
