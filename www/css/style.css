@@ -456,3 +456,14 @@ audio { margin-top:10px; }
 p{
     margin-top:0 !important;
 }
+
+.search-input{
+    padding: 10px !important;
+    line-height: 2 !important;
+    background: #ffffff !important;
+    border: 1px solid #8962ed !important;
+}
+
+background{
+    background: #ffffff !important;
+}

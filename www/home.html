@@ -9,7 +9,7 @@
             </ons-toolbar-button>
             </div>
             
-            <div class="center">اپلیکیشن موبایل</div>
+            <div class="center">Radioogle</div>
             
             <!--
             <div class="left">
@@ -31,39 +31,29 @@
             <ons-icon icon="search"></ons-icon> جستجو               
             </ons-button>
         </div>
+     
+        <span ng-bind="msg"></span>
        
         
         <div ng-repeat="new in getFeeds(search)">
         <ons-row style="padding: 0 0 10px 0;">
             <ons-col>
                 <section style="padding: 0 10px 0 10px;">
-                     <h3 class="title" style="direction:ltr;">{{new.title}}</h3>
+                     <h3 class="title" style="text-align:center; color:#8962ed;">{{new.title}}</h3>
                      <img ng-src="{{getImage($index)}}"alt="{{new.title}}"/>
-				
-                    <ons-button modifier="outline" class="button-share" ng-click="sharePost($index)">
-        <ons-icon icon="share-alt"></ons-icon> اشتراک گذاری
+                    <br/><br/>
+                    <div style="margin:auto; display:block; text-align:center;">
+                        <ons-button modifier="outline" class="button-share" ng-click="sharePost($index)">
+                        <ons-icon icon="share-alt"></ons-icon> اشتراک گذاری
+                        </ons-button>
                         
-        </ons-button>
-                    
-                     <ons-button modifier="outline" class="button-share" ng-click="bookmarkPost($index)">
-        <ons-icon icon="heart"></ons-icon> علاقه مندی
-                        
-        </ons-button>
-                <!--<p ng-model="letterLimit">{{new.body | limitTo:letterLimit  }}</p>-->
-				<hr>
+                        <ons-button modifier="outline" class="button-share" ng-click="bookmarkPost($index)">
+                        <ons-icon icon="heart"></ons-icon> علاقه مندی
+                        </ons-button>
+                    </div>
+				<hr style="border-top: 1px solid #8962ed;">
                 </section>
             </ons-col>
-            <!--
-			<ons-col>
-                <section>
-                <h3 class="title" ng-click="showSearchDetail($index)">{{new.title}}</h3>
-                <p ng-model="letterLimit">{{new.body | limitTo:letterLimit  }}...</p>
-                <p class="tags"><ons-icon icon="tags" fixed-width="true"></ons-icon>
-                <span ng-repeat="tag in new.tags">{{tag}}{{$last ? '' : ', '}}</span>
-                </p>
-                </section>
-            </ons-col>
-			-->
         </ons-row>
         </div>
     </section>

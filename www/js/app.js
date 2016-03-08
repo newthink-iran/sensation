@@ -757,7 +757,15 @@ var app = {
         }
 
         $scope.getImage = function(index) {
-        var selectedItem = $scope.getFeeds()[index];
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+        
+        $scope.getImageFav = function(index) {
+        var selectedItem = $scope.getBookmarks()[index];
         var content = selectedItem.content;
         var element = $('<div>').html(content);
         var source = element.find('img').attr("src");
@@ -791,7 +799,7 @@ var app = {
 
                 if (!data.responseData) {
                     //$scope.data = FeedStorage.get();
-                    $scope.msg = "Offline Mode - The device is unable to get the data.";
+                    $scope.msg = "لطفا اینترنت گوشی خود را وصل نمایید";
 
                     //$scope.title = $scope.data.feed.title;
                     //$scope.description = $scope.data.feed.description;
@@ -812,7 +820,7 @@ var app = {
 
 
             //$scope.data = FeedStorage.get();
-            $scope.msg = 'Offline Mode - An error occured:' + status;
+            $scope.msg = $scope.msg = "لطفا اینترنت گوشی خود را وصل نمایید";
 
             //$scope.title = $scope.data.feed.title;
             //$scope.description = $scope.data.feed.description;
@@ -824,7 +832,21 @@ var app = {
         
         $scope.sharePost = function (index) {
             
-            var selectedItem = $scope.getFeeds()[index];
+            var selectedItem = $scope.feeds[index];
+            var subject = selectedItem.title;
+            var message = selectedItem.content;
+            message = message.replace(/(<([^>]+)>)/ig,"");
+
+            var link = selectedItem.link;
+            
+            //Documentation: https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin
+            //window.plugins.socialsharing.share('Message', 'Subject', 'Image', 'Link');
+            window.plugins.socialsharing.share(message, subject, null, link);
+        }
+        
+          $scope.sharePostFav = function (index) {
+            
+            var selectedItem = $scope.getBookmarks()[index];
             var subject = selectedItem.title;
             var message = selectedItem.content;
             message = message.replace(/(<([^>]+)>)/ig,"");
@@ -838,7 +860,7 @@ var app = {
         
         $scope.bookmarkPost = function (index) {
             
-            var selectedItem = $scope.getFeeds()[index];
+            var selectedItem = $scope.feeds[index];
             var user_bookmarks = !_.isUndefined(window.localStorage.myBookmarks) ?              JSON.parse(window.localStorage.myBookmarks) : [];         
 
             //check if this post is already saved
