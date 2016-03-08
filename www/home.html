@@ -23,22 +23,30 @@
  <section style="padding: 10px; direction:rtl">
         
         <ons-row style="padding: 10px;">
-        <input type="search" placeholder="جستجو" class="search-input" ng-model="search">
+        <input type="search" placeholder="" class="search-input" ng-model="search">
         </ons-row>
+     
+        <div style="margin:auto; display:block; text-align:center;">
+            <ons-button modifier="outline" class="button-share" ng-click="getData1()">
+            <ons-icon icon="search"></ons-icon> جستجو               
+            </ons-button>
+        </div>
+       
         
-        <div ng-repeat="new in getFeeds()">
+        <div ng-repeat="new in getFeeds(search)">
         <ons-row style="padding: 0 0 10px 0;">
             <ons-col>
                 <section style="padding: 0 10px 0 10px;">
-                <img ng-src="{{getImage($index)}}"alt="{{new.title}}" ng-click="showSearchDetail($index)"/>
-				 <h3 class="title" style="direction:ltr;" ng-click="showSearchDetail($index)">{{new.title}}</h3>
+                     <h3 class="title" style="direction:ltr;">{{new.title}}</h3>
+                     <img ng-src="{{getImage($index)}}"alt="{{new.title}}"/>
+				
                     <ons-button modifier="outline" class="button-share" ng-click="sharePost($index)">
         <ons-icon icon="share-alt"></ons-icon> اشتراک گذاری
                         
         </ons-button>
                     
                      <ons-button modifier="outline" class="button-share" ng-click="bookmarkPost($index)">
-        <ons-icon icon="share-alt"></ons-icon> علاقه مندی
+        <ons-icon icon="heart"></ons-icon> علاقه مندی
                         
         </ons-button>
                 <!--<p ng-model="letterLimit">{{new.body | limitTo:letterLimit  }}</p>-->

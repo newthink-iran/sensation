@@ -16,29 +16,42 @@
             <span ng-bind="msg"></span>
             </ons-col>
         </ons-row>
-
-        <div ng-repeat="feed in getBookmarks() | limitTo: paginationLimit()">
-
-            <ons-row style="padding: 0 0 20px 0;">
-                
-                <ons-col ng-if="getImage($index)" width="95px" >
-                <img ng-src="{{getImage($index)}}" class="thumbnail"></img>
-                </ons-col>
-                
-                <ons-col>
-                    <h3 class="title" ng-bind-html="feed.title" ng-click="showDetail($index)"></h3>
-
-                    <p class="post-excerpt" ng-bind-html="feed.contentSnippet"></p>
-                    <ons-button class="post-teaser" modifier="quiet" ng-click="showDetail($index)">بیشتر..</ons-button>
-                </ons-col>
-            </ons-row>
+        
+         <div ng-repeat="new in getBookmarks()">
+        <ons-row style="padding: 0 0 10px 0;">
+            <ons-col>
+                <section style="padding: 0 10px 0 10px;">
+                     <h3 class="title" style="direction:ltr;">{{new.title}}</h3>
+                     <img ng-src="{{getImage($index)}}"alt="{{new.title}}"/>
+				
+                    <ons-button modifier="outline" class="button-share" ng-click="sharePost($index)">
+        <ons-icon icon="share-alt"></ons-icon> اشتراک گذاری
+                        
+        </ons-button>
+                    
+                     <ons-button modifier="outline" class="button-share" ng-click="removeBookmark(new.title)">
+        <ons-icon icon="heart"></ons-icon>حذف علاقه مندی
+                        
+        </ons-button>
+                <!--<p ng-model="letterLimit">{{new.body | limitTo:letterLimit  }}</p>-->
+				<hr>
+                </section>
+            </ons-col>
+            <!--
+			<ons-col>
+                <section>
+                <h3 class="title" ng-click="showSearchDetail($index)">{{new.title}}</h3>
+                <p ng-model="letterLimit">{{new.body | limitTo:letterLimit  }}...</p>
+                <p class="tags"><ons-icon icon="tags" fixed-width="true"></ons-icon>
+                <span ng-repeat="tag in new.tags">{{tag}}{{$last ? '' : ', '}}</span>
+                </p>
+                </section>
+            </ons-col>
+			-->
+        </ons-row>
         </div>
 
-        <ons-row align="center" fixed-style>
-            <ons-col>
-            <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="post-show-more"><i class="fa fa-angle-double-down more-icon"></i>نمایش بیشتر</ons-button>
-            </ons-col>
-        </ons-row>
+       
 
     </section>
     
