@@ -197,12 +197,12 @@ sensationApp.factory('MenuData', function(){
             title: 'علاقه مندی ها',
             icon: 'square-o',
             page: 'favorites.html'
-        },
+        }/*,
         { 
             title: 'تمامی حقوق محفوظ است',
             icon: 'fa-copy',
             page: 'copyright.html'
-        }
+        }*/
         /*,
         { 
             title: 'Grid',
