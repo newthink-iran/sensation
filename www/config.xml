@@ -16,7 +16,7 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen"/>
     <!-- <plugin name="com.sarriaroman.PhotoViewer" /> -->
-    <plugin name="org.apache.cordova.dialogs.Notification" />
+    <!--<plugin name="org.apache.cordova.dialogs.Notification" />-->
 
     
     <content src="index.html" />
@@ -81,6 +81,10 @@
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
+    
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.Notification" />
     </feature>
     
 </widget>
