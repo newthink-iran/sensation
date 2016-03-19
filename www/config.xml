@@ -15,6 +15,7 @@
 	<gap:plugin name="org.apache.cordova.inappbrowser"/>
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen"/>
+    <gap:plugin name="com.sarriaroman.PhotoViewer.PhotoActivity" />
 
     
     <content src="index.html" />
