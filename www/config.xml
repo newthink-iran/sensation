@@ -16,7 +16,7 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen"/>
     <!-- <plugin name="com.sarriaroman.PhotoViewer" /> -->
-    <gap:plugin name="org.apache.cordova.dialogs.Notification" />
+    <plugin name="org.apache.cordova.dialogs.Notification" />
 
     
     <content src="index.html" />
