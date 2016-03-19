@@ -14,7 +14,7 @@
 	<gap:plugin name="org.apache.cordova.dialogs"  />
 	<gap:plugin name="org.apache.cordova.geolocation" />
 	<gap:plugin name="org.apache.cordova.inappbrowser"/>
-    <gap:plugn name="com.sarriaroman.PhotoViewer.PhotoActivity" />
+    <gap:plugin name="com.sarriaroman.PhotoViewer.PhotoActivity" />
 
     
     <content src="index.html" />
