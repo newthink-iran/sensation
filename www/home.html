@@ -3,7 +3,7 @@
     <ons-page ng-controller="FeedsController">
         
         <ons-toolbar fixed-style>
-            <div class="right">
+            <div class="left">
             <ons-toolbar-button onclick="menu.toggleMenu()">
             <ons-icon icon="bars">
             </ons-toolbar-button>
@@ -20,15 +20,20 @@
             -->
         </ons-toolbar>
         
- <section style="padding: 10px; direction:rtl">
+ <section style="padding: 10px;">
         
+        
+        <ons-row style="padding: 10px;">
+        <img ng-src="img/logo-large.png" alt="Radioogle"/>
+        </ons-row>
+     
         <ons-row style="padding: 10px;">
         <input type="search" placeholder="" class="search-input" ng-model="search">
         </ons-row>
      
         <div style="margin:auto; display:block; text-align:center;">
             <ons-button modifier="outline" class="button-share" ng-click="getData1()">
-            <ons-icon icon="search"></ons-icon> جستجو               
+            <ons-icon icon="search"></ons-icon> Search             
             </ons-button>
         </div>
      
@@ -44,11 +49,11 @@
                     <br/><br/>
                     <div style="margin:auto; display:block; text-align:center;">
                         <ons-button modifier="outline" class="button-share" ng-click="sharePost($index)">
-                        <ons-icon icon="share-alt"></ons-icon> اشتراک گذاری
+                        <ons-icon icon="share-alt"></ons-icon> Share
                         </ons-button>
                         
                         <ons-button modifier="outline" class="button-share" ng-click="bookmarkPost($index)">
-                        <ons-icon icon="heart"></ons-icon> علاقه مندی
+                        <ons-icon icon="heart"></ons-icon> Like
                         </ons-button>
                     </div>
 				<hr style="border-top: 1px solid #8962ed;">

@@ -2,16 +2,16 @@
     
     
     <ons-toolbar fixed-style>
-    <div class="right">
+    <div class="left">
     <ons-toolbar-button onclick="menu.toggleMenu()">
     <ons-icon icon="bars">
     </ons-toolbar-button>
     </div>
-    <div class="center">علاقه مندی های من</div>
+    <div class="center">My Favorites</div>
     </ons-toolbar>
     
     
-    <section style="padding: 0 10px 10px 10px;direction:rtl;">
+    <section style="padding: 0 10px 10px 10px;">
         
         
         <div ng-repeat="new in getBookmarks()">
@@ -23,11 +23,11 @@
                     <br/><br/>
                     <div style="margin:auto; display:block; text-align:center;">
                         <ons-button modifier="outline" class="button-share" ng-click="sharePostFav($index)">
-                        <ons-icon icon="share-alt"></ons-icon> اشتراک گذاری
+                        <ons-icon icon="share-alt"></ons-icon> Share
                         </ons-button>
                         
                         <ons-button modifier="outline" class="button-share" ng-click="removeBookmark(new.title)">
-                        <ons-icon icon="heart"></ons-icon>حذف علاقه مندی
+                        <ons-icon icon="heart"></ons-icon> Dislike
                         </ons-button>
                     </div>
 				<hr style="border-top: 1px solid #8962ed;">
