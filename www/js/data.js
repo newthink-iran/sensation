@@ -189,20 +189,20 @@ sensationApp.factory('MenuData', function(){
     
     data.items = [
         { 
-            title: 'خانه',
+            title: 'Home',
             icon: 'home',
             page: 'home.html'
         },
         { 
-            title: 'علاقه مندی ها',
+            title: 'My Favorites',
             icon: 'square-o',
             page: 'favorites.html'
-        }/*,
+        },
         { 
-            title: 'تمامی حقوق محفوظ است',
+            title: 'About Us',
             icon: 'fa-copy',
-            page: 'copyright.html'
-        }*/
+            page: 'about.html'
+        }
         /*,
         { 
             title: 'Grid',

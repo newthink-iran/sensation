@@ -418,7 +418,7 @@ audio { margin-top:10px; }
 
 
 
-.list__header{
+/*.list__header{
 	text-align: right !important;
 	padding: 0 10px 0 10px !important;
 }
@@ -433,7 +433,7 @@ audio { margin-top:10px; }
 	right : 0 !important;
 	content: "\f104" !important;
     display: none !important;
-}
+}*/
 
 /*
 .page__background {   
