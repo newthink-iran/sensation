@@ -27,6 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('searchbutton', this.onSearchKeyDown, false);
         
     },
     // deviceready Event Handler
@@ -84,7 +85,10 @@ var app = {
         if (device.platform == "iPhone" || device.platform == "iOS") {
             registerPushwooshIOS();
         }
-    }
+    },
+    onSearchKeyDown: function () {
+        window.plugins.toast.show('Item added to favorites.','short','center');   
+}
     
 };
 
