@@ -16,7 +16,7 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen"/>
     <gap:plugin name="cordova-plugin-x-toast" source="npm" />
-    <gap:plugin name="com.admob.google" source="plugins.cordova.io"/>
+    <plugin name="com.admob.google" spec="4.0.8" source="pgb" />
 
     <!-- <plugin name="com.sarriaroman.PhotoViewer" /> -->
     <!--<plugin name="org.apache.cordova.dialogs.Notification" />-->
