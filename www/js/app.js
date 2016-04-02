@@ -57,15 +57,49 @@ var app = {
 
         });
         
-        $(document).on('pageinit', function() {
+        /*$(document).on('pageinit', function() {
             document.addEventListener("searchbutton", function(){alert("salam");}, false); //never fires
-        });
+        });*/
         
         
         // Initialize Push Notifications
         // Uncomment the following initialization when you have made the appropriate configuration for iOS - http://goo.gl/YKQL8k and for Android - http://goo.gl/SPGWDJ
         app.initPushwoosh();
         console.log("salam");
+        
+        //Admob
+        var admobid = {};
+        if( /(android)/i.test(navigator.userAgent) ) { // for android
+            admobid = {
+                banner: 'ca-app-pub-9325324970346208/5891514772',
+                interstitial: 'ca-app-pub-9325324970346208/8844981178'
+            };
+        } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) { // for ios
+            admobid = {
+                banner: 'ca-app-pub-xxx/zzz',
+                interstitial: 'ca-app-pub-xxx/kkk'
+            };
+        } else { // for windows phone
+            admobid = {
+                banner: 'ca-app-pub-xxx/zzz',
+                interstitial: 'ca-app-pub-xxx/kkk'
+            };
+        }
+
+
+        // It will display smart banner at top center, using the default options
+        if(AdMob) AdMob.createBanner( {
+        adId: admobid.banner, 
+        position: AdMob.AD_POSITION.TOP_CENTER, 
+        autoShow: true } );
+
+        // Prepare and load ad resource in background, e.g. at begining of game level
+        if(AdMob) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );
+
+        // Show the interstitial later, e.g. at end of game level
+        if(AdMob) AdMob.showInterstitial();
+
+        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -200,9 +234,9 @@ var app = {
         $scope.submitForm = function() {
             
             window.plugin.email.open({
-                to:      ['username@company.com'],
-                cc:      ['username1@company.com'],
-                bcc:     ['username2@company.com'],
+                to:      ['elyasyavari@gmail.com'],
+                cc:      ['elyasyavari@gmail.com'],
+                bcc:     ['elyasyavari@gmail.com'],
                 subject: $scope.subject,
                 body:    $scope.message
             });
