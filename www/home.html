@@ -45,7 +45,9 @@
             <ons-col>
                 <section style="padding: 0 10px 0 10px;">
                      <h3 class="title" style="text-align:center; color:#8962ed;">{{new.title}}</h3>
-                     <img ng-src="{{getImage($index)}}"alt="{{new.title}}" target="_blank"/>
+                     <a id="link-3" ng-href="{{getImage($index)}}">
+                    <img ng-src="{{getImage($index)}}"alt="{{new.title}}" target="_blank"/>
+                         </a> 
                     <br/><br/>
                     <div style="margin:auto; display:block; text-align:center;">
                         <ons-button modifier="outline" class="button-share" ng-click="sharePost($index)">
