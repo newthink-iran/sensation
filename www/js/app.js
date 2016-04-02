@@ -862,13 +862,14 @@ var app = {
         $scope.bookmarkPost = function (index) {
             
             var selectedItem = $scope.feeds[index];
-            var user_bookmarks = !_.isUndefined(window.localStorage.myBookmarks) ?              JSON.parse(window.localStorage.myBookmarks) : [];         
+            var user_bookmarks = !_.isUndefined(window.localStorage.myBookmarks) ? JSON.parse(window.localStorage.myBookmarks) : [];         
 
             //check if this post is already saved
             var existing_post = _.find(user_bookmarks, function(post){ return post.title == selectedItem.title; });
 
             if(!existing_post){
                 user_bookmarks.push(selectedItem);
+                window.plugins.toast.show('salam','long','center');
                 }
             
             window.localStorage.myBookmarks = JSON.stringify(user_bookmarks);
