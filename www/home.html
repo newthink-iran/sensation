@@ -28,7 +28,7 @@
         </ons-row>
      
         <ons-row style="padding: 10px;">
-        <input type="search" placeholder="" class="search-input" ng-model="search">
+        <input type="text" placeholder="" class="search-input" ng-model="search">
         </ons-row>
      
         <div style="margin:auto; display:block; text-align:center;">
@@ -45,7 +45,7 @@
             <ons-col>
                 <section style="padding: 0 10px 0 10px;">
                      <h3 class="title" style="text-align:center; color:#8962ed;">{{new.title}}</h3>
-                     <img ng-src="{{getImage($index)}}"alt="{{new.title}}"/>
+                     <img ng-src="{{getImage($index)}}"alt="{{new.title}}" target="_blank"/>
                     <br/><br/>
                     <div style="margin:auto; display:block; text-align:center;">
                         <ons-button modifier="outline" class="button-share" ng-click="sharePost($index)">

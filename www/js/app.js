@@ -776,7 +776,8 @@ var app = {
         $scope.getFeeds = function() {        
             
             // Filter News by $scope.search
-            return $scope.feeds.filter(function(item) {
+            $scope.msg = $scope.feeds.length + " results found."
+            return $scope.feeds/*.filter(function(item) {
                 
                 // Filter News by Title
                 var itemDoesMatch = !$scope.search ||
@@ -788,7 +789,7 @@ var app = {
                 //item.body.toLowerCase().indexOf($scope.search.toLowerCase()) > -1;
                 
                 return itemDoesMatch;
-            });
+            })*/;
         }
         
         $scope.getData1 = function(){
@@ -799,7 +800,7 @@ var app = {
 
                 if (!data.responseData) {
                     //$scope.data = FeedStorage.get();
-                    $scope.msg = "لطفا اینترنت گوشی خود را وصل نمایید";
+                    $scope.msg = "No connection.";
 
                     //$scope.title = $scope.data.feed.title;
                     //$scope.description = $scope.data.feed.description;
@@ -820,7 +821,7 @@ var app = {
 
 
             //$scope.data = FeedStorage.get();
-            $scope.msg = $scope.msg = "لطفا اینترنت گوشی خود را وصل نمایید";
+            $scope.msg = $scope.msg = "No connection.";
 
             //$scope.title = $scope.data.feed.title;
             //$scope.description = $scope.data.feed.description;
