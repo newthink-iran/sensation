@@ -203,12 +203,12 @@ sensationApp.factory('MenuData', function(){
             icon: 'fa-copy',
             page: 'about.html'
         }
-        /*,
+        ,
         { 
-            title: 'Grid',
+            title: 'Contact us',
             icon: 'th',
-            page: 'grid.html'
-        },
+            page: 'contact.html'
+        }/*,
         { 
             title: 'Login',
             icon: 'sign-in',
