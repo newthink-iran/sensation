@@ -889,6 +889,15 @@ var app = {
             window.localStorage.myBookmarks = JSON.stringify(remaining_posts);
             window.plugins.toast.show('Item removed from favorites.','short','center');
         }
+        
+        $scope.keypress = function (e) {
+            if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+                 $('#search2').click();
+                return false;
+            } else {
+                return true;
+            }
+        }
             
 
     });
