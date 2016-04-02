@@ -869,8 +869,11 @@ var app = {
 
             if(!existing_post){
                 user_bookmarks.push(selectedItem);
-                window.plugins.toast.show('salam','long','center');
+                window.plugins.toast.show('Item added to favorites.','short','center');
                 }
+            else{
+                window.plugins.toast.show('This item added to favorites previously.','short','center');
+            }
             
             window.localStorage.myBookmarks = JSON.stringify(user_bookmarks);
         }
@@ -884,6 +887,7 @@ var app = {
                  JSON.parse(window.localStorage.myBookmarks) : [];
             var remaining_posts = _.filter(user_bookmarks, function(bookmark){ return bookmark.title != title; });
             window.localStorage.myBookmarks = JSON.stringify(remaining_posts);
+            window.plugins.toast.show('Item removed from favorites.','short','center');
         }
             
 
