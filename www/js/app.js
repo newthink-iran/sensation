@@ -27,8 +27,6 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.addEventListener('searchbutton', this.onSearchKeyDown, false);
-        
     },
     // deviceready Event Handler
     //
@@ -59,6 +57,11 @@ var app = {
 
         });
         
+        $(document).on('pageinit', function() {
+            document.addEventListener("searchbutton", function(){alert("salam");}, false); //never fires
+        });
+        
+        
         // Initialize Push Notifications
         // Uncomment the following initialization when you have made the appropriate configuration for iOS - http://goo.gl/YKQL8k and for Android - http://goo.gl/SPGWDJ
         app.initPushwoosh();
@@ -85,10 +88,7 @@ var app = {
         if (device.platform == "iPhone" || device.platform == "iOS") {
             registerPushwooshIOS();
         }
-    },
-    onSearchKeyDown: function () {
-        window.plugins.toast.show('Item added to favorites.','short','center');   
-}
+    }
     
 };
 
