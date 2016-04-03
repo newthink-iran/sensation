@@ -67,36 +67,27 @@ var app = {
         app.initPushwoosh();
         console.log("salam");
         
-         function initAds() {
-          if (admob) {
-            var adPublisherIds = {
-              ios : {
-                banner : "ca-app-pub-XXXXXXXXXXXXXXXX/BBBBBBBBBB",
-                interstitial : "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII"
-              },
-              android : {
-                banner: 'ca-app-pub-9325324970346208/5891514772',
-                interstitial: 'ca-app-pub-9325324970346208/8844981178'
-              }
-            };
-
-            var admobid = (/(android)/i.test(navigator.userAgent)) ? adPublisherIds.android : adPublisherIds.ios;
-
-            admob.setOptions({
-              publisherId:      admobid.banner,
-              interstitialAdId: admobid.interstitial,
-
-            });
-
-            registerAdEvents();
-
-          } else {
-            alert('AdMobAds plugin not ready');
-          }
-        }
+        document.removeEventListener('deviceready', this.onDeviceReady, false);
         
-        document.removeEventListener('deviceready', onDeviceReady, false);
-        initAds();
+        var adPublisherIds = {
+          ios : {
+            banner : "ca-app-pub-XXXXXXXXXXXXXXXX/BBBBBBBBBB",
+            interstitial : "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII"
+          },
+          android : {
+            banner: 'ca-app-pub-9325324970346208/5891514772',
+            interstitial: 'ca-app-pub-9325324970346208/8844981178'
+          }
+        };
+
+        var admobid = (/(android)/i.test(navigator.userAgent)) ? adPublisherIds.android : adPublisherIds.ios;
+
+        admob.setOptions({
+          publisherId:      admobid.banner,
+          interstitialAdId: admobid.interstitial,
+
+        });
+
 
       // display a banner at startup
       admob.createBannerView();
@@ -104,12 +95,7 @@ var app = {
       // request an interstitial
       admob.requestInterstitialAd();
         
-        
-        
-        
-       
-
-        
+          
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
