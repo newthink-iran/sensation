@@ -816,7 +816,6 @@ var app = {
         $scope.getFeeds = function() {        
             
             // Filter News by $scope.search
-            $scope.msg = $scope.feeds.length + " results found."
             return $scope.feeds/*.filter(function(item) {
                 
                 // Filter News by Title
@@ -851,7 +850,7 @@ var app = {
                     $scope.description = data.responseData.feed.description;
                     $scope.link = data.responseData.feed.link;
                     $scope.feeds = data.responseData.feed.entries;
-
+                    $scope.msg = $scope.feeds.length + " results found."
                     // Save feeds to the local storage
                     //FeedStorage.save(data.responseData);
                 }
