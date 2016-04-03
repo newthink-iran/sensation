@@ -67,33 +67,39 @@ var app = {
         app.initPushwoosh();
         console.log("salam");
         
-        document.removeEventListener('deviceready', this.onDeviceReady, false);
+        var admobid = {};
+        if( /(android)/i.test(navigator.userAgent) ) { 
+            admobid = { // for Android
+                banner: 'ca-app-pub-6869992474017983/9375997553',
+                interstitial: 'ca-app-pub-6869992474017983/1657046752'
+            };
+        } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+            admobid = { // for iOS
+                banner: 'ca-app-pub-6869992474017983/4806197152',
+                interstitial: 'ca-app-pub-6869992474017983/7563979554'
+            };
+        } else {
+            admobid = { // for Windows Phone
+                banner: 'ca-app-pub-6869992474017983/8878394753',
+                interstitial: 'ca-app-pub-6869992474017983/1355127956'
+            };
+        }
         
-        var adPublisherIds = {
-          ios : {
-            banner : "ca-app-pub-XXXXXXXXXXXXXXXX/BBBBBBBBBB",
-            interstitial : "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII"
-          },
-          android : {
-            banner: 'ca-app-pub-9325324970346208/5891514772',
-            interstitial: 'ca-app-pub-9325324970346208/8844981178'
-          }
-        };
-
-        var admobid = (/(android)/i.test(navigator.userAgent)) ? adPublisherIds.android : adPublisherIds.ios;
-
-        admob.setOptions({
-          publisherId:      admobid.banner,
-          interstitialAdId: admobid.interstitial,
-
+        AdMob.createBanner( {
+            adId: admobid.banner, 
+            isTesting: true,
+            overlap: false, 
+            offsetTopBar: false, 
+            position: AdMob.AD_POSITION.BOTTOM_CENTER,
+            bgColor: 'black'
+        } );
+    
+        AdMob.prepareInterstitial({
+            adId: admobid.interstitial,
+            autoShow: true
         });
 
-
-      // display a banner at startup
-      admob.createBannerView();
-
-      // request an interstitial
-      admob.requestInterstitialAd();
+       
         
           
     },
