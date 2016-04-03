@@ -2,7 +2,7 @@
     
     
     <ons-toolbar fixed-style>
-    <div class="right">
+    <div class="left">
     <ons-toolbar-button onclick="menu.toggleMenu()">
     <ons-icon icon="bars">
     </ons-toolbar-button>
@@ -19,7 +19,9 @@
             <ons-col>
                 <section style="padding: 0 10px 0 10px;">
                      <h3 class="title" style="text-align:center; color:#8962ed;">{{new.title}}</h3>
-                     <img ng-src="{{getImageFav($index)}}"alt="{{new.title}}"/>
+                     <a id="link-3" ng-href="{{getImageFav($index)}}">
+                     <img ng-src="{{getImageFav($index)}}"alt="{{new.title}}" target="_blank"/>
+                     </a> 
                     <br/><br/>
                     <div style="margin:auto; display:block; text-align:center;">
                         <ons-button modifier="outline" class="button-share" ng-click="sharePostFav($index)">

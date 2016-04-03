@@ -94,10 +94,10 @@ var app = {
             bgColor: 'black'
         } );
     
-        AdMob.prepareInterstitial({
+        /*AdMob.prepareInterstitial({
             adId: admobid.interstitial,
             autoShow: true
-        });
+        });*/
 
        
         
