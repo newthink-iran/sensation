@@ -236,9 +236,9 @@ var app = {
         $scope.submitForm = function() {
             
             window.plugin.email.open({
-                to:      ['elyasyavari@gmail.com'],
-                cc:      ['elyasyavari@gmail.com'],
-                bcc:     ['elyasyavari@gmail.com'],
+                to:      ['info@radioogle.ir'],
+                cc:      ['info@radioogle.ir'],
+                bcc:     ['info@radioogle.ir'],
                 subject: $scope.subject,
                 body:    $scope.message
             });

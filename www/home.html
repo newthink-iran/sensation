@@ -27,6 +27,7 @@
         <img ng-src="img/logo-large.png" alt="Radioogle" style="margin: auto;" class="center"/>
         </ons-row>
      
+        <form onsubmit="getData1()">
         <ons-row style="padding: 10px;">
         <input type="search" placeholder="" class="search-input" ng-model="search" id="search1">
         </ons-row>
@@ -36,6 +37,7 @@
             <ons-icon icon="search"></ons-icon> Search             
             </ons-button>
         </div>
+        </form>
      
         <span ng-bind="msg" style="margin:auto;display:block;text-align:center;"></span>
        
