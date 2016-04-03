@@ -362,3 +362,8 @@ audio { margin-top:10px; }
 background{
     background: #ffffff !important;
 }
+
+.text-input, .textarea{
+     background: #ffffff !important;
+     border: 1px solid #8962ed !important;
+}
