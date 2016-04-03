@@ -31,13 +31,11 @@
         <access origin="*" />
     </gap:platform>
     
-    <!--
 	<gap:platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <access origin="*" />
     </gap:platform>
-	-->
     
     <preference name="android-build-tool" value="gradle" /> 
     <preference name="SplashScreen" value="screen"/>
