@@ -355,7 +355,7 @@ audio { margin-top:10px; }
     padding: 10px !important;
     line-height: 2 !important;
     background: #ffffff !important;
-    border: 1px solid #8962ed !important;
+    border: 1px dashed #8962ed !important;
     height: 50px !important;
 }
 

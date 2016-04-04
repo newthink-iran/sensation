@@ -41,7 +41,7 @@ function registerPushwooshIOS() {
     
 	// Trigger pending push notifications
     // pw_appid: PushWoosh Application Code
-	pushNotification.onDeviceReady({pw_appid: "XXXXX-XXXXX"});
+	pushNotification.onDeviceReady({pw_appid: "D6AB8-8AB31"});
 
 	// Register for pushes
 	pushNotification.registerDevice(
