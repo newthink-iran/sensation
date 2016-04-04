@@ -24,19 +24,17 @@
         
         
         <ons-row style="padding: 10px;" fixed-style>
-        <img ng-src="img/logo-large.png" alt="Radioogle" style="margin: auto;" class="center"/>
+        <img ng-src="img/logo-large.png" alt="Radioogle" style="margin: auto;max-width:80%" class="center"/>
         </ons-row>
      
         <form onsubmit="getData1()">
         <ons-row style="padding: 10px;">
-        <input type="search" placeholder="" class="search-input" ng-model="search" id="search1">
-        </ons-row>
-     
-        <div style="margin:auto; display:block; text-align:center;">
+        <input type="search" placeholder="" class="search-input" ng-model="search" id="search1">&nbsp;&nbsp;
             <ons-button modifier="outline" class="button-share" ng-click="getData1()" id="search2">
             <ons-icon icon="search"></ons-icon> Search             
             </ons-button>
-        </div>
+        </ons-row>
+     
         </form>
      
         <span ng-bind="msg" style="margin:auto;display:block;text-align:center;"></span>
@@ -46,7 +44,7 @@
         <ons-row style="padding: 0 0 10px 0;">
             <ons-col>
                 <section style="padding: 0 10px 0 10px;">
-                     <h3 class="title" style="text-align:center; color:#8962ed;">{{new.title}}</h3>
+                     <h3 class="title" style="text-align:center; color:#1fb5a4;">{{new.title}}</h3>
                      <a id="link-3" ng-href="{{getImage($index)}}">
                     <img ng-src="{{getImage($index)}}"alt="{{new.title}}" target="_blank"/>
                          </a> 
@@ -60,7 +58,7 @@
                         <ons-icon icon="heart"></ons-icon> Like
                         </ons-button>
                     </div>
-				<hr style="border-top: 1px solid #8962ed;">
+				<hr style="border-top: 1px solid #1fb5a4;">
                 </section>
             </ons-col>
         </ons-row>

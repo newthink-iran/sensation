@@ -355,8 +355,16 @@ audio { margin-top:10px; }
     padding: 10px !important;
     line-height: 2 !important;
     background: #ffffff !important;
-    border: 1px dashed #8962ed !important;
+    border: 2px dashed #1fb5a4 !important;
     height: 50px !important;
+    max-width: 60% !important;
+}
+
+#search2{
+    line-height: 2 !important;
+    max-width: 30% !important;
+    height: 50px !important;
+    border-radius: 50% !important;
 }
 
 background{
@@ -365,5 +373,17 @@ background{
 
 .text-input, .textarea{
      background: #ffffff !important;
-     border: 1px solid #8962ed !important;
+     border: 1px solid #1fb5a4 !important;
+}
+
+.navigation-bar{
+    background: #1fb5a4 !important;
+}
+
+.navigation-bar__title{
+    color: #ffffff !important;
+}
+
+.toolbar-button .ons-icon{
+    color: #ffffff !Important;
 }
