@@ -90,6 +90,7 @@ var app = {
             overlap: false, 
             offsetTopBar: false, 
             position: AdMob.AD_POSITION.BOTTOM_CENTER,
+            autoShow:true,
             bgColor: 'black'
         } );
     
