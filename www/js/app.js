@@ -86,15 +86,11 @@ var app = {
         }
         
         AdMob.createBanner( {
-            /*adId: admobid.banner, 
-            isTesting: true,
+            adId: admobid.banner, 
             overlap: false, 
             offsetTopBar: false, 
             position: AdMob.AD_POSITION.BOTTOM_CENTER,
-            bgColor: 'black'*/
-            adId: admobid.banner, 
-	        position: AdMob.AD_POSITION.BOTTOM_CENTER, 
-	        autoShow: true }
+            bgColor: 'black'
         } );
     
         /*AdMob.prepareInterstitial({
