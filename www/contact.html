@@ -1,15 +1,22 @@
 <ons-page ng-controller="ContactController">
     
     <ons-toolbar fixed-style>
-    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
-    <div class="center">ارتباط با ما</div>
+        <div class="right">
+        <ons-toolbar-button onclick="menu.toggleMenu()">
+        <ons-icon icon="bars">
+        </ons-toolbar-button>
+        </div>
     </ons-toolbar>
 
     <section style="padding: 10px; direction:rtl">
 
-        <input type="text" class="text-input" placeholder="موضوع" ng-model="subject" style="width:100%; margin-bottom:10px;">
+         <h2 class="title"style="text-align:center;">مشاوره پزشکی</h2><br>
+        <p>کاربر گرامی؛ جهت دریافت خدمات مشاوره پزشکی، لطفا فرم زیر را با دقت تکمیل نمایید</p>
+        <p>پس از تکمیل فرم، مشاوران مرکز در اسرع وقت با شما تماس گرفته و راهنمایی های لازم را ارائه خواهند داد</p>
+        <p>جهت تماس با شما، حتما در بخش توضیحات شماره موبایل خود را وارد نمایید</p>
+        <input type="text" class="text-input" placeholder="نام و نام خانوادگی" ng-model="subject" style="width:100%; margin-bottom:10px;">
 
-        <textarea class="textarea" rows="10" placeholder="پیام" ng-model="message" style="width:100%; margin-bottom:10px;"></textarea>
+        <textarea class="textarea" rows="10" placeholder="توضیحات" ng-model="message" style="width:100%; margin-bottom:10px;"></textarea>
 
         <ons-button modifier="large" ng-click="submitForm()">
         ارسال

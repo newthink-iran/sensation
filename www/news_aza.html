@@ -1,4 +1,4 @@
-<ons-page ng-controller="AkhbarController">
+<ons-page ng-controller="AkhbarAzaController">
     
     <ons-toolbar fixed-style>
         <div class="right">
@@ -13,7 +13,7 @@
     </div> 
     
     <section style="padding:10px ;direction:rtl;">
-           <h2 class="title"style="text-align:center;">اخبار موسسه</h2><br/>
+           <h2 class="title"style="text-align:center;">هیئت مدیره</h2><br/>
         
         <div ng-repeat="feed in feeds">
         <ons-row style="padding: 0 0 10px 0;">
@@ -24,7 +24,7 @@
             
             <ons-col>
                 <h3 class="title" ng-bind-html="feed.title" ng-click="showDetail($index)"></h3>
-                <p class="post-excerpt" ng-bind-html="feed.contentSnippet" ng-click="showDetail($index)"></p>
+                <!--<p class="post-excerpt" ng-bind-html="feed.contentSnippet" ng-click="showDetail($index)"></p>-->
             </ons-col>
             
         </ons-row>

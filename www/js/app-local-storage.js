@@ -324,6 +324,60 @@ angular.module('appLocalStorage', [])
   }
 })
 
+.factory('FeedStorage_akhbar_tasv', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_akhbar_tasv'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_akhbar_tasv'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_akhbar_tasv');
+    }
+  }
+})
+
+.factory('FeedStorage_akhbar_aza', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_akhbar_aza'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_akhbar_aza'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_akhbar_aza');
+    }
+  }
+})
+
+.factory('FeedStorage_akhbar_arts', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_akhbar_arts'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_akhbar_arts'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_akhbar_arts');
+    }
+  }
+})
+
 .factory('FeedStorage_darbare', function() {
   return {
     get: function() {

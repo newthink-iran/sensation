@@ -1777,10 +1777,244 @@ var app = {
         
     });
     
+      // RSS: Akhbar Tasviri Controller
+    app.controller('AkhbarTasvController', function($scope, $http, FeedData_akhbar_tasv, FeedStorage_akhbar_tasv) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            /*var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
+            FeedData_akhbar.url = newURL;*/
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_tasv.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_akhbar_tasv.get();
+                    $scope.feeds = $scope.data.feed.entries;
+                    
+                } else {
+                    $scope.feeds = data.responseData.feed.entries;
+                    // Save feeds to the local storage
+                    //FeedStorage_akhbar.clear();
+                    FeedStorage_akhbar_tasv.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_akhbar_tasv.get();
+            $scope.feeds = $scope.data.feed.entries; 
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+        
+        $scope.showDetail = function(index) {
+        var selectedItem = $scope.feeds[index];
+        FeedData_akhbar_tasv.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('new_tasviri.html', selectedItem);
+        }
+
+        $scope.getImage = function(index) {
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+        
+    });
+    
+    // RSS: Akhbar Aza Controller
+    app.controller('AkhbarAzaController', function($scope, $http, FeedData_akhbar_aza, FeedStorage_akhbar_aza) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            /*var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
+            FeedData_akhbar.url = newURL;*/
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_aza.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_akhbar_aza.get();
+                    $scope.feeds = $scope.data.feed.entries;
+                    
+                } else {
+                    $scope.feeds = data.responseData.feed.entries;
+                    // Save feeds to the local storage
+                    //FeedStorage_akhbar.clear();
+                    FeedStorage_akhbar_aza.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_akhbar_aza.get();
+            $scope.feeds = $scope.data.feed.entries; 
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+        
+        $scope.showDetail = function(index) {
+        var selectedItem = $scope.feeds[index];
+        FeedData_akhbar_aza.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('new_aza.html', selectedItem);
+        }
+
+        $scope.getImage = function(index) {
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+        
+    });
+    
+     // RSS: Akhbar Maghalat Controller
+    app.controller('AkhbarArtsController', function($scope, $http, FeedData_akhbar_arts, FeedStorage_akhbar_arts) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            /*var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
+            FeedData_akhbar.url = newURL;*/
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_arts.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_akhbar_arts.get();
+                    $scope.feeds = $scope.data.feed.entries;
+                    
+                } else {
+                    $scope.feeds = data.responseData.feed.entries;
+                    // Save feeds to the local storage
+                    //FeedStorage_akhbar.clear();
+                    FeedStorage_akhbar_arts.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_akhbar_arts.get();
+            $scope.feeds = $scope.data.feed.entries; 
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+        
+        $scope.showDetail = function(index) {
+        var selectedItem = $scope.feeds[index];
+        FeedData_akhbar_arts.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('new_arts.html', selectedItem);
+        }
+
+        $scope.getImage = function(index) {
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+        
+    });
+    
     
     // RSS: Khabar Controller
     app.controller('KhabarController', function($scope, FeedData_akhbar, $sce) {
         $scope.item = FeedData_akhbar.selectedItem;
+        
+        $scope.content = $sce.trustAsHtml($scope.item.content);
+        
+        $scope.loadURL = function (url) {
+            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
+            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
+            //_blank: Opens in the InAppBrowser.
+            //_system: Opens in the system's web browser.
+            window.open(url,'_blank');
+        }
+        
+     });
+    
+     // RSS: Khabar Tasviri Controller
+    app.controller('KhabarTasvController', function($scope, FeedData_akhbar_tasv, $sce) {
+        $scope.item = FeedData_akhbar_tasv.selectedItem;
+        
+        $scope.content = $sce.trustAsHtml($scope.item.content);
+        
+        $scope.loadURL = function (url) {
+            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
+            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
+            //_blank: Opens in the InAppBrowser.
+            //_system: Opens in the system's web browser.
+            window.open(url,'_blank');
+        }
+        
+     });
+    
+     // RSS: Khabar Aza Controller
+    app.controller('KhabarAzaController', function($scope, FeedData_akhbar_aza, $sce) {
+        $scope.item = FeedData_akhbar_aza.selectedItem;
+        
+        $scope.content = $sce.trustAsHtml($scope.item.content);
+        
+        $scope.loadURL = function (url) {
+            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
+            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
+            //_blank: Opens in the InAppBrowser.
+            //_system: Opens in the system's web browser.
+            window.open(url,'_blank');
+        }
+        
+     });
+    
+     // RSS: Maghale Controller
+    app.controller('KhabarArtsController', function($scope, FeedData_akhbar_arts, $sce) {
+        $scope.item = FeedData_akhbar_arts.selectedItem;
         
         $scope.content = $sce.trustAsHtml($scope.item.content);
         

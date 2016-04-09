@@ -6,55 +6,73 @@ sensationApp.factory('Data', function(){
     
     data.items = [
         { 
-            title: '',
+            title: 'اخبار',
             icon: '',
             image: 'img/akhbar.png',
             page: 'news.html'
         },
         { 
-            title: '',
+            title: 'گالری',
             icon: '',
-            image: 'img/mahsolat.png',
-            page: 'products.html'
+            image: 'img/akhbar.png',
+            page: 'news_tasviri.html'
+        },
+         { 
+            title: 'هیئت مدیره',
+            icon: '',
+            image: 'img/akhbar.png',
+            page: 'news_aza.html'
         },
         { 
-            title: '',
+            title: 'واحدها',
+            icon: '',
+            image: 'img/mahsolat.png',
+            page: 'vahedha.html'
+        },
+        { 
+            title: 'درباره موسسه',
             icon: '',
             image: 'img/darbare.png',
             page: 'about.html'
         },
         { 
-            title: '',
+            title: 'مشاوره پزشکی',
             icon: '',
-            image: 'img/takhfifat.png',
-            page: 'takhfifs.html'
+            image: 'img/darbare.png',
+            page: 'contact.html'
         },
         { 
-            title: '',
+            title: 'کمک به فرزانگان',
             icon: '',
-            image: 'img/khadamat.png',
-            page: 'Services.html'
+            image: 'img/darbare.png',
+            page: 'komak.html'
         },
         { 
-            title: '',
-            icon: '',
-            image: 'img/gallery.png',
-            page: 'gallery.html'
-        },
-        { 
-            title: '',
+            title: 'مقالات مفید',
             icon: '',
             image: 'img/mofid.png',
-            page: 'Mofids.html'
+            page: 'news_arts.html'
         },
         { 
-            title: '',
+            title: 'اهداف موسسه',
             icon: '',
             image: 'img/gavahi.png',
-            page: 'Certs.html'
+            page: 'ahdaf.html'
         },
         { 
-            title: '',
+            title: 'خدمات آینده',
+            icon: '',
+            image: 'img/gavahi.png',
+            page: 'ayande.html'
+        },
+        { 
+            title: 'نحوه پذیرش بیمار',
+            icon: '',
+            image: 'img/gavahi.png',
+            page: 'paziresh.html'
+        },
+        { 
+            title: 'ارتباط با ما',
             icon: '',
             image: 'img/ertebat.png',
             page: 'Ertebat.html'
@@ -653,7 +671,31 @@ sensationApp.factory('FeedData_sayer', function(){
 // RSS Data: Akhbar Feeds configuration
 sensationApp.factory('FeedData_akhbar', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=19' };
+    var data = { url: 'http://salmandfarzanegan.com/feed/?cat=10' };
+    
+    return data;
+});
+
+// RSS Data: Akhbar Tasviri Feeds configuration
+sensationApp.factory('FeedData_akhbar_tasv', function(){
+    
+    var data = { url: 'http://salmandfarzanegan.com/feed/?cat=5' };
+    
+    return data;
+});
+
+// RSS Data: Akhbar Aza Feeds configuration
+sensationApp.factory('FeedData_akhbar_aza', function(){
+    
+    var data = { url: 'http://salmandfarzanegan.com/feed/?cat=8' };
+    
+    return data;
+});
+
+// RSS Data: Akhbar Aza Feeds configuration
+sensationApp.factory('FeedData_akhbar_arts', function(){
+    
+    var data = { url: 'http://salmandfarzanegan.com/feed/?cat=9' };
     
     return data;
 });
