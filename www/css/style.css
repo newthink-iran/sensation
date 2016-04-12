@@ -435,19 +435,12 @@ audio { margin-top:10px; }
     display: none !important;
 }
 
-/*
+
 .page__background {   
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 4px, transparent 4px, transparent 100%);
-    background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 4px, transparent 4px, transparent 100%);
-    background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 4px, transparent 4px, transparent 100%);
-    background-image: repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 4px, transparent 4px, transparent 100%);
-    -webkit-background-size: 20px 20px;
-    -moz-background-size: 20px 20px;
-    background-size: 20px 20px;
     
     background-color: rgb(255, 255, 255) !important;
 }
-*/
+
 
 
 .grid-menu-item, .grid-menu-item1, .grid-menu-item.list__item { border:none!important; background-image:none; }

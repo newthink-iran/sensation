@@ -6,73 +6,73 @@ sensationApp.factory('Data', function(){
     
     data.items = [
         { 
-            title: 'اخبار',
+            title: '',
             icon: '',
             image: 'img/akhbar.png',
             page: 'news.html'
         },
         { 
-            title: 'گالری',
+            title: '',
             icon: '',
-            image: 'img/akhbar.png',
+            image: 'img/gallery.png',
             page: 'news_tasviri.html'
         },
          { 
-            title: 'هیئت مدیره',
+            title: '',
             icon: '',
-            image: 'img/akhbar.png',
+            image: 'img/modirs.png',
             page: 'news_aza.html'
         },
         { 
-            title: 'واحدها',
+            title: '',
             icon: '',
-            image: 'img/mahsolat.png',
+            image: 'img/vahedha.png',
             page: 'vahedha.html'
         },
         { 
-            title: 'درباره موسسه',
+            title: '',
             icon: '',
             image: 'img/darbare.png',
             page: 'about.html'
         },
         { 
-            title: 'مشاوره پزشکی',
+            title: '',
             icon: '',
-            image: 'img/darbare.png',
+            image: 'img/moshaver.png',
             page: 'contact.html'
         },
         { 
-            title: 'کمک به فرزانگان',
+            title: '',
             icon: '',
-            image: 'img/darbare.png',
+            image: 'img/help.png',
             page: 'komak.html'
         },
         { 
-            title: 'مقالات مفید',
+            title: '',
             icon: '',
             image: 'img/mofid.png',
             page: 'news_arts.html'
         },
         { 
-            title: 'اهداف موسسه',
+            title: '',
             icon: '',
-            image: 'img/gavahi.png',
+            image: 'img/ahdaf.png',
             page: 'ahdaf.html'
         },
         { 
-            title: 'خدمات آینده',
+            title: '',
             icon: '',
-            image: 'img/gavahi.png',
+            image: 'img/ayande.png',
             page: 'ayande.html'
         },
         { 
-            title: 'نحوه پذیرش بیمار',
+            title: '',
             icon: '',
-            image: 'img/gavahi.png',
+            image: 'img/paziresh.png',
             page: 'paziresh.html'
         },
         { 
-            title: 'ارتباط با ما',
+            title: '',
             icon: '',
             image: 'img/ertebat.png',
             page: 'Ertebat.html'
