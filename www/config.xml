@@ -67,7 +67,43 @@
         <splash src="res/screen/ios/Default.png"/>
     </platform>
     
-    <icon src="icon.png"/>     
+    <icon src="icon.png"/>  
+    
+    <!-- iPhone 6 / 6+ -->
+    <icon src="res/icon/ios/Icon-152.png" platform="ios" width="180" height="180" />
+
+    <!-- iPhone / iPod Touch  -->
+    <icon src="res/icon/ios/Tab-bar-icon.png" platform="ios" width="60" height="60" />
+    <icon src="res/icon/ios/Icon-120.png" platform="ios" width="120" height="120" />
+
+    <!-- iPad -->
+    <icon src="res/icon/ios/Icon-76.png" platform="ios" width="76" height="76" />
+    <icon src="res/icon/ios/Icon-152.png" platform="ios" width="152" height="152" />
+
+    <!-- Settings Icon -->
+    <icon src="res/icon/ios/Icon-Small.png" platform="ios" width="29" height="29" />
+    <icon src="res/icon/ios/Icon-Small@2x.png" platform="ios" width="58" height="58" />
+
+    <!-- Spotlight Icon -->
+    <icon src="res/icon/ios/toolbar-icon.png" platform="ios" width="40" height="40" />
+    <icon src="res/icon/ios/Icon-76.png" platform="ios" width="80" height="80" />
+    
+    <!-- iPhone / iPod Touch -->
+    <icon src="res/icon/ios/Icon-Small@2x.png" platform="ios" width="57" height="57" />
+    <icon src="res/icon/ios/Icon@2x.png" platform="ios" width="114" height="114" />
+
+    <!-- iPad -->
+    <icon src="res/icon/ios/Icon-72.png" platform="ios" width="72" height="72" />
+    <icon src="res/icon/ios/Icon-152.png" platform="ios" width="144" height="144" />
+
+    <!-- iPhone Spotlight and Settings Icon -->
+    <icon src="res/icon/ios/Icon-Small.png" platform="ios" width="29" height="29" />
+    <icon src="res/icon/ios/Icon-Small@2x.png" platform="ios" width="58" height="58" />
+
+    <!-- iPad Spotlight and Settings Icon -->
+    <icon src="ires/icon/ios/Icon-Small-50.png" platform="ios" width="50" height="50" />
+    <icon src="res/icon/ios/Icon-Small-100.png" platform="ios" width="100" height="100" />
+    
     
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
