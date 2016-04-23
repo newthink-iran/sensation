@@ -449,3 +449,16 @@ audio { margin-top:10px; }
 p{
     margin-top:0 !important;
 }
+
+.my-content img{
+    float: none !important;
+    display: block !important;
+    margin:auto !important;
+    pointer-events: none !important;
+    cursor: default !important;
+}
+
+.my-content a{
+    pointer-events: none !important;
+    cursor: default !important;
+}
