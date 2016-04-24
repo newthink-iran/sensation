@@ -462,3 +462,7 @@ p{
     pointer-events: none !important;
     cursor: default !important;
 }
+
+.ons-row-inner{
+    margin-bottom: -10px !important;
+}

@@ -12,22 +12,22 @@
         <img src="img/top.png" style="width:100%; height:auto;" />
     </div> 
     
-    <section style="padding:10px ;direction:rtl;">
-           <h2 class="title"style="text-align:center;">گالری</h2><br/>
+    <section style="padding:0 10px ;direction:rtl;">
+           <h2 class="title"style="text-align:center;">گالری</h2>
         
         <div ng-repeat="feed in feeds">
-        <ons-row style="padding: 0 0 10px 0;">
+        <ons-row style="padding: 0;">
             
-            <ons-col ng-if="getImage($index)" width="95px" >
+            <ons-col ng-if="getImage($index)" width="100px" >
                 <img ng-src="{{getImage($index)}}" class="thumbnail" ng-click="showDetail($index)"></img>
             </ons-col>
             
             <ons-col>
-                 <h4 class="title" ng-bind-html="feed.title" ng-click="showDetail($index)"></h4>
+                 <p class="title" ng-bind-html="feed.title" ng-click="showDetail($index)"></p>
                 <p class="post-excerpt" ng-bind-html="feed.contentSnippet" ng-click="showDetail($index)"></p>
             </ons-col>
-            
         </ons-row>
+        <hr/>
         </div>
     </section>
     
