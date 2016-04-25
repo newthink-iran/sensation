@@ -466,3 +466,8 @@ p{
 .ons-row-inner{
     margin-bottom: -10px !important;
 }
+
+input , textarea{
+    border-color: #019795 !important;
+    background: #ffffff !important;
+}
