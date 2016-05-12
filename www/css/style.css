@@ -459,7 +459,7 @@ p{
     margin-bottom: 10px !important;
 }
 
-.my-content p:nth-child(2){
+.my-content > p{
     display: none !important;
 }
 
