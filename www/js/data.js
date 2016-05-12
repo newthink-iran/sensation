@@ -671,7 +671,7 @@ sensationApp.factory('FeedData_sayer', function(){
 // RSS Data: Akhbar Feeds configuration
 sensationApp.factory('FeedData_akhbar', function(){
     
-    var data = { url: 'http://salmandfarzanegan.com/feed/?cat=10' };
+    var data = { url: 'http://isf-maliat.ir/feed/?cat=15' };
     
     return data;
 });
@@ -679,7 +679,7 @@ sensationApp.factory('FeedData_akhbar', function(){
 // RSS Data: Akhbar Tasviri Feeds configuration
 sensationApp.factory('FeedData_akhbar_tasv', function(){
     
-    var data = { url: 'http://salmandfarzanegan.com/feed/?cat=5' };
+    var data = { url: 'http://isf-maliat.ir/feed/?cat=4' };
     
     return data;
 });
