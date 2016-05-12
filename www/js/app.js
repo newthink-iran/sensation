@@ -1975,7 +1975,7 @@ var app = {
             //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
             //_blank: Opens in the InAppBrowser.
             //_system: Opens in the system's web browser.
-            window.open(url,'_blank');
+            window.open(url,'_self');
         }
         
      });
