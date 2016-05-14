@@ -6,37 +6,37 @@ sensationApp.factory('Data', function(){
     
     data.items = [
         { 
-            title: '',
+            title: 'قوانین',
             icon: '',
             image: 'img/akhbar.png',
-            page: 'news.html'
+            page: 'http://google.com'
         },
         { 
-            title: '',
+            title: 'مودیان',
             icon: '',
             image: 'img/gallery.png',
-            page: 'news_tasviri.html'
+            page: 'Moadians.html'
         },
          { 
-            title: '',
+            title: 'اخبار',
             icon: '',
             image: 'img/modirs.png',
             page: 'news_aza.html'
         },
         { 
-            title: '',
+            title: 'طرح جامع مالیاتی',
             icon: '',
             image: 'img/vahedha.png',
             page: 'vahedha.html'
         },
         { 
-            title: '',
+            title: 'آموزش و خدمات الکترونیک',
             icon: '',
             image: 'img/darbare.png',
             page: 'about.html'
         },
         { 
-            title: '',
+            title: 'ارتباطات مردمی',
             icon: '',
             image: 'img/moshaver.png',
             page: 'contact.html'
@@ -54,30 +54,11 @@ sensationApp.factory('Data', function(){
             page: 'news_arts.html'
         },
         { 
-            title: '',
+            title: 'پیوندهای مفید',
             icon: '',
             image: 'img/ahdaf.png',
             page: 'ahdaf.html'
         },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/ayande.png',
-            page: 'ayande.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/paziresh.png',
-            page: 'paziresh.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/ertebat.png',
-            page: 'Ertebat.html'
-        },
-       
     ]; 
     
     return data;
@@ -89,37 +70,37 @@ sensationApp.factory('DataProducts', function(){
     
     data.items = [
         { 
-            title: '',
+            title: 'قوانین',
             icon: '',
             image: 'img/marmar.png',
             page: 'Marmar.html'
         },
         { 
-            title: '',
+            title: 'مودیان',
             icon: '',
             image: 'img/marmarit.png',
-            page: 'Marmarit.html'
+            page: 'Moadians.html'
         },
         { 
-            title: '',
+            title: 'اخبار',
             icon: '',
             image: 'img/travertine.png',
             page: 'Trav.html'
         },
         { 
-            title: '',
+            title: 'آموزش و خدمات الکترونیک',
             icon: '',
             image: 'img/tazeeni.png',
             page: 'Tazini.html'
         },
         { 
-            title: '',
+            title: 'ارتباطات مردمی',
             icon: '',
             image: 'img/chini.png',
             page: 'Chini.html'
         },
         { 
-            title: '',
+            title: 'قوانین',
             icon: '',
             image: 'img/granit.png',
             page: 'Granit.html'
@@ -131,71 +112,46 @@ sensationApp.factory('DataProducts', function(){
             page: 'Antique.html'
         },
         { 
-            title: '',
+            title: 'پیوندهای مفید',
             icon: '',
             image: 'img/varedati.png',
             page: 'Varedati.html'
         },
         { 
-            title: '',
+            title: 'طرح جامع مالیاتی',
             icon: '',
             image: 'img/giotine.png',
             page: 'Giotin.html'
         },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/malon.png',
-            page: 'Malon.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/limestone.png',
-            page: 'Limestone.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/travenix.png',
-            page: 'Travonix.html'
-        },
-       
     ]; 
     
     return data;
 });
 
 
-// Services Data: Services
-sensationApp.factory('DataServices', function(){
+// moadian menu
+sensationApp.factory('DataMoadian', function(){
     var data = {};
     
     data.items = [
         { 
-            title: '',
+            title: 'پرسش های متداول',
             icon: '',
             image: 'img/shomine.png',
             page: 'Shomine.html'
         },
         { 
-            title: '',
+            title: 'لیست دفاتر پیشخوان',
             icon: '',
             image: 'img/Boreshkari.png',
             page: 'Sotoon.html'
         },
         { 
-            title: '',
+            title: 'ادارات شهرستان ها',
             icon: '',
             image: 'img/Sayer.png',
             page: 'Sayer.html'
         },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/Abnama.png',
-            page: 'Abnama.html'
-        }
     ]; 
     
     return data;
@@ -426,7 +382,7 @@ sensationApp.factory('NVD3Data', function(){
                 }
             }
         };
-
+ 
     data.data = [
             {
                 key: "Cumulative Return",
@@ -540,133 +496,6 @@ sensationApp.factory('FeedData', function(){
     return data;
 });
 
-// RSS Data: Antique Feeds configuration
-sensationApp.factory('FeedData_antique', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=8' };
-    
-    return data;
-});
-
-// RSS Data: Travertan Feeds configuration
-sensationApp.factory('FeedData_trav', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=7' };
-    
-    return data;
-});
-
-// RSS Data: Travonix Feeds configuration
-sensationApp.factory('FeedData_travonix', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=9' };
-    
-    return data;
-});
-
-// RSS Data: Tazini Feeds configuration
-sensationApp.factory('FeedData_tazini', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=10' };
-    
-    return data;
-});
-
-// RSS Data: Chini Feeds configuration
-sensationApp.factory('FeedData_chini', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=11' };
-    
-    return data;
-});
-
-// RSS Data: Granit Feeds configuration
-sensationApp.factory('FeedData_granit', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=12' };
-    
-    return data;
-});
-
-// RSS Data: Giotin Feeds configuration
-sensationApp.factory('FeedData_giotin', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=13' };
-    
-    return data;
-});
-
-// RSS Data: Limestone Feeds configuration
-sensationApp.factory('FeedData_limestone', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=14' };
-    
-    return data;
-});
-
-// RSS Data: Malon Feeds configuration
-sensationApp.factory('FeedData_malon', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=15' };
-    
-    return data;
-});
-
-// RSS Data: Marmar Feeds configuration
-sensationApp.factory('FeedData_marmar', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=16' };
-    
-    return data;
-});
-
-// RSS Data: Marmarit Feeds configuration
-sensationApp.factory('FeedData_marmarit', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=17' };
-    
-    return data;
-});
-
-// RSS Data: Varedati Feeds configuration
-sensationApp.factory('FeedData_varedati', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=18' };
-    
-    return data;
-});
-
-// RSS Data: Sotoon Feeds configuration
-sensationApp.factory('FeedData_sotoon', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=20' };
-    
-    return data;
-});
-
-// RSS Data: Shomine Feeds configuration
-sensationApp.factory('FeedData_shomine', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=21' };
-    
-    return data;
-});
-
-// RSS Data: Abnama Feeds configuration
-sensationApp.factory('FeedData_abnama', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=22' };
-    
-    return data;
-});
-
-// RSS Data: Sayer Feeds configuration
-sensationApp.factory('FeedData_sayer', function(){
-    
-    var data = { url: 'http://mehregansang.com/feed/?cat=23' };
-    
-    return data;
-});
 
 // RSS Data: Akhbar Feeds configuration
 sensationApp.factory('FeedData_akhbar', function(){
