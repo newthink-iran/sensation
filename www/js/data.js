@@ -9,7 +9,7 @@ sensationApp.factory('Data', function(){
             title: 'قوانین',
             icon: '',
             image: 'img/akhbar.png',
-            page: 'http://google.com'
+            page: 'Ghavanins.html'
         },
         { 
             title: 'مودیان',
@@ -64,64 +64,46 @@ sensationApp.factory('Data', function(){
     return data;
 });
 
-// Products Data: Product categories
-sensationApp.factory('DataProducts', function(){
+// ghavanin menu
+sensationApp.factory('DataGhavanin', function(){
     var data = {};
     
     data.items = [
         { 
-            title: 'قوانین',
+            title: 'قانون مالیات های مستقیم',
             icon: '',
-            image: 'img/marmar.png',
+            image: 'img/ahdaf.png',
             page: 'Marmar.html'
         },
         { 
-            title: 'مودیان',
+            title: 'پایگاه قوانین و مقررات مالیاتی',
             icon: '',
-            image: 'img/marmarit.png',
+            image: 'img/ahdaf.png',
             page: 'Moadians.html'
         },
         { 
-            title: 'اخبار',
+            title: 'سامانه قوانین و مقررات',
             icon: '',
-            image: 'img/travertine.png',
+            image: 'img/ahdaf.png',
             page: 'Trav.html'
-        },
-        { 
-            title: 'آموزش و خدمات الکترونیک',
-            icon: '',
-            image: 'img/tazeeni.png',
-            page: 'Tazini.html'
-        },
-        { 
-            title: 'ارتباطات مردمی',
-            icon: '',
-            image: 'img/chini.png',
-            page: 'Chini.html'
-        },
-        { 
-            title: 'قوانین',
-            icon: '',
-            image: 'img/granit.png',
-            page: 'Granit.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/antik.png',
-            page: 'Antique.html'
+            image: 'img/white.png',
+            page: 'Tazini.html'
         },
         { 
-            title: 'پیوندهای مفید',
+            title: 'ارزش معاملاتی و اجاره املاک',
             icon: '',
-            image: 'img/varedati.png',
-            page: 'Varedati.html'
+            image: 'img/ahdaf.png',
+            page: 'Chini.html'
         },
         { 
-            title: 'طرح جامع مالیاتی',
+            title: 'قانون مالیات بر ارزش افزوده',
             icon: '',
-            image: 'img/giotine.png',
-            page: 'Giotin.html'
+            image: 'img/ahdaf.png',
+            page: 'Granit.html'
         },
     ]; 
     

@@ -1,0 +1,28 @@
+<ons-page ng-controller="GhavaninCategoriesController">
+
+    <div data-role="header" style="width:100%;top:0;direction: rtl;">
+        <img src="img/top.png" style="width:100%; height:auto;" />
+        <img src="img/products_.png" style="width:30%;height:auto;" />
+    </div> 
+    
+    <ons-scroller>
+        <section class="home-grid">
+            <div class="grid-menu">
+                <div class="centering-and-alignment" ng-repeat="row in items | partition:3">
+                  <div class="grid-menu-item list__item list__item--tappable" ng-repeat="item in row" ng-click="showDetail(($parent.$index*row.length)+$index);">
+                    <ons-icon icon="{{item.icon}}" ng-show="item.icon"></ons-icon>
+                    <img ng-src="{{item.image}}" ng-show="item.image" style="width:80%;height:auto;"/>
+
+                    <div class="grid-menu-item-label">{{item.title}}</div>
+                  </div>
+                </div>
+            </div>
+
+            
+        </section>
+        
+        
+    </ons-scroller>
+
+</ons-page>
+

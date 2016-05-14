@@ -119,13 +119,43 @@ var app = {
         $scope.showDetail = function(index){
             switch(index){
                 case 0: // porsesh matadavel
-                    window.open("http://isf-maliat.ir/%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85-%D8%A7%D8%B4%D8%AE%D8%A7%D8%B5-%D8%AD%D9%82%D9%8A%D9%82%DB%8C-%D9%88-%D8%AD%D9%82%D9%88%D9%82%DB%8C/",'target');
+                    window.open("http://isf-maliat.ir/%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85-%D8%A7%D8%B4%D8%AE%D8%A7%D8%B5-%D8%AD%D9%82%D9%8A%D9%82%DB%8C-%D9%88-%D8%AD%D9%82%D9%88%D9%82%DB%8C/",'_system');
                     break;
                 case 1: // dafater pishkhan
-                    window.open("http://isf-maliat.ir/%D9%84%DB%8C%D8%B3%D8%AA-%D8%AF%D9%81%D8%A7%D8%AA%D8%B1-%D9%BE%DB%8C%D8%B4%D8%AE%D9%88%D8%A7%D9%86/","_self")
+                    window.open("http://isf-maliat.ir/%D9%84%DB%8C%D8%B3%D8%AA-%D8%AF%D9%81%D8%A7%D8%AA%D8%B1-%D9%BE%DB%8C%D8%B4%D8%AE%D9%88%D8%A7%D9%86/","_system")
                     break;
                 case 2: // edarat shahrestan ha
                     window.open("http://isf-maliat.ir/%D8%A7%D8%AF%D8%A7%D8%B1%D8%A7%D8%AA-%D8%B4%D9%87%D8%B1%D8%B3%D8%AA%D8%A7%D9%86-%D9%87%D8%A7/","_system");
+                    
+            }
+
+        }
+        
+    });
+    
+     // Ghavanin Category Controller
+    app.controller('GhavaninCategoriesController', function($scope, DataGhavanin) {
+        
+        $scope.items = DataGhavanin.items;
+
+        $scope.showDetail = function(index){
+            switch(index){
+                case 0: // maliat mostaghim
+                    window.open("http://isf-maliat.ir/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D9%85%D8%A7%D9%84%DB%8C%D8%A7%D8%AA-%D9%87%D8%A7%DB%8C-%D9%85%D8%B3%D8%AA%D9%82%DB%8C%D9%85/",'_system');
+                    break;
+                case 1: // paygah ghavanin
+                    window.open("http://www.intamedia.ir/Laws/ShowSearch.aspx","_system")
+                    break;
+                case 2: // samane ghavanin
+                    window.open("http://law.dotic.ir/AIPLaw/index-ghanoon-home.jsp","_system");
+                case 3: // blank
+                    break;
+                case 4: // arzesh moamelati
+                    window.open("http://isf-maliat.ir/%D8%A7%D8%B1%D8%B2%D8%B4-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA%DB%8C/","_system")
+                    break;
+                case 5: // arzesh afzode
+                    window.open("http://isf-maliat.ir/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D9%85%D8%A7%D9%84%D9%8A%D8%A7%D8%AA-%D8%A8%D8%B1-%D8%A7%D8%B1%D8%B2%D8%B4-%D8%A7%D9%81%D8%B2%D9%88%D8%AF%D9%87/","_system")
+                    break;
                     
             }
 
