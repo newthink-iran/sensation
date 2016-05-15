@@ -6,58 +6,40 @@ sensationApp.factory('Data', function(){
     
     data.items = [
         { 
-            title: 'قوانین',
+            title: '',
             icon: '',
-            image: 'img/akhbar.png',
+            image: 'img/news.jpg',
             page: 'Ghavanins.html'
         },
         { 
-            title: 'مودیان',
+            title: '',
             icon: '',
-            image: 'img/gallery.png',
+            image: 'img/news.jpg',
             page: 'Moadians.html'
         },
          { 
-            title: 'اخبار',
+            title: '',
             icon: '',
-            image: 'img/modirs.png',
+            image: 'img/news.jpg',
             page: 'news_aza.html'
         },
         { 
-            title: 'طرح جامع مالیاتی',
+            title: '',
             icon: '',
-            image: 'img/vahedha.png',
+            image: 'img/news.jpg',
             page: 'vahedha.html'
         },
         { 
-            title: 'آموزش و خدمات الکترونیک',
+            title: '',
             icon: '',
-            image: 'img/darbare.png',
+            image: 'img/news.jpg',
             page: 'about.html'
         },
         { 
-            title: 'ارتباطات مردمی',
+            title: '',
             icon: '',
-            image: 'img/moshaver.png',
+            image: 'img/news.jpg',
             page: 'contact.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/help.png',
-            page: 'komak.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/mofid.png',
-            page: 'news_arts.html'
-        },
-        { 
-            title: 'پیوندهای مفید',
-            icon: '',
-            image: 'img/ahdaf.png',
-            page: 'ahdaf.html'
         },
     ]; 
     
@@ -84,7 +66,7 @@ sensationApp.factory('DataGhavanin', function(){
         { 
             title: 'سامانه قوانین و مقررات',
             icon: '',
-            image: 'img/ahdaf.png',
+            image: 'img/news.jpg',
             page: 'Trav.html'
         },
         { 

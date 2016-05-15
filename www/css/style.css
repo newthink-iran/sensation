@@ -476,3 +476,7 @@ input , textarea{
     border-color: #019795 !important;
     background: #ffffff !important;
 }
+
+.grid-menu-item{
+    width:50% !important;
+}

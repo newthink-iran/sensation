@@ -31,17 +31,17 @@
         </ons-toolbar>
             
         <div data-role="header" style="width:100%;top:0;">
-            <img src="img/top.png" style="display: block; margin: auto;" fixed-style/>
+            <img src="img/header.jpg" style="display: block; margin: auto; margin-bottom:30px;" fixed-style/>
             <!--<img src="img/mehregan.png" style="width:100%; height:auto;" />-->
         </div> 
         
         <ons-scroller>
             <section class="home-grid">
                 <div class="grid-menu">
-                    <div class="centering-and-alignment" ng-repeat="row in items | partition:3">
+                    <div class="centering-and-alignment" ng-repeat="row in items | partition:2">
                       <div class="grid-menu-item list__item list__item--tappable" ng-repeat="item in row" ng-click="showDetail(($parent.$index*row.length)+$index);">
                         <ons-icon icon="{{item.icon}}" ng-show="item.icon"></ons-icon>
-                        <img ng-src="{{item.image}}" ng-show="item.image" style="width:80%;height:auto;"/>
+                        <img ng-src="{{item.image}}" ng-show="item.image" style="width:90%;height:auto;"/>
 
                         <div class="grid-menu-item-label">{{item.title}}</div>
                       </div>
