@@ -33,7 +33,7 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/news.jpg',
-            page: 'vahedha.html'
+            page: 'Cities.html'
         },
         { 
             title: '',
@@ -174,6 +174,41 @@ sensationApp.factory('DataElectronics', function(){
     
     return data;
 });
+
+// Cities menu
+sensationApp.factory('FeedData_akhbar_cities', function(){
+    var data = {};
+    
+    data.items = [
+        { title: 'آران و بیدگل'},
+        { title: 'اردستان'},
+        { title: 'اصفهان'},
+        { title: 'برخوار'},
+        { title: 'تیران و کرون'},
+        { title: 'چادگان'},
+        { title: 'خوانسار'},
+        { title: 'خور و بیابانک'},
+        { title: 'خمینی شهر'},
+        { title: 'دهاقان'},
+        { title: 'سمیرم'},
+        { title: 'شاهین شهر و میمه'},
+        { title: 'شهرضا'},
+        { title: 'فریدن'},
+        { title: 'فریدونشهر'},
+        { title: 'فلاورجان'},
+        { title: 'کاشان'},
+        { title: 'گلپایگان'},
+        { title: 'لنجان'},
+        { title: 'مبارکه'},
+        { title: 'نایین'},
+        { title: 'نجف آباد'},
+        { title: 'نطنز'},
+    ];
+    data.url = 'http://isf-maliat.ir/feed/?cat=21';
+    
+    return data;
+});
+
 
 
 // Menu Data: Menu configuration

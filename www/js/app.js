@@ -148,6 +148,37 @@ var app = {
         
     });
     
+    // Cities Category Controller
+    app.controller('CitiesCategoriesController', function($scope, DataCities) {
+        
+        $scope.items = DataCities.items;
+
+        $scope.showDetail = function(index){
+            switch(index){
+                case 0: // amozesh
+                    window.open("http://isf-maliat.ir/category/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%85%D9%88%D8%AF%DB%8C%D8%A7%D9%86","_system");
+                    break;
+                case 1: // tarhe maliati
+                    window.open("http://isf-maliat.ir/%D9%86%DA%AF%D8%A7%D9%87%DB%8C-%D8%B7%D8%B1%D8%AD-%D8%AC%D8%A7%D9%85%D8%B9-%D9%85%D8%A7%D9%84%DB%8C%D8%A7%D8%AA%DB%8C/","_system");
+                    break;
+                case 2: // dafater pishkhan
+                    window.open("http://isf-maliat.ir/%D9%84%DB%8C%D8%B3%D8%AA-%D8%AF%D9%81%D8%A7%D8%AA%D8%B1-%D9%BE%DB%8C%D8%B4%D8%AE%D9%88%D8%A7%D9%86/","_system");
+                    break;
+                case 3: // porsesh matadavel
+                    window.open("http://isf-maliat.ir/%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85-%D8%A7%D8%B4%D8%AE%D8%A7%D8%B5-%D8%AD%D9%82%D9%8A%D9%82%DB%8C-%D9%88-%D8%AD%D9%82%D9%88%D9%82%DB%8C/",'_system');
+                    break;
+                case 4: // edarat shahrestan ha
+                    window.open("http://isf-maliat.ir/%D8%A7%D8%AF%D8%A7%D8%B1%D8%A7%D8%AA-%D8%B4%D9%87%D8%B1%D8%B3%D8%AA%D8%A7%D9%86-%D9%87%D8%A7/","_system");
+                    break;
+                case 5: // tamas ba ma
+                    window.open("http://isf-maliat.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7/","_system");
+                    break;
+            }
+
+        }
+        
+    });
+    
     // Ghavanin Category Controller
     app.controller('GhavaninCategoriesController', function($scope, DataGhavanin) {
         
@@ -1063,9 +1094,10 @@ var app = {
         
     });
     
-      // RSS: Akhbar Tasviri Controller
-    app.controller('AkhbarTasvController', function($scope, $http, FeedData_akhbar_tasv, FeedStorage_akhbar_tasv) {
+    // RSS: Akhbar Cities Controller
+    app.controller('AkhbarCitiesController', function($scope, $http, FeedData_akhbar_cities, FeedStorage_akhbar_cities) {
         
+        $scope.items = FeedData_akhbar_cities.items;
         $scope.feeds = "";
         
         var getData = function ($done) {
@@ -1076,20 +1108,20 @@ var app = {
             newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
             FeedData_akhbar.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_tasv.url)}).
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_cities.url)}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
                 if (!data.responseData) {
-                    $scope.data = FeedStorage_akhbar_tasv.get();
+                    $scope.data = FeedStorage_akhbar_cities.get();
                     $scope.feeds = $scope.data.feed.entries;
                     
                 } else {
                     $scope.feeds = data.responseData.feed.entries;
                     // Save feeds to the local storage
                     //FeedStorage_akhbar.clear();
-                    FeedStorage_akhbar_tasv.save(data.responseData);
+                    FeedStorage_akhbar_cities.save(data.responseData);
                 }
 
             }).
@@ -1097,7 +1129,7 @@ var app = {
 
             if ($done) { $done(); }
 
-            $scope.data = FeedStorage_akhbar_tasv.get();
+            $scope.data = FeedStorage_akhbar_cities.get();
             $scope.feeds = $scope.data.feed.entries; 
             });
         }
@@ -1109,59 +1141,106 @@ var app = {
             getData($done);
         };
         
+           /*$scope.showDetail = function(index) {
+        var selectedItem = $scope.categories[index];
+        FeedPluginData.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('feed-category.html', {title : selectedItem.title});*/
+        
         $scope.showDetail = function(index) {
-        var selectedItem = $scope.feeds[index];
-        FeedData_akhbar_tasv.selectedItem = selectedItem;
-        $scope.appNavigator.pushPage('new_tasviri.html', selectedItem);
-        }
-
-        $scope.getImage = function(index) {
-        var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
+        //var selectedItem = $scope.feeds[index];
+        FeedData_akhbar_cities.selectedIndex = index;
+        $scope.appNavigator.pushPage('news_cities.html');
         }
         
     });
     
-    // RSS: Akhbar Aza Controller
-    app.controller('AkhbarAzaController', function($scope, $http, FeedData_akhbar_aza, FeedStorage_akhbar_aza) {
+    // RSS: Akhbar City Controller
+    app.controller('AkhbarCityController', function($scope, $http, FeedData_akhbar_cities, FeedStorage_akhbar_cities) {
         
-        $scope.feeds = "";
+        $scope.feeds = [];
         
         var getData = function ($done) {
             
-            //add datetime for refreshing google api
-            /*var randomNum = Math.floor(Date.now() / 1000);
-            var newURL = "";
-            newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
-            FeedData_akhbar.url = newURL;*/
+            $scope.data = FeedStorage_akhbar_cities.get();
+            var city = "";
+            
+            switch(parseInt(FeedData_akhbar_cities.selectedIndex)){
+                case 0:
+                    city = 'آران و بیدگل';
+                    break;
+                case 1:
+                     city = 'اردستان';
+                    break;
+                case 2:
+                    city = 'اصفهان';
+                    break;
+                case 3:
+                    city = 'برخوار';
+                    break;
+                case 4:
+                    city = 'تیران و کرون';
+                    break;
+                case 5:
+                    city = 'چادگان';
+                    break;
+                case 6:
+                    city = 'خوانسار';
+                    break;
+                case 7:
+                    city = 'خور و بیابانک';
+                    break;
+                case 8:
+                    city = 'خمینی شهر';
+                    break;
+                case 9:
+                    city = 'دهاقان';
+                    break;
+                case 10:
+                    city = 'سمیرم';
+                    break;
+                case 11:
+                    city = 'شاهین شهر و میمه';
+                    break;
+                case 12:
+                    city = 'شهرضا';
+                    break;
+                case 13:
+                    city = 'فریدن';
+                    break;
+                case 14:
+                    city = 'فریدونشهر';
+                    break;
+                case 15:
+                    city = 'فلاورجان';
+                    break;
+                case 16:
+                    city = 'کاشان';
+                    break;
+                case 17:
+                    city = 'گلپایگان';
+                    break;
+                case 18:
+                    city = 'لنجان';
+                    break;
+                case 19:
+                    city = 'مبارکه';
+                    break;
+                case 20:
+                    city = 'نایین';
+                    break;
+                case 21:
+                    city = 'نجف آباد';
+                    break;
+                case 22:
+                    city = 'نطنز';
+                    break;
+            }
+            
+            for(var i=0 ; i< $scope.data.feed.entries.length ; ++i){
+                if($scope.data.feed.entries[i].categories[0] == city)
+                    $scope.feeds.push($scope.data.feed.entries[i]);
+            }
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_aza.url)}).
-            success(function(data, status, headers, config) {
-
-                if ($done) { $done(); }
-
-                if (!data.responseData) {
-                    $scope.data = FeedStorage_akhbar_aza.get();
-                    $scope.feeds = $scope.data.feed.entries;
-                    
-                } else {
-                    $scope.feeds = data.responseData.feed.entries;
-                    // Save feeds to the local storage
-                    //FeedStorage_akhbar.clear();
-                    FeedStorage_akhbar_aza.save(data.responseData);
-                }
-
-            }).
-            error(function(data, status, headers, config) {
-
-            if ($done) { $done(); }
-
-            $scope.data = FeedStorage_akhbar_aza.get();
-            $scope.feeds = $scope.data.feed.entries; 
-            });
         }
         
         // Initial Data Loading
@@ -1171,10 +1250,11 @@ var app = {
             getData($done);
         };
         
+        
         $scope.showDetail = function(index) {
         var selectedItem = $scope.feeds[index];
-        FeedData_akhbar_aza.selectedItem = selectedItem;
-        $scope.appNavigator.pushPage('new_aza.html', selectedItem);
+        FeedData_akhbar_cities.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('new_cities.html', selectedItem);
         }
 
         $scope.getImage = function(index) {
@@ -1185,67 +1265,6 @@ var app = {
         return source;
         }
         
-    });
-    
-     // RSS: Akhbar Maghalat Controller
-    app.controller('AkhbarArtsController', function($scope, $http, FeedData_akhbar_arts, FeedStorage_akhbar_arts) {
-        
-        $scope.feeds = "";
-        
-        var getData = function ($done) {
-            
-            //add datetime for refreshing google api
-            /*var randomNum = Math.floor(Date.now() / 1000);
-            var newURL = "";
-            newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
-            FeedData_akhbar.url = newURL;*/
-
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_arts.url)}).
-            success(function(data, status, headers, config) {
-
-                if ($done) { $done(); }
-
-                if (!data.responseData) {
-                    $scope.data = FeedStorage_akhbar_arts.get();
-                    $scope.feeds = $scope.data.feed.entries;
-                    
-                } else {
-                    $scope.feeds = data.responseData.feed.entries;
-                    // Save feeds to the local storage
-                    //FeedStorage_akhbar.clear();
-                    FeedStorage_akhbar_arts.save(data.responseData);
-                }
-
-            }).
-            error(function(data, status, headers, config) {
-
-            if ($done) { $done(); }
-
-            $scope.data = FeedStorage_akhbar_arts.get();
-            $scope.feeds = $scope.data.feed.entries; 
-            });
-        }
-        
-        // Initial Data Loading
-        getData();
-
-        $scope.load = function($done) {
-            getData($done);
-        };
-        
-        $scope.showDetail = function(index) {
-        var selectedItem = $scope.feeds[index];
-        FeedData_akhbar_arts.selectedItem = selectedItem;
-        $scope.appNavigator.pushPage('new_arts.html', selectedItem);
-        }
-
-        $scope.getImage = function(index) {
-        var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
-        }
         
     });
     
@@ -1266,9 +1285,9 @@ var app = {
         
      });
     
-     // RSS: Khabar Tasviri Controller
-    app.controller('KhabarTasvController', function($scope, FeedData_akhbar_tasv, $sce) {
-        $scope.item = FeedData_akhbar_tasv.selectedItem;
+    // RSS: Khabar city Controller
+    app.controller('KhabarCityController', function($scope, FeedData_akhbar_cities, $sce) {
+        $scope.item = FeedData_akhbar_cities.selectedItem;
         
         $scope.content = $sce.trustAsHtml($scope.item.content);
         
@@ -1282,37 +1301,6 @@ var app = {
         
      });
     
-     // RSS: Khabar Aza Controller
-    app.controller('KhabarAzaController', function($scope, FeedData_akhbar_aza, $sce) {
-        $scope.item = FeedData_akhbar_aza.selectedItem;
-        
-        $scope.content = $sce.trustAsHtml($scope.item.content);
-        
-        $scope.loadURL = function (url) {
-            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
-            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
-            //_blank: Opens in the InAppBrowser.
-            //_system: Opens in the system's web browser.
-            window.open(url,'_blank');
-        }
-        
-     });
-    
-     // RSS: Maghale Controller
-    app.controller('KhabarArtsController', function($scope, FeedData_akhbar_arts, $sce) {
-        $scope.item = FeedData_akhbar_arts.selectedItem;
-        
-        $scope.content = $sce.trustAsHtml($scope.item.content);
-        
-        $scope.loadURL = function (url) {
-            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
-            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
-            //_blank: Opens in the InAppBrowser.
-            //_system: Opens in the system's web browser.
-            window.open(url,'_blank');
-        }
-        
-     });
     
     // RSS: Darbare Controller
     app.controller('DarbareController', function($scope, $http, FeedData_darbare, FeedStorage_darbare) {

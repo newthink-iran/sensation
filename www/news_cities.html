@@ -1,4 +1,4 @@
-<ons-page ng-controller="AkhbarController">
+<ons-page ng-controller="AkhbarCityController">
     
      <ons-toolbar fixed-style>
             <div class="right">
@@ -17,7 +17,7 @@
 
         
     <div style="direction:rtl;">
-    <ons-list ng-controller="AkhbarController">
+    <ons-list ng-controller="AkhbarCityController">
         <ons-list-item modifier="chevron" class="item" ng-repeat="item in feeds" ng-click="showDetail($index)">
             <ons-row>
                 <!--
@@ -31,7 +31,8 @@
                 <header>
                 <span class="item-title" style="line-height:2;">{{item.title}}</span>
                 </header>
-                <p ng-if="item.categories[0]=='اخبار موبایل'">{{item.categories[0]}}</p>
+                    <p class="post-excerpt" ng-bind-html="item.content| limitTo:100"></p>
+                   <!--{{item.content | limitTo:100}}</p>-->
                    
                 </ons-col>
 

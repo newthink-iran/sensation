@@ -1,0 +1,19 @@
+<ons-page ng-controller="KhabarCityController">
+    
+
+    <ons-toolbar fixed-style>
+            <div class="right">
+            <ons-toolbar-button onclick="menu.toggleMenu()">
+            <ons-icon icon="bars">
+            </ons-toolbar-button>
+            </div>
+    </ons-toolbar>
+    
+    <section style="padding:0 10px;direction:rtl;">
+    
+        <h3 class="title" ng-bind-html="item.title" style="text-align:center;"></h3>
+        <p ng-bind-html="content" style="text-align:center;" class="my-content"></p>
+        
+    </section> 
+    
+</ons-page>
