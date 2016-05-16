@@ -1103,10 +1103,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            /*var randomNum = Math.floor(Date.now() / 1000);
+            var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
-            FeedData_akhbar.url = newURL;*/
+            FeedData_akhbar.url = newURL;
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_cities.url)}).
             success(function(data, status, headers, config) {
@@ -1141,10 +1141,6 @@ var app = {
             getData($done);
         };
         
-           /*$scope.showDetail = function(index) {
-        var selectedItem = $scope.categories[index];
-        FeedPluginData.selectedItem = selectedItem;
-        $scope.appNavigator.pushPage('feed-category.html', {title : selectedItem.title});*/
         
         $scope.showDetail = function(index) {
         //var selectedItem = $scope.feeds[index];
