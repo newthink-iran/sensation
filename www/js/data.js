@@ -9,6 +9,18 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/news.jpg',
+            page: ''
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/news.jpg',
+            page: 'news.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/news.jpg',
             page: 'Ghavanins.html'
         },
         { 
@@ -16,12 +28,6 @@ sensationApp.factory('Data', function(){
             icon: '',
             image: 'img/news.jpg',
             page: 'Moadians.html'
-        },
-         { 
-            title: '',
-            icon: '',
-            image: 'img/news.jpg',
-            page: 'news_aza.html'
         },
         { 
             title: '',
@@ -33,14 +39,9 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/news.jpg',
-            page: 'about.html'
+            page: 'Electronics.html'
         },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/news.jpg',
-            page: 'contact.html'
-        },
+        
     ]; 
     
     return data;
@@ -51,12 +52,6 @@ sensationApp.factory('DataGhavanin', function(){
     var data = {};
     
     data.items = [
-        { 
-            title: 'قانون مالیات های مستقیم',
-            icon: '',
-            image: 'img/ahdaf.png',
-            page: 'Marmar.html'
-        },
         { 
             title: 'پایگاه قوانین و مقررات مالیاتی',
             icon: '',
@@ -70,22 +65,22 @@ sensationApp.factory('DataGhavanin', function(){
             page: 'Trav.html'
         },
         { 
-            title: '',
-            icon: '',
-            image: 'img/white.png',
-            page: 'Tazini.html'
-        },
-        { 
-            title: 'ارزش معاملاتی و اجاره املاک',
+            title: 'قانون مالیات های مستقیم',
             icon: '',
             image: 'img/ahdaf.png',
-            page: 'Chini.html'
+            page: 'Marmar.html'
         },
         { 
             title: 'قانون مالیات بر ارزش افزوده',
             icon: '',
             image: 'img/ahdaf.png',
             page: 'Granit.html'
+        },
+        { 
+            title: 'ارزش معاملاتی و اجاره املاک',
+            icon: '',
+            image: 'img/ahdaf.png',
+            page: 'Chini.html'
         },
     ]; 
     
@@ -99,10 +94,16 @@ sensationApp.factory('DataMoadian', function(){
     
     data.items = [
         { 
-            title: 'پرسش های متداول',
+            title: 'آموزش مودیان',
             icon: '',
-            image: 'img/shomine.png',
-            page: 'Shomine.html'
+            image: 'img/Boreshkari.png',
+            page: 'Sotoon.html'
+        },
+        { 
+            title: 'طرح جامع مالیاتی',
+            icon: '',
+            image: 'img/Boreshkari.png',
+            page: 'Sotoon.html'
         },
         { 
             title: 'لیست دفاتر پیشخوان',
@@ -111,7 +112,19 @@ sensationApp.factory('DataMoadian', function(){
             page: 'Sotoon.html'
         },
         { 
+            title: 'پرسش های متداول',
+            icon: '',
+            image: 'img/shomine.png',
+            page: 'Shomine.html'
+        },
+        { 
             title: 'ادارات شهرستان ها',
+            icon: '',
+            image: 'img/Sayer.png',
+            page: 'Sayer.html'
+        },
+        { 
+            title: 'تماس با ما',
             icon: '',
             image: 'img/Sayer.png',
             page: 'Sayer.html'
@@ -120,6 +133,48 @@ sensationApp.factory('DataMoadian', function(){
     
     return data;
 });
+
+
+// electronics menu
+sensationApp.factory('DataElectronics', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            title: 'ثبت نام و صدور شماره اقتصادی',
+            icon: '',
+            image: 'img/Boreshkari.png',
+            page: 'Sotoon.html'
+        },
+        { 
+            title: 'اظهارنامه مالیاتی الکترونیکی',
+            icon: '',
+            image: 'img/shomine.png',
+            page: 'Shomine.html'
+        },
+        { 
+            title: 'صورت معاملات فصلی',
+            icon: '',
+            image: 'img/Sayer.png',
+            page: 'Sayer.html'
+        },
+        { 
+            title: 'صدور قبض مالیات و پرداخت الکترونیک',
+            icon: '',
+            image: 'img/Sayer.png',
+            page: 'Sayer.html'
+        },
+         { 
+            title: 'فهرست مالیات حقوق الکترونیکی',
+            icon: '',
+            image: 'img/Sayer.png',
+            page: 'Sayer.html'
+        },
+    ]; 
+    
+    return data;
+});
+
 
 // Menu Data: Menu configuration
 sensationApp.factory('MenuData', function(){

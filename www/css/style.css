@@ -469,7 +469,7 @@ p{
 }
 
 .ons-row-inner{
-    margin-bottom: -10px !important;
+    margin-bottom: -5px !important;
 }
 
 input , textarea{
@@ -478,5 +478,7 @@ input , textarea{
 }
 
 .grid-menu-item{
-    width:50% !important;
+    width:46% !important;
+    margin-left:2% !important;
+    margin-right:2% !important;
 }
