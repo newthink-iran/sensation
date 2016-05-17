@@ -1065,10 +1065,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api elyas
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
-            FeedData_akhbar.url = newURL;
+            FeedData_akhbar.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar.url)}).
             success(function(data, status, headers, config) {
@@ -1128,10 +1128,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_akhbar_cities.url) + String("&t=") + String(randomNum);
-            FeedData_akhbar_cities.url = newURL;
+            FeedData_akhbar_cities.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_cities.url)}).
             success(function(data, status, headers, config) {
