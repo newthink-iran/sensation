@@ -106,14 +106,24 @@ var app = {
         $scope.showDetail = function(index){
             var selectedItem = $scope.items[index];
             Data.selectedItem = selectedItem;
+            
             switch(index){
                 case 0:
                     window.open("http://isf-maliat.ir/%D9%87%D9%85%D8%A7%DB%8C%D8%B4-%D9%87%D8%A7/",'_system');
                     break;
-                    
+                default:
+                    $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
+                    break;
             }
-            $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
+   
+            
         }
+        
+        /*$scope.showCopyright = function(){
+            var selectedItem = $scope.items[10];
+            Data.selectedItem = selectedItem;
+            $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
+        }*/
         
     });
     
@@ -258,7 +268,6 @@ var app = {
         $scope.showDetail = function(index){
             var selectedItem = $scope.items[index];
             MenuData.selectedItem = selectedItem;
-
             $scope.menu.setMainPage(selectedItem.page, {closeMenu: true})
             
         }
@@ -1236,6 +1245,8 @@ var app = {
                 if($scope.data.feed.entries[i].categories[0] == city)
                     $scope.feeds.push($scope.data.feed.entries[i]);
             }
+            
+            $scope.city = city;
 
         }
         

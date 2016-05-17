@@ -8,38 +8,44 @@ sensationApp.factory('Data', function(){
         { 
             title: '',
             icon: '',
-            image: 'img/news.jpg',
+            image: 'img/10.png',
             page: ''
         },
         { 
             title: '',
             icon: '',
-            image: 'img/news.jpg',
+            image: 'img/2.png',
             page: 'news.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/news.jpg',
+            image: 'img/1.png',
             page: 'Ghavanins.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/news.jpg',
+            image: 'img/3.png',
             page: 'Moadians.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/news.jpg',
+            image: 'img/4.png',
             page: 'Cities.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/news.jpg',
+            image: 'img/5.png',
             page: 'Electronics.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/6.png',
+            page: 'Links.html'
         },
         
     ]; 
@@ -222,7 +228,22 @@ sensationApp.factory('MenuData', function(){
             page: 'home.html'
         },
         { 
-            title: 'تمامی حقوق محفوظ است',
+            title: 'ویژه مودیان',
+            icon: 'chevron-left',
+            page: 'Moadians.html'
+        },
+        { 
+            title: 'قوانین مالیاتی',
+            icon: 'chevron-left',
+            page: 'Ghavanins.html'
+        },
+        { 
+            title: 'خدمات الکترونیک',
+            icon: 'chevron-left',
+            page: 'Electronics.html'
+        },
+        { 
+            title: 'کپی رایت',
             icon: 'fa-copy',
             page: 'copyright.html'
         }/*,
