@@ -1,0 +1,36 @@
+<ons-page>
+    <ons-toolbar fixed-style>
+            <div class="right">
+            <ons-toolbar-button onclick="menu.toggleMenu()">
+            <ons-icon icon="bars">
+            </ons-toolbar-button>
+            </div>
+            <div class="center">پیوندهای مفید</div>
+    </ons-toolbar>
+
+        <div data-role="header" style="width:100%;top:0;">
+            <img src="img/header.jpg" style="display: block; margin: auto; margin-bottom:10px;" fixed-style/>
+            <!--<img src="img/mehregan.png" style="width:100%; height:auto;" />-->
+        </div> 
+
+
+    <div style="direction:rtl;">
+    <ons-list ng-controller="LinksController">
+        <ons-list-item modifier="chevron" class="item" ng-repeat="item in items" ng-click="showDetail($index)">
+            <ons-row>
+                <ons-col width="60px"> 
+                <div class="item-thum"><ons-icon icon="home"></ons-icon></div>
+                </ons-col>
+                <ons-col>
+                <header>
+                <span class="item-title" style="line-height:2;">{{item.title}}</span>
+                </header>
+                <!--<p class="item-desc">{{category.description}}</p>-->
+                </ons-col>
+
+            </ons-row>                          
+        </ons-list-item>
+    </ons-list>
+    </div>
+
+</ons-page>

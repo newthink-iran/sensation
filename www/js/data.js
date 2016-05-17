@@ -47,6 +47,12 @@ sensationApp.factory('Data', function(){
             image: 'img/6.png',
             page: 'Links.html'
         },
+         { 
+            title: '',
+            icon: '',
+            image: 'img/6.png',
+            page: 'Links.html'
+        },
         
     ]; 
     
@@ -180,6 +186,57 @@ sensationApp.factory('DataElectronics', function(){
     
     return data;
 });
+
+// Links menu
+sensationApp.factory('DataLinks', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            title: 'پایگاه اطلاع رسانی مقام معظم رهبری',
+            page: 'http://www.leader.ir/fa'
+        },
+        { 
+            title: 'پایگاه اطلاع رسانی ریاست جمهوری',
+            page: 'http://www.president.ir/fa/'
+        },
+        { 
+            title: 'سازمان امور مالیاتی کشور',
+            page: 'http://www.intamedia.ir/'
+        },
+        { 
+            title: 'نظام مالیات بر ارزش افزوده',
+            page: 'http://vat.ir/'
+        },
+        { 
+            title: 'ستاد صیانت از حریم امنیت عمومی و حقوق شهروندی',
+            page: 'http://isf-maliat.ir/%D8%B3%D8%AA%D8%A7%D8%AF-%D8%B5%DB%8C%D8%A7%D9%86%D8%AA-%D8%A7%D8%B2-%D8%AD%D8%B1%DB%8C%D9%85-%D8%A7%D9%85%D9%86%DB%8C%D8%AA-%D8%B9%D9%85%D9%88%D9%85%DB%8C-%D9%88-%D8%AD%D9%82%D9%88%D9%82-%D8%B4%D9%87/'
+        },
+        { 
+            title: 'روابط عمومی الکترونیک',
+            page: 'http://isf-maliat.ir/%D8%B1%D8%B3%D8%A7%D9%86%D9%87-%D9%85%D8%A7%D9%84%DB%8C%D8%A7%D8%AA%DB%8C/'
+        },
+        { 
+            title: 'یادمان شهدا',
+            page: 'http://isf-maliat.ir/%DB%8C%D8%A7%D8%AF%D9%85%D8%A7%D9%86-%D8%B4%D9%87%D8%AF%D8%A7/'
+        },
+         { 
+            title: 'سامانه عملیات الکترونیکی سازمان مالیاتی امور کشور',
+            page: 'http://tax.gov.ir/'
+        },
+        { 
+            title: 'کتابخانه تخصصی سازمان امور مالیاتی کشور',
+            page: 'http://78.39.160.44/web/guest;jsessionid=46E538781FE212C349E41FD1286AF5A9'
+        },
+        { 
+            title: 'مرکز آموزش علمی کاربردی مالیاتی اصفهان',
+            page: 'http://ekme.ir/'
+        },
+    ]; 
+    
+    return data;
+});
+
 
 // Cities menu
 sensationApp.factory('FeedData_akhbar_cities', function(){

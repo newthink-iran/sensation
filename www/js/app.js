@@ -111,6 +111,9 @@ var app = {
                 case 0:
                     window.open("http://isf-maliat.ir/%D9%87%D9%85%D8%A7%DB%8C%D8%B4-%D9%87%D8%A7/",'_system');
                     break;
+                case 6:
+                    navigator.app.exitApp();
+                    break;
                 default:
                     $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
                     break;
@@ -184,6 +187,19 @@ var app = {
                     window.open("http://isf-maliat.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7/","_system");
                     break;
             }
+
+        }
+        
+    });
+    
+    // Links Category Controller
+    app.controller('LinksController', function($scope, DataLinks) {
+        
+        $scope.items = DataLinks.items;
+
+        $scope.showDetail = function(index){
+            var selectedItem = $scope.items[index];
+            window.open(selectedItem.page,"_system");
 
         }
         
