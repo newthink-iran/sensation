@@ -1,0 +1,8 @@
+{
+    "jscodehints.detectedExclusions": [
+        "D:/Git/sensation/sensation/platforms/browser/platform_www/cordova-js-src/platform.js",
+        "D:/Git/sensation/sensation/platforms/browser/www/js/bluebird.js",
+        "D:/Git/sensation/sensation/www/js/data.js",
+        "D:/Git/sensation/sensation/platforms/browser/www/platform.js"
+    ]
+}

@@ -482,3 +482,23 @@ input , textarea{
     margin-left:2% !important;
     margin-right:2% !important;
 }
+
+.item-title, .col.ons-col-inner.ng-binding , .title{
+    color: #014b60;
+}
+
+.ons-icon, .fa-chevron-circle-left{
+    color: #510476;
+}
+
+.list__item , .navigation-bar{
+    border-bottom: 1px solid #510476 !important;
+}
+
+.list{
+     border-top: 1px solid #510476 !important;
+}
+
+img{
+    border-radius: 5px !important;
+}
