@@ -8,50 +8,49 @@ sensationApp.factory('Data', function(){
         { 
             title: '',
             icon: '',
-            image: 'img/10.png',
+            image: 'img/1.png',
             page: ''
         },
         { 
             title: '',
             icon: '',
-            image: 'img/2.png',
-            //page: 'news.html'
-            page: 'contact.html'
+            image: 'img/3.png',
+            page: 'news.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/1.png',
+            image: 'img/2.png',
             page: 'Ghavanins.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/3.png',
+            image: 'img/4.png',
             page: 'Moadians.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/4.png',
+            image: 'img/5.png',
             page: 'Cities.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/5.png',
+            image: 'img/6.png',
             page: 'Electronics.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/6.png',
+            image: 'img/8.png',
             page: 'Ghavanin-eslahi.html'
         },
          { 
             title: '',
             icon: '',
-            image: 'img/6.png',
+            image: 'img/7.png',
             page: 'Links.html'
         },
         

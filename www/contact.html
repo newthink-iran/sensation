@@ -1,12 +1,18 @@
 <ons-page ng-controller="ContactController">
     
     <ons-toolbar fixed-style>
-        <div class="right">
-        <ons-toolbar-button onclick="menu.toggleMenu()">
-        <ons-icon icon="bars">
-        </ons-toolbar-button>
-        </div>
+            <div class="right">
+            <ons-toolbar-button onclick="menu.toggleMenu()">
+            <ons-icon icon="bars">
+            </ons-toolbar-button>
+            </div>
+            <div class="center">تماس با ما</div>
     </ons-toolbar>
+
+        <div data-role="header" style="width:100%;top:0;">
+            <img src="img/header.jpg" style="display: block; margin: auto; margin-bottom:10px;" fixed-style/>
+            <!--<img src="img/mehregan.png" style="width:100%; height:auto;" />-->
+        </div> 
         
     
     <section style="padding: 10px;direction:rtl;">    
@@ -63,19 +69,6 @@
     
 
     </section>
-    <ons-row>
-        <ons-col></ons-col>
-    </ons-row>
-     <ons-row>
-         <ons-col></ons-col>
-    </ons-row>
-    <hr/>
-     <ons-row>
-        <ons-col></ons-col>
-    </ons-row>
-     <ons-row>
-         <ons-col> </ons-col>
-    </ons-row>
-    <hr/>
+   
         
 </ons-page>

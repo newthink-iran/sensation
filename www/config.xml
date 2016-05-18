@@ -15,8 +15,6 @@
 	<gap:plugin name="org.apache.cordova.inappbrowser"/>
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen"/>
-    <gap:plugin name="e.sitewaerts.cordova.documentviewer" source="plugins.cordova.io"/>
-
 
     
     <content src="index.html" />

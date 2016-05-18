@@ -111,9 +111,9 @@ var app = {
                 case 0:
                     window.open("http://isf-maliat.ir/%D9%87%D9%85%D8%A7%DB%8C%D8%B4-%D9%87%D8%A7/",'_system');
                     break;
-                //case 6:
-                   // navigator.app.exitApp();
-                   // break;
+                case 6:
+                    navigator.app.exitApp();
+                    break;
                 default:
                     $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
                     break;
@@ -351,14 +351,6 @@ var app = {
     // Contact Controller
     app.controller('ContactController', function($scope) {
 
-        
-        var getData = function ($done) {
-            SitewaertsDocumentViewer.viewDocument("img/001.jpg");
-        
-        }
-            
-        // Initial Data Loading
-        getData();
         
         $scope.submitForm = function() {
             
