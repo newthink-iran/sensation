@@ -141,7 +141,7 @@ var app = {
             
             switch(index){
                 case 0: // amozesh
-                    window.open("http://isf-maliat.ir/category/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%85%D9%88%D8%AF%DB%8C%D8%A7%D9%86","_system");
+                    $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
                     break;
                 case 1: // tarhe maliati
                    $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
@@ -1140,6 +1140,68 @@ var app = {
         
     });
     
+     // RSS: Akhbar Moadi Controller
+    app.controller('AkhbarMoadiController', function($scope, $http, FeedData_akhbar_moadi, FeedStorage_akhbar_moadi) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api elyas
+            var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_akhbar_moadi.url) + String("&t=") + String(randomNum);
+            FeedData_akhbar_moadi.url = newURL;
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_moadi.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_akhbar_moadi.get();
+                    $scope.feeds = $scope.data.feed.entries;
+                    
+                } else {
+                    $scope.feeds = data.responseData.feed.entries;
+                    // Save feeds to the local storage
+                    //FeedStorage_akhbar.clear();
+                    FeedStorage_akhbar_moadi.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_akhbar_moadi.get();
+            $scope.feeds = $scope.data.feed.entries; 
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+        
+        $scope.showDetail = function(index) {
+        var selectedItem = $scope.feeds[index];
+        FeedData_akhbar_moadi.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('new_moadi.html', selectedItem);
+        }
+
+        $scope.getImage = function(index) {
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+        
+    });
+    
     // RSS: Akhbar Cities Controller
     app.controller('AkhbarCitiesController', function($scope, $http, FeedData_akhbar_cities, FeedStorage_akhbar_cities) {
         
@@ -1316,6 +1378,22 @@ var app = {
     // RSS: Khabar Controller
     app.controller('KhabarController', function($scope, FeedData_akhbar, $sce) {
         $scope.item = FeedData_akhbar.selectedItem;
+        
+        $scope.content = $sce.trustAsHtml($scope.item.content);
+        
+        $scope.loadURL = function (url) {
+            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
+            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
+            //_blank: Opens in the InAppBrowser.
+            //_system: Opens in the system's web browser.
+            window.open(url,'_blank');
+        }
+        
+     });
+    
+     // RSS: Khabar Moadi Controller
+    app.controller('KhabarMoadiController', function($scope, FeedData_akhbar_moadi, $sce) {
+        $scope.item = FeedData_akhbar_moadi.selectedItem;
         
         $scope.content = $sce.trustAsHtml($scope.item.content);
         

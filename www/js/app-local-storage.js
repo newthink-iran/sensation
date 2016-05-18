@@ -36,3 +36,22 @@ angular.module('appLocalStorage', [])
   }
 })
 
+.factory('FeedStorage_akhbar_moadi', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['FeedStorage_akhbar_moadi'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['FeedStorage_akhbar_moadi'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('FeedStorage_akhbar_moadi');
+    }
+  }
+})
+
+

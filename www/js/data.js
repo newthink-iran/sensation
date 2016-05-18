@@ -150,7 +150,7 @@ sensationApp.factory('DataMoadian', function(){
             title: 'آموزش مودیان',
             icon: '',
             image: 'img/Boreshkari.png',
-            page: 'Sotoon.html'
+            page: 'news_moadi.html'
         },
         { 
             title: 'طرح جامع مالیاتی',
@@ -674,6 +674,14 @@ sensationApp.factory('FeedData', function(){
 sensationApp.factory('FeedData_akhbar', function(){
     
     var data = { url: 'http://isf-maliat.ir/feed/?cat=15' };
+    
+    return data;
+});
+
+// RSS Data: Akhbar  moadi Feeds configuration
+sensationApp.factory('FeedData_akhbar_moadi', function(){
+    
+    var data = { url: 'http://isf-maliat.ir/feed/?cat=16' };
     
     return data;
 });
