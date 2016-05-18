@@ -15,7 +15,8 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/2.png',
-            page: 'news.html'
+            //page: 'news.html'
+            page: 'contact.html'
         },
         { 
             title: '',
@@ -45,7 +46,7 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/6.png',
-            page: 'Links.html'
+            page: 'Ghavanin-eslahi.html'
         },
          { 
             title: '',
@@ -77,10 +78,10 @@ sensationApp.factory('DataGhavanin', function(){
             page: 'Trav.html'
         },
         { 
-            title: 'قانون مالیات های مستقیم',
+            title: 'قانون ماليات های مستقيم با آخرین اصلاحات',
             icon: '',
             image: 'img/ahdaf.png',
-            page: 'Marmar.html'
+            page: 'Ghavanin-eslahi.html'
         },
         { 
             title: 'قانون مالیات بر ارزش افزوده',
@@ -93,6 +94,47 @@ sensationApp.factory('DataGhavanin', function(){
             icon: '',
             image: 'img/ahdaf.png',
             page: 'Chini.html'
+        },
+    ]; 
+    
+    return data;
+});
+
+
+// eslahi menu
+sensationApp.factory('DataEslahi', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            title: 'باب اول: اشخاص مشمول مالیات',
+            icon: '',
+            image: 'img/ahdaf.png',
+            page: 'bab1.html'
+        },
+        { 
+            title: 'باب دوم: مالیات بر دارایی',
+            icon: '',
+            image: 'img/news.jpg',
+            page: 'bab2.html'
+        },
+        { 
+            title: 'باب سوم: مالیات بر درآمد',
+            icon: '',
+            image: 'img/ahdaf.png',
+            page: 'bab3.html'
+        },
+        { 
+            title: 'باب چهارم: در مقررات مختلفه',
+            icon: '',
+            image: 'img/ahdaf.png',
+            page: 'bab4.html'
+        },
+        { 
+            title: 'باب پنجم: سازمان تشخیص و مراجع مالیاتی',
+            icon: '',
+            image: 'img/ahdaf.png',
+            page: 'bab5.html'
         },
     ]; 
     
@@ -115,7 +157,7 @@ sensationApp.factory('DataMoadian', function(){
             title: 'طرح جامع مالیاتی',
             icon: '',
             image: 'img/Boreshkari.png',
-            page: 'Sotoon.html'
+            page: 'tarhe-jame.html'
         },
         { 
             title: 'لیست دفاتر پیشخوان',
@@ -139,7 +181,7 @@ sensationApp.factory('DataMoadian', function(){
             title: 'تماس با ما',
             icon: '',
             image: 'img/Sayer.png',
-            page: 'Sayer.html'
+            page: 'contact.html'
         },
     ]; 
     

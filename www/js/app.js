@@ -111,9 +111,9 @@ var app = {
                 case 0:
                     window.open("http://isf-maliat.ir/%D9%87%D9%85%D8%A7%DB%8C%D8%B4-%D9%87%D8%A7/",'_system');
                     break;
-                case 6:
-                    navigator.app.exitApp();
-                    break;
+                //case 6:
+                   // navigator.app.exitApp();
+                   // break;
                 default:
                     $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
                     break;
@@ -136,12 +136,15 @@ var app = {
         $scope.items = DataMoadian.items;
 
         $scope.showDetail = function(index){
+             var selectedItem = $scope.items[index];
+            DataMoadian.selectedItem = selectedItem;
+            
             switch(index){
                 case 0: // amozesh
                     window.open("http://isf-maliat.ir/category/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%85%D9%88%D8%AF%DB%8C%D8%A7%D9%86","_system");
                     break;
                 case 1: // tarhe maliati
-                    window.open("http://isf-maliat.ir/%D9%86%DA%AF%D8%A7%D9%87%DB%8C-%D8%B7%D8%B1%D8%AD-%D8%AC%D8%A7%D9%85%D8%B9-%D9%85%D8%A7%D9%84%DB%8C%D8%A7%D8%AA%DB%8C/","_system");
+                   $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
                     break;
                 case 2: // dafater pishkhan
                     window.open("http://isf-maliat.ir/%D9%84%DB%8C%D8%B3%D8%AA-%D8%AF%D9%81%D8%A7%D8%AA%D8%B1-%D9%BE%DB%8C%D8%B4%D8%AE%D9%88%D8%A7%D9%86/","_system");
@@ -153,7 +156,7 @@ var app = {
                     window.open("http://isf-maliat.ir/%D8%A7%D8%AF%D8%A7%D8%B1%D8%A7%D8%AA-%D8%B4%D9%87%D8%B1%D8%B3%D8%AA%D8%A7%D9%86-%D9%87%D8%A7/","_system");
                     break;
                 case 5: // tamas ba ma
-                    window.open("http://isf-maliat.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7/","_system");
+                    $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
                     break;
             }
 
@@ -192,6 +195,20 @@ var app = {
         
     });
     
+    
+    // Ghavanin Eslahi Category Controller
+    app.controller('GhavaninEslahiController', function($scope, DataEslahi) {
+        
+        $scope.items = DataEslahi.items;
+
+        $scope.showDetail = function(index){
+            var selectedItem = $scope.items[index];
+            DataEslahi.selectedItem = selectedItem;
+            $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
+        }
+        
+    });
+    
     // Links Category Controller
     app.controller('LinksController', function($scope, DataLinks) {
         
@@ -211,15 +228,18 @@ var app = {
         $scope.items = DataGhavanin.items;
 
         $scope.showDetail = function(index){
+            var selectedItem = $scope.items[index];
+            DataGhavanin.selectedItem = selectedItem;
+            
             switch(index){
-                case 0: // samane ghavanin
+                case 0: // paygah ghavanin
+                    window.open("http://www.intamedia.ir/Laws/ShowSearch.aspx","_system");
+                    break;
+                case 1: // samane ghavanin
                     window.open("http://e4.tax.gov.ir/Pages/action/show/2","_system");
-                    break;
-                case 1: // paygah ghavanin
-                    window.open("http://www.intamedia.ir/Laws/ShowSearch.aspx","_system")
-                    break;
-                case 2: // maliat mostaghim
-                    window.open("http://isf-maliat.ir/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D9%85%D8%A7%D9%84%DB%8C%D8%A7%D8%AA-%D9%87%D8%A7%DB%8C-%D9%85%D8%B3%D8%AA%D9%82%DB%8C%D9%85/",'_system');
+                    break;       
+                case 2: // maliat mostaghim 
+                    $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
                     break;
                 case 3: // arzesh afzode
                     window.open("http://isf-maliat.ir/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D9%85%D8%A7%D9%84%D9%8A%D8%A7%D8%AA-%D8%A8%D8%B1-%D8%A7%D8%B1%D8%B2%D8%B4-%D8%A7%D9%81%D8%B2%D9%88%D8%AF%D9%87/","_system")
@@ -331,6 +351,15 @@ var app = {
     // Contact Controller
     app.controller('ContactController', function($scope) {
 
+        
+        var getData = function ($done) {
+            SitewaertsDocumentViewer.viewDocument("img/001.jpg");
+        
+        }
+            
+        // Initial Data Loading
+        getData();
+        
         $scope.submitForm = function() {
             
             window.plugin.email.open({
@@ -1065,10 +1094,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api elyas
-            /*var randomNum = Math.floor(Date.now() / 1000);
+            var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
-            FeedData_akhbar.url = newURL;*/
+            FeedData_akhbar.url = newURL;
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar.url)}).
             success(function(data, status, headers, config) {

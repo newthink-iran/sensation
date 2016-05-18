@@ -1,28 +1,34 @@
-<ons-page ng-controller="DarbareController">
+<ons-navigator title="Sensation" var="appNavigator">
     
-    <ons-toolbar fixed-style>
-        <div class="right">
-        <ons-toolbar-button onclick="menu.toggleMenu()">
-        <ons-icon icon="bars">
-        </ons-toolbar-button>
-        </div>
+    
+   <ons-toolbar fixed-style>
+            <div class="right">
+            <ons-toolbar-button onclick="menu.toggleMenu()">
+            <ons-icon icon="bars">
+            </ons-toolbar-button>
+            </div>
+            <div class="center">کپی رایت</div>
     </ons-toolbar>
-    
-    
-    <div data-role="header" style="width:100%;top:0;direction: rtl;">
-        <img src="img/top.png" style="width:100%; height:auto;" />
-    </div> 
 
-    <section style="padding:0 10px; direction:rtl">
-        <h2 class="title" style="text-align:center;">اهداف موسسه</h2>
-        <!--<p ng-bind-html="description" style="text-align:center;"></p>-->
-        <ul>
-            <li>نگهداری، مراقبت، آموزش و توانبخشی سالمندان به صورت تمام وقت و پاره وقت</li>
-            <li>پیشگیری از پیشرفت ضایعه ها و تسکین دردهای آنها از طریق تیم های مجرب پزشکی و مشاوره ای</li>
-            <li>کسب همیاری و مشارکت مادی و معنوی مردم  و جمع آوری کمک ها و اعانات منقول و غیر منقول از افراد خیر و نیکوکار و قبول هر نوع کمک نقدی و غیر نقدی و صرف آن در جهت حمایت و رفاه سالمندان تحت پوشش</li>
-            <li>تشکیل کلاس و دوره های آموزش برای کارکنان در سطوح مختلف به منظور ارتقای سطح علمی آنها در خدمت به سالمندان</li>
-            <li>ایجاد برنامه های تفریحی و سیاحتی کوتاه مدت جهت ارتقاء سطح سلامت سالمندان از نظر جسمی و روانی</li>
-        </ul>
-    
+        <div data-role="header" style="width:100%;top:0;">
+            <img src="img/header.jpg" style="display: block; margin: auto; margin-bottom:10px;" fixed-style/>
+            <!--<img src="img/mehregan.png" style="width:100%; height:auto;" />-->
+        </div> 
+        
 
-</ons-page>
+        <section style="padding: 10px;direction:rtl;">
+        <h3 style="text-align:center;" class="title">گروه مهندسی ویستاپرداز نواندیش<br/>طراحی حرفه ای وب سایت و اپلیکیشن موبایل</h3>
+        <div styel="text-align:right;">
+            <br/><i class="fa fa-chevron-circle-left" aria-hidden="true">&nbsp;</i>
+            آدرس: اصفهان، خمینی شهر، بلوار طالقانی، ساختمان عرشیا، طبقه دوم
+            <br/><i class="fa fa-chevron-circle-left" aria-hidden="true">&nbsp;</i>
+            تلفن: 33517735 - 031
+            <br/><i class="fa fa-chevron-circle-left" aria-hidden="true">&nbsp;</i>
+            وب سایت: www.newthink24.com
+            
+        </section>
+            
+       
+    </ons-page>
+
+</ons-navigator>
