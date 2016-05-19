@@ -363,6 +363,10 @@ var app = {
             });
 
         };
+        
+        $scope.show_com = function(){
+             window.open("http://newthink24.com","_system");
+        };
 
     });
     
