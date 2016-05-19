@@ -162,7 +162,7 @@ sensationApp.factory('DataMoadian', function(){
             title: 'لیست دفاتر پیشخوان',
             icon: '',
             image: 'img/Boreshkari.png',
-            page: 'Sotoon.html'
+            page: 'addr.html'
         },
         { 
             title: 'پرسش های متداول',

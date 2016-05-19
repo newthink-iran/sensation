@@ -147,7 +147,7 @@ var app = {
                    $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
                     break;
                 case 2: // dafater pishkhan
-                    window.open("http://isf-maliat.ir/%D9%84%DB%8C%D8%B3%D8%AA-%D8%AF%D9%81%D8%A7%D8%AA%D8%B1-%D9%BE%DB%8C%D8%B4%D8%AE%D9%88%D8%A7%D9%86/","_system");
+                   $scope.appNavigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
                     break;
                 case 3: // porsesh matadavel
                     window.open("http://isf-maliat.ir/%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85-%D8%A7%D8%B4%D8%AE%D8%A7%D8%B5-%D8%AD%D9%82%D9%8A%D9%82%DB%8C-%D9%88-%D8%AD%D9%82%D9%88%D9%82%DB%8C/",'_system');
@@ -1086,10 +1086,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api elyas
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_akhbar.url) + String("&t=") + String(randomNum);
-            FeedData_akhbar.url = newURL;
+            FeedData_akhbar.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar.url)}).
             success(function(data, status, headers, config) {
@@ -1148,10 +1148,10 @@ var app = {
         var getData = function ($done) {
             
             //add datetime for refreshing google api elyas
-            var randomNum = Math.floor(Date.now() / 1000);
+            /*var randomNum = Math.floor(Date.now() / 1000);
             var newURL = "";
             newURL = String(FeedData_akhbar_moadi.url) + String("&t=") + String(randomNum);
-            FeedData_akhbar_moadi.url = newURL;
+            FeedData_akhbar_moadi.url = newURL;*/
 
             $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar_moadi.url)}).
             success(function(data, status, headers, config) {
