@@ -44,7 +44,7 @@ function registerPushwooshAndroid() {
     // Trigger pending push notifications
     // projectid: Google Project Number
     // appid: PushWoosh Application Code
-    pushNotification.onDeviceReady({projectid: "883975106986", pw_appid : "9FDA5-433CA"});
+    pushNotification.onDeviceReady({projectid: "883975106986", pw_appid : "6A393-1D425"});
 
 	// Register for pushes
     pushNotification.registerDevice(
