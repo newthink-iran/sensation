@@ -325,7 +325,7 @@ sensationApp.factory('MenuData', function(){
             icon: 'home',
             page: 'home.html'
         },
-        { 
+        /*{ 
             title: 'ویژه مودیان',
             icon: 'chevron-left',
             page: 'Moadians.html'
@@ -339,7 +339,7 @@ sensationApp.factory('MenuData', function(){
             title: 'خدمات الکترونیک',
             icon: 'chevron-left',
             page: 'Electronics.html'
-        },
+        },*/
         { 
             title: 'کپی رایت',
             icon: 'fa-copy',
