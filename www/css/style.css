@@ -1,42 +1,37 @@
 @font-face {
-  font-family: "Source Sans Pro";
-  src: url("../font/SourceSansPro-Regular.ttf");
+  font-family: "Sans";
+  src: url('../font/sans/eot/IRANSansWeb.eot');
+  src: url('../font/sans/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/sans/woff2/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/sans/woff/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/sans/ttf/IRANSansWeb.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("../font/SourceSansPro-Italic.ttf");
-  font-style:italic;
-}
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("../font/SourceSansPro-Light.ttf");
+  font-family: "Sans";
+  src: url('../font/sans/eot/IRANSansWeb_Light.eot');
+  src: url('../font/sans/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/sans/woff2/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/sans/woff/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/sans/ttf/IRANSansWeb_Light.ttf') format('truetype');
   font-weight: 300;
 }
 
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("../font/SourceSansPro-LightItalic.ttf");
-  font-weight: 300;
-  font-style:italic;
-}
 
 @font-face {
-  font-family: "Source Sans Pro";
-  src: url("../font/SourceSansPro-Bold.ttf");
+  font-family: "Sans";
+  src: url('../font/sans/eot/IRANSansWeb_Bold.eot');
+  src: url('../font/sans/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/sans/woff2/IRANSansWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/sans/woff/IRANSansWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/sans/ttf/IRANSansWeb_Bold.ttf') format('truetype');
   font-weight: 600;
 }
 
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("../font/SourceSansPro-BoldItalic.ttf");
-  font-weight: 600;
-  font-style:italic;
-}
 
-*, .navigation-bar, input, .text-input, .textarea, input[type=email], input[type=password], .button, .button--quiet, .search-input, .modal__content {
-  font-family: 'Yekan'/*, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif*/;
+*, .navigation-bar, input, .text-input, .textarea, input[type=email], input[type=password], .button, .button--quiet, .search-input, .modal__content{
+    font-family: 'Sans', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
 .subtitle { margin:0 0 10px 0; font-size:14px }
@@ -364,32 +359,6 @@ audio { margin-top:10px; }
 
 
 /*---------------------------------------------------*/
-
-@font-face {
-  *, .navigation-bar, input, .text-input, .textarea, input[type=email], input[type=password], .button, .button--quiet, .search-input, .modal__content {
-  font-family: 'Yekan'/*, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif*/;
-}
-}
-
-@media only screen and (max-width: 320px) {
-    *, .navigation-bar, input, .text-input, .textarea, input[type=email], input[type=password], .button, .button--quiet, .search-input, .modal__content {
-  font-family: 'Yekan'/*, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif*/;
-}
-}
-
-@media only screen and (max-device-width: 1080px) and (orientation:portrait) {
-   *, .navigation-bar, input, .text-input, .textarea, input[type=email], input[type=password], .button, .button--quiet, .search-input, .modal__content {
-  font-family: 'Yekan'/*, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif*/;
-}
-}
-
-@media only screen and (max-device-width: 1920px) and (orientation:landscape) {
-   *, .navigation-bar, input, .text-input, .textarea, input[type=email], input[type=password], .button, .button--quiet, .search-input, .modal__content {
-  font-family: 'Yekan'/*, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif*/;
-}
-}
-
-
 
 
 .list__header{
