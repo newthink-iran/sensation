@@ -2146,6 +2146,111 @@ var app = {
         addSlides($scope.slides);
 
     });
+    
+     // Gallery Trav Controller
+    app.controller('GalleryTravController', function($scope, GalleryTravData) {
+
+        var items = GalleryTravData.items;
+
+        function addSlides(target) {
+            angular.forEach(items,function(item,index){
+                target.push({
+                    label: item.label,
+                    picture: item.src,
+                    location: item.location,
+                    item: (index + 1)
+                });
+            });
+         };
+
+        $scope.slides = [];
+        addSlides($scope.slides);
+
+    });
+    
+      // Gallery Trav Controller
+    app.controller('GalleryTravonixController', function($scope, GalleryTravonixData) {
+
+        var items = GalleryTravonixData.items;
+
+        function addSlides(target) {
+            angular.forEach(items,function(item,index){
+                target.push({
+                    label: item.label,
+                    picture: item.src,
+                    location: item.location,
+                    item: (index + 1)
+                });
+            });
+         };
+
+        $scope.slides = [];
+        addSlides($scope.slides);
+
+    });
+    
+     // Gallery Trav Controller
+    app.controller('GallerySotoonController', function($scope, GallerySotoonData) {
+
+        var items = GallerySotoonData.items;
+
+        function addSlides(target) {
+            angular.forEach(items,function(item,index){
+                target.push({
+                    label: item.label,
+                    picture: item.src,
+                    location: item.location,
+                    item: (index + 1)
+                });
+            });
+         };
+
+        $scope.slides = [];
+        addSlides($scope.slides);
+
+    });
+    
+     // Gallery Trav Controller
+    app.controller('GalleryTaziniController', function($scope, GalleryTaziniData) {
+
+        var items = GalleryTaziniData.items;
+
+        function addSlides(target) {
+            angular.forEach(items,function(item,index){
+                target.push({
+                    label: item.label,
+                    picture: item.src,
+                    location: item.location,
+                    item: (index + 1)
+                });
+            });
+         };
+
+        $scope.slides = [];
+        addSlides($scope.slides);
+
+    });
+    
+    // Gallery Trav Controller
+    app.controller('GalleryShomineController', function($scope, GalleryShomineData) {
+
+        var items = GalleryShomineData.items;
+
+        function addSlides(target) {
+            angular.forEach(items,function(item,index){
+                target.push({
+                    label: item.label,
+                    picture: item.src,
+                    location: item.location,
+                    item: (index + 1)
+                });
+            });
+         };
+
+        $scope.slides = [];
+        addSlides($scope.slides);
+
+    });
 
     // Settings Controller
     app.controller('SettingsController', function($scope, SettingsData, localStorageService, FeedStorage) {

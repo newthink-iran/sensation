@@ -304,6 +304,155 @@ sensationApp.factory('GalleryData', function(){
     return data;
 });
 
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryTravData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/press_tar (1).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/press_tar (2).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/press_tar (3).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/press_tar (4).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/press_tar (5).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            src: 'img/press_tar (6).jpg',
+            location: 'Tokyo, May 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GallerySotoonData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/semant (1).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/semant (2).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/semant (3).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/semant (4).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/semant (5).jpg',
+            location: 'Athens, August 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryTaziniData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/wash (1).jpg',
+            location: 'New York, June 2014'
+        }
+    ]; 
+    
+    return data;
+});
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryShomineData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/jadval (2).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/jadval (3).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/jadval (4).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/jadval (1).jpg',
+            location: 'Athens, August 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+// Products Data: JSON Products configuration
+sensationApp.factory('ProductsData', function(){
+    
+    var data = { url: 'json/products.json', letterLimit: 100 };
+    
+    return data;
+});
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryTravonixData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/vibre (1).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/vibre (2).jpg',
+            location: 'Athens, August 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
 // Products Data: JSON Products configuration
 sensationApp.factory('ProductsData', function(){
     
