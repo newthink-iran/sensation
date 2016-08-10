@@ -14,7 +14,7 @@
 <plugin name="org.apache.cordova.dialogs" source="pgb" spec="0.2.10" />
 <plugin name="org.apache.cordova.geolocation" source="pgb" spec="0.3.10" />
 <plugin name="org.apache.cordova.vibration" source="pgb" spec="0.3.11" />
-<plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.5.2" />
+<plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.6.0" />
 
     
     <content src="index.html" />
