@@ -1,45 +1,58 @@
-<ons-page ng-controller="MofidController">
+<ons-navigator title="Sensation" var="appNavigator">
+
+<ons-page ng-controller="HomeController">
     
 
+     <ons-toolbar fixed-style>
+            <div class="right">
+            <ons-toolbar-button onclick="menu.toggleMenu()">
+            <ons-icon icon="bars">
+            </ons-toolbar-button>
+            </div>
+            
+            <!--<div class="center">اپلیکیشن موبایل</div>-->
+            
+            <!--
+            <div class="left">
+            <ons-toolbar-button onclick="appNavigator.pushPage('settings.html',{title: 'Settings', animation: 'slide'})">
+            <ons-icon icon="gears">
+            </ons-toolbar-button>
+            </div>
+            -->
+        </ons-toolbar>
+    
     <div data-role="header" style="width:100%;top:0;">
             <img src="img/top.png" style="width:100%; height:auto;" />
-    </div> 
+            <img src="img/footer.jpg" style="width:100%; height:auto;" />
+            <!--<img src="img/mehregan.png" style="width:100%; height:auto;" />-->
+        </div> 
     
-    <section style="padding: 0 10px 10px 10px;direction:rtl;">
+    <section style="padding: 10px 10px 10px 10px;direction:rtl;">
     
         <table class="profile-desc" style="width:100%; opacity: 0.7;">
 	<tr>
-		<td><div style="padding-bottom:5px; padding-top:20px;"><img src="img/segal.jpg" width="30%" ></div></td> 
+		<td><div style="padding-bottom:5px; padding-top:20px;"><img src="img/newthink.jpg" width="30%" ></div></td> 
 	</tr>
   <tr>
     <td><div>----------------</div></td> 
   </tr>
   <tr>
-    <td><div>شرکت ایده گستران سگال</div></td> 
+    <td><div>َشرکت ویستا پرداز نواندیش</div></td> 
   </tr>
   <tr>
-    <td><div>آدرس: تهران، خیابان مطهری، خیابان میر عماد</div></td> 
+    <td><div>آدرس: اصفهان، انتهای بلوار اشرفی اصفهانی</div></td> 
   </tr>
   <tr>
-    <td><div>کوچه دوم، پلاک 18، طبقه دوم، واحد 4</div></td> 
+    <td><div>بلوار طالقانی، ساختمان عرشیا، طبقه دوم</div></td> 
   </tr>
   <tr>
-    <td><div>تلفن: 88177854-021</div></td> 
+    <td><div>تلفن: 33517735-031</div></td> 
   </tr>
   <tr>
-    <td><div>021-88176487</div></td> 
+    <td><div>وب سایت: www.newthink24.com</div></td> 
   </tr>
   <tr>
-    <td><div>وب سایت: www.idsegul.com</div></td> 
-  </tr>
-  <tr>
-    <td><div>نمابر: 89773446-021</div></td> 
-  </tr>
-  <tr>
-    <td><div>ایمیل: info@idsegul.com</div></td> 
-  </tr>
-  <tr>
-    <td><div>idea.segul@gmail.com</div></td> 
+    <td><div>ایمیل: info@newthink24.com</div></td> 
   </tr>
   
 </table>
@@ -47,6 +60,8 @@
     </section> 
     
 </ons-page>
+    
+    </ons-navigator>
 
 
 
