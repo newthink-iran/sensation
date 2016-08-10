@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="mehregan" version="1.15.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>سنگ مهرگان</name>
+<widget id="beton-nama" version="1.15.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>اصفهان بتن نما</name>
 
     <description>
-    مهرگان نماد زیبایی
+
     </description>
 	
 <plugin name="com.phonegap.plugins.barcodescanner" source="pgb" spec="2.0.0" />
