@@ -1,0 +1,28 @@
+<ons-page ng-controller="FeedController">
+    
+    <ons-toolbar fixed-style>
+    <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+    <div class="center" ng-bind-html="item.title"></div>
+    </ons-toolbar>
+
+    <section style="padding: 10px;direction:rtl;">
+
+        <h2 class="title" ng-bind-html="item.title"></h2>
+
+        <div class="post-submitted">
+        ارسال شده در تاریخ {{item.publishedDate }}
+        </div>
+        <p ng-bind-html="content"></p>
+        
+        <ons-button modifier="outline" class="button-share" ng-click="sharePost()">
+        <ons-icon icon="share-alt"></ons-icon> اشتراک گذاری
+        </ons-button>
+
+        <!-- Open the post using the InAppBrowser plugin (org.apache.cordova.inappbrowser) -->
+        <ons-button modifier="large" ng-click="loadURL(item.link)">
+        نمایش
+        </ons-button>
+
+    </section>
+    
+</ons-page>
