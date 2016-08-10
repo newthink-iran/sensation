@@ -15,9 +15,9 @@
 <plugin name="org.apache.cordova.geolocation" source="pgb" spec="0.3.10" />
 <plugin name="org.apache.cordova.vibration" source="pgb" spec="0.3.11" />
 <plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.6.0" />
-<gap:plugin name="com.pushwoosh.plugins.pushwoosh" />
-<gap:plugin name="cordova-plugin-whitelist" source="npm" />
-<gap:plugin name="org.apache.cordova.splashscreen"/>
+<plugin name="com.pushwoosh.plugins.pushwoosh" />
+<plugin name="cordova-plugin-whitelist" source="npm" />
+<plugin name="org.apache.cordova.splashscreen"/>
 
 
     
