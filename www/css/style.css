@@ -456,3 +456,7 @@ audio { margin-top:10px; }
 p{
     margin-top:0 !important;
 }
+
+.rn-carousel-indicator{
+    padding-bottom: 40px !important;
+}

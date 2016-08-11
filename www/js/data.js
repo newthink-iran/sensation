@@ -412,8 +412,23 @@ sensationApp.factory('GalleryMalonData', function(){
     data.items = [
         { 
             label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            src: 'img/proje.jpg',
+            src: 'img/proje (1).jpg',
             location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/proje (2).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/proje (3).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/proje (4).jpg',
+            location: 'Athens, August 2013'
         }
     ]; 
     
