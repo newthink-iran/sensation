@@ -2189,6 +2189,48 @@ var app = {
 
     });
     
+      // Gallery Trav Controller
+    app.controller('GalleryAbnamaController', function($scope, GalleryAbnamaData) {
+
+        var items = GalleryAbnamaData.items;
+
+        function addSlides(target) {
+            angular.forEach(items,function(item,index){
+                target.push({
+                    label: item.label,
+                    picture: item.src,
+                    location: item.location,
+                    item: (index + 1)
+                });
+            });
+         };
+
+        $scope.slides = [];
+        addSlides($scope.slides);
+
+    });
+    
+       // Gallery Trav Controller
+    app.controller('GalleryMalonController', function($scope, GalleryMalonData) {
+
+        var items = GalleryMalonData.items;
+
+        function addSlides(target) {
+            angular.forEach(items,function(item,index){
+                target.push({
+                    label: item.label,
+                    picture: item.src,
+                    location: item.location,
+                    item: (index + 1)
+                });
+            });
+         };
+
+        $scope.slides = [];
+        addSlides($scope.slides);
+
+    });
+    
      // Gallery Trav Controller
     app.controller('GallerySotoonController', function($scope, GallerySotoonData) {
 

@@ -8,56 +8,50 @@ sensationApp.factory('Data', function(){
         { 
             title: '',
             icon: '',
-            image: 'img/akhbar.png',
-            page: 'news.html'
+            image: 'img/press_tar.png',
+            page: 'Trav.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/mahsolat.png',
-            page: 'products.html'
+            image: 'img/press_khoshk.png',
+            page: 'Abnama.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/darbare.png',
-            page: 'about.html'
+            image: 'img/vibre.png',
+            page: 'Travonix.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/takhfifat.png',
-            page: 'takhfifs.html'
+            image: 'img/semant_plast.png',
+            page: 'Sotoon.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/khadamat.png',
-            page: 'Services.html'
+            image: 'img/jadval.png',
+            page: 'Shomine.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/gallery.png',
-            page: 'gallery.html'
+            image: 'img/wash_beton.png',
+            page: 'Tazini.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/mofid.png',
-            page: 'Mofids.html'
+            image: 'img/projeha.png',
+            page: 'Malon.html'
         },
         { 
             title: '',
             icon: '',
-            image: 'img/gavahi.png',
+            image: 'img/policy.png',
             page: 'Certs.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/ertebat.png',
-            page: 'Ertebat.html'
         },
        
     ]; 
@@ -192,6 +186,11 @@ sensationApp.factory('MenuData', function(){
             title: 'خانه',
             icon: 'home',
             page: 'home.html'
+        },
+         { 
+            title: 'ارتباط با ما',
+            icon: 'square-o',
+            page: 'contact.html'
         },
         { 
             title: 'تمامی حقوق محفوظ است',
@@ -374,6 +373,47 @@ sensationApp.factory('GallerySotoonData', function(){
             label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
             src: 'img/semant (5).jpg',
             location: 'Athens, August 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryAbnamaData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/khoshk (1).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/khoshk (2).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/khoshk (3).jpg',
+            location: 'Athens, August 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryMalonData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/proje.jpg',
+            location: 'New York, June 2014'
         }
     ]; 
     
