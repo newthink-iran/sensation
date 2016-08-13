@@ -36,11 +36,6 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         
-         cordova.plugins.ZoomControl.ZoomControl("true");
-         // enabling built in zoom control
-         cordova.plugins.ZoomControl.setBuiltInZoomControls("true");
-         // enabling display zoom control
-         cordova.plugins.ZoomControl.setDisplayZoomControls("true");
         
         ons.setDefaultDeviceBackButtonListener(function() {
             if (navigator.notification.confirm("آیا مایل به خروج از برنامه هستید؟", 
