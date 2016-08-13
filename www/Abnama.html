@@ -23,7 +23,10 @@
 
 
         <div ng-repeat="slide in slides">
-        <img ng-src="{{slide.picture}}" style="display:block;margin:auto;"/>
+             <a id="link-3" ng-href="{{getImage($index)}}">
+                         
+        <img ng-src="{{slide.picture}}" style="display:block;margin:auto;" target="_blank"/>
+                 </a> 
 
         </div>
 
