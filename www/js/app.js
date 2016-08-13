@@ -37,13 +37,13 @@ var app = {
         app.receivedEvent('deviceready');
         
         ons.setDefaultDeviceBackButtonListener(function() {
-            /*if (navigator.notification.confirm("Are you sure to close the app?", 
+            if (navigator.notification.confirm("آیا مایل به خروج از برنامه هستید؟", 
                 function(index) {
                     if (index == 1) { // OK button*/
                         navigator.app.exitApp(); // Close the app
-                    /*}
+                    }
                 }
-            ));*/
+            ));
 			//window.plugins.sim.getSimInfo(function(result){ alert(result);}, function(error){ alert(error);});
         });
 
