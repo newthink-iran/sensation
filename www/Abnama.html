@@ -21,14 +21,12 @@
     
      <section style="padding: 0 10px 10px 10px;">
 
-        <ul rn-carousel rn-carousel-indicator>
-        <li ng-repeat="slide in slides">
+
+        <div ng-repeat="slide in slides">
         <img ng-src="{{slide.picture}}" style="display:block;margin:auto;"/>
-        <div class="content" style="padding:0;">
-        <div style="text-align:center;">({{slide.item}}/{{slides.length}})</div>
+
         </div>
-        </li>
-    </ul>
+
         
     </section>
     
