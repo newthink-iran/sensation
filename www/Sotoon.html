@@ -1,0 +1,37 @@
+<ons-page ng-controller="GallerySotoonController">
+    
+      <ons-toolbar fixed-style>
+           <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+            
+            <!--<div class="center">اپلیکیشن موبایل</div>-->
+            
+            <!--
+            <div class="left">
+            <ons-toolbar-button onclick="appNavigator.pushPage('settings.html',{title: 'Settings', animation: 'slide'})">
+            <ons-icon icon="gears">
+            </ons-toolbar-button>
+            </div>
+            -->
+        </ons-toolbar>
+    
+    <div data-role="header" style="width:100%;top:0;direction: rtl;">
+        <img src="img/top.png" style="display:block; margin:auto;width:20%;" />
+        <img src="img/semant_plast.png" style="width:50%;height:auto;" />
+        
+        
+    </div> 
+    
+    <section style="padding: 0 10px 10px 10px;">
+
+        <ul rn-carousel rn-carousel-indicator>
+        <li ng-repeat="slide in slides">
+        <img ng-src="{{slide.picture}}" style="display:block;margin:auto;"/>
+        <div class="content" style="padding:0;">
+        <div style="text-align:center;">({{slide.item}}/{{slides.length}})</div>
+        </div>
+        </li>
+    </ul>
+        
+    </section>
+    
+</ons-page>

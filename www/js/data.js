@@ -8,312 +8,174 @@ sensationApp.factory('Data', function(){
         { 
             title: '',
             icon: '',
-            image: 'img/1.png',
-            page: ''
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/3.png',
-            page: 'news.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/2.png',
-            page: 'Ghavanins.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/4.png',
-            page: 'Moadians.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/5.png',
-            page: 'Cities.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/6.png',
-            page: 'Electronics.html'
-        },
-        { 
-            title: '',
-            icon: '',
-            image: 'img/8.png',
-            page: 'Ghavanin-eslahi.html'
-        },
-         { 
-            title: '',
-            icon: '',
-            image: 'img/7.png',
-            page: 'Links.html'
-        },
-        
-    ]; 
-    
-    return data;
-});
-
-// ghavanin menu
-sensationApp.factory('DataGhavanin', function(){
-    var data = {};
-    
-    data.items = [
-        { 
-            title: 'پایگاه قوانین و مقررات مالیاتی',
-            icon: '',
-            image: 'img/ahdaf.png',
-            page: 'Moadians.html'
-        },
-        { 
-            title: 'سامانه قوانین و مقررات',
-            icon: '',
-            image: 'img/news.jpg',
+            image: 'img/press_tar.png',
             page: 'Trav.html'
         },
         { 
-            title: 'قانون ماليات های مستقيم با آخرین اصلاحات',
+            title: '',
             icon: '',
-            image: 'img/ahdaf.png',
-            page: 'Ghavanin-eslahi.html'
+            image: 'img/press_khoshk.png',
+            page: 'Abnama.html'
         },
         { 
-            title: 'قانون مالیات بر ارزش افزوده',
+            title: '',
             icon: '',
-            image: 'img/ahdaf.png',
+            image: 'img/vibre.png',
+            page: 'Travonix.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/semant_plast.png',
+            page: 'Sotoon.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/jadval.png',
+            page: 'Shomine.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/wash_beton.png',
+            page: 'Tazini.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/projeha.png',
+            page: 'Malon.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/policy.png',
+            page: 'Certs.html'
+        },
+       
+    ]; 
+    
+    return data;
+});
+
+// Products Data: Product categories
+sensationApp.factory('DataProducts', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            title: '',
+            icon: '',
+            image: 'img/marmar.png',
+            page: 'Marmar.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/marmarit.png',
+            page: 'Marmarit.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/travertine.png',
+            page: 'Trav.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/tazeeni.png',
+            page: 'Tazini.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/chini.png',
+            page: 'Chini.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/granit.png',
             page: 'Granit.html'
         },
         { 
-            title: 'ارزش معاملاتی و اجاره املاک',
+            title: '',
             icon: '',
-            image: 'img/ahdaf.png',
-            page: 'Chini.html'
+            image: 'img/antik.png',
+            page: 'Antique.html'
         },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/varedati.png',
+            page: 'Varedati.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/giotine.png',
+            page: 'Giotin.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/malon.png',
+            page: 'Malon.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/limestone.png',
+            page: 'Limestone.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/travenix.png',
+            page: 'Travonix.html'
+        },
+       
     ]; 
     
     return data;
 });
 
 
-// eslahi menu
-sensationApp.factory('DataEslahi', function(){
+// Services Data: Services
+sensationApp.factory('DataServices', function(){
     var data = {};
     
     data.items = [
         { 
-            title: 'باب اول: اشخاص مشمول مالیات',
-            icon: '',
-            image: 'img/ahdaf.png',
-            page: 'bab1.html'
-        },
-        { 
-            title: 'باب دوم: مالیات بر دارایی',
-            icon: '',
-            image: 'img/news.jpg',
-            page: 'bab2.html'
-        },
-        { 
-            title: 'باب سوم: مالیات بر درآمد',
-            icon: '',
-            image: 'img/ahdaf.png',
-            page: 'bab3.html'
-        },
-        { 
-            title: 'باب چهارم: در مقررات مختلفه',
-            icon: '',
-            image: 'img/ahdaf.png',
-            page: 'bab4.html'
-        },
-        { 
-            title: 'باب پنجم: سازمان تشخیص و مراجع مالیاتی',
-            icon: '',
-            image: 'img/ahdaf.png',
-            page: 'bab5.html'
-        },
-    ]; 
-    
-    return data;
-});
-
-
-// moadian menu
-sensationApp.factory('DataMoadian', function(){
-    var data = {};
-    
-    data.items = [
-        { 
-            title: 'آموزش مودیان',
-            icon: '',
-            image: 'img/Boreshkari.png',
-            page: 'news_moadi.html'
-        },
-        { 
-            title: 'طرح جامع مالیاتی',
-            icon: '',
-            image: 'img/Boreshkari.png',
-            page: 'tarhe-jame.html'
-        },
-        { 
-            title: 'لیست دفاتر پیشخوان',
-            icon: '',
-            image: 'img/Boreshkari.png',
-            page: 'addr.html'
-        },
-        { 
-            title: 'پرسش های متداول',
+            title: '',
             icon: '',
             image: 'img/shomine.png',
             page: 'Shomine.html'
         },
         { 
-            title: 'ادارات شهرستان ها',
-            icon: '',
-            image: 'img/Sayer.png',
-            page: 'Sayer.html'
-        },
-        { 
-            title: 'تماس با ما',
-            icon: '',
-            image: 'img/Sayer.png',
-            page: 'contact.html'
-        },
-    ]; 
-    
-    return data;
-});
-
-
-// electronics menu
-sensationApp.factory('DataElectronics', function(){
-    var data = {};
-    
-    data.items = [
-        { 
-            title: 'ثبت نام و صدور شماره اقتصادی',
+            title: '',
             icon: '',
             image: 'img/Boreshkari.png',
             page: 'Sotoon.html'
         },
         { 
-            title: 'اظهارنامه مالیاتی الکترونیکی',
-            icon: '',
-            image: 'img/shomine.png',
-            page: 'Shomine.html'
-        },
-        { 
-            title: 'صورت معاملات فصلی',
+            title: '',
             icon: '',
             image: 'img/Sayer.png',
             page: 'Sayer.html'
         },
         { 
-            title: 'صدور قبض مالیات و پرداخت الکترونیک',
+            title: '',
             icon: '',
-            image: 'img/Sayer.png',
-            page: 'Sayer.html'
-        },
-         { 
-            title: 'فهرست مالیات حقوق الکترونیکی',
-            icon: '',
-            image: 'img/Sayer.png',
-            page: 'Sayer.html'
-        },
+            image: 'img/Abnama.png',
+            page: 'Abnama.html'
+        }
     ]; 
     
     return data;
 });
-
-// Links menu
-sensationApp.factory('DataLinks', function(){
-    var data = {};
-    
-    data.items = [
-        { 
-            title: 'پایگاه اطلاع رسانی مقام معظم رهبری',
-            page: 'http://www.leader.ir/fa'
-        },
-        { 
-            title: 'پایگاه اطلاع رسانی ریاست جمهوری',
-            page: 'http://www.president.ir/fa/'
-        },
-        { 
-            title: 'سازمان امور مالیاتی کشور',
-            page: 'http://www.intamedia.ir/'
-        },
-        { 
-            title: 'نظام مالیات بر ارزش افزوده',
-            page: 'http://vat.ir/'
-        },
-        { 
-            title: 'ستاد صیانت از حریم امنیت عمومی و حقوق شهروندی',
-            page: 'http://isf-maliat.ir/%D8%B3%D8%AA%D8%A7%D8%AF-%D8%B5%DB%8C%D8%A7%D9%86%D8%AA-%D8%A7%D8%B2-%D8%AD%D8%B1%DB%8C%D9%85-%D8%A7%D9%85%D9%86%DB%8C%D8%AA-%D8%B9%D9%85%D9%88%D9%85%DB%8C-%D9%88-%D8%AD%D9%82%D9%88%D9%82-%D8%B4%D9%87/'
-        },
-        { 
-            title: 'روابط عمومی الکترونیک',
-            page: 'http://isf-maliat.ir/%D8%B1%D8%B3%D8%A7%D9%86%D9%87-%D9%85%D8%A7%D9%84%DB%8C%D8%A7%D8%AA%DB%8C/'
-        },
-        { 
-            title: 'یادمان شهدا',
-            page: 'http://isf-maliat.ir/%DB%8C%D8%A7%D8%AF%D9%85%D8%A7%D9%86-%D8%B4%D9%87%D8%AF%D8%A7/'
-        },
-         { 
-            title: 'سامانه عملیات الکترونیکی سازمان مالیاتی امور کشور',
-            page: 'http://tax.gov.ir/'
-        },
-        { 
-            title: 'کتابخانه تخصصی سازمان امور مالیاتی کشور',
-            page: 'http://78.39.160.44/web/guest;jsessionid=46E538781FE212C349E41FD1286AF5A9'
-        },
-        { 
-            title: 'مرکز آموزش علمی کاربردی مالیاتی اصفهان',
-            page: 'http://ekme.ir/'
-        },
-    ]; 
-    
-    return data;
-});
-
-
-// Cities menu
-sensationApp.factory('FeedData_akhbar_cities', function(){
-    var data = {};
-    
-    data.items = [
-        { title: 'آران و بیدگل'},
-        { title: 'اردستان'},
-        { title: 'اصفهان'},
-        { title: 'برخوار'},
-        { title: 'تیران و کرون'},
-        { title: 'چادگان'},
-        { title: 'خوانسار'},
-        { title: 'خور و بیابانک'},
-        { title: 'خمینی شهر'},
-        { title: 'دهاقان'},
-        { title: 'سمیرم'},
-        { title: 'شاهین شهر و میمه'},
-        { title: 'شهرضا'},
-        { title: 'فریدن'},
-        { title: 'فریدونشهر'},
-        { title: 'فلاورجان'},
-        { title: 'کاشان'},
-        { title: 'گلپایگان'},
-        { title: 'لنجان'},
-        { title: 'مبارکه'},
-        { title: 'نایین'},
-        { title: 'نجف آباد'},
-        { title: 'نطنز'},
-    ];
-    data.url = 'http://isf-maliat.ir/feed/?cat=21';
-    
-    return data;
-});
-
-
 
 // Menu Data: Menu configuration
 sensationApp.factory('MenuData', function(){
@@ -325,23 +187,13 @@ sensationApp.factory('MenuData', function(){
             icon: 'home',
             page: 'home.html'
         },
-        /*{ 
-            title: 'ویژه مودیان',
-            icon: 'chevron-left',
-            page: 'Moadians.html'
+         { 
+            title: 'ارتباط با ما',
+            icon: 'square-o',
+            page: 'contact.html'
         },
         { 
-            title: 'قوانین مالیاتی',
-            icon: 'chevron-left',
-            page: 'Ghavanins.html'
-        },
-        { 
-            title: 'خدمات الکترونیک',
-            icon: 'chevron-left',
-            page: 'Electronics.html'
-        },*/
-        { 
-            title: 'کپی رایت',
+            title: 'تمامی حقوق محفوظ است',
             icon: 'fa-copy',
             page: 'copyright.html'
         }/*,
@@ -445,6 +297,211 @@ sensationApp.factory('GalleryData', function(){
             label: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             src: 'img/gallery-3.jpg',
             location: 'Tokyo, May 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryTravData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/press_tar (1).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/press_tar (2).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/press_tar (3).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/press_tar (4).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/press_tar (5).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            src: 'img/press_tar (6).jpg',
+            location: 'Tokyo, May 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GallerySotoonData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/semant (1).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/semant (2).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/semant (3).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/semant (4).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/semant (5).jpg',
+            location: 'Athens, August 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryAbnamaData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/khoshk (1).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/khoshk (2).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/khoshk (3).jpg',
+            location: 'Athens, August 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryMalonData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/proje (1).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/proje (2).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/proje (3).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/proje (4).jpg',
+            location: 'Athens, August 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryTaziniData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/wash (1).jpg',
+            location: 'New York, June 2014'
+        }
+    ]; 
+    
+    return data;
+});
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryShomineData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/jadval (2).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/jadval (3).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/jadval (4).jpg',
+            location: 'Athens, August 2013'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/jadval (1).jpg',
+            location: 'Athens, August 2013'
+        }
+    ]; 
+    
+    return data;
+});
+
+// Products Data: JSON Products configuration
+sensationApp.factory('ProductsData', function(){
+    
+    var data = { url: 'json/products.json', letterLimit: 100 };
+    
+    return data;
+});
+
+// Gallery Trav Data: Gallery configuration
+sensationApp.factory('GalleryTravonixData', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            label: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            src: 'img/vibre (1).jpg',
+            location: 'New York, June 2014'
+        },
+        { 
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            src: 'img/vibre (2).jpg',
+            location: 'Athens, August 2013'
         }
     ]; 
     
@@ -555,7 +612,7 @@ sensationApp.factory('NVD3Data', function(){
                 }
             }
         };
- 
+
     data.data = [
             {
                 key: "Cumulative Return",
@@ -669,43 +726,138 @@ sensationApp.factory('FeedData', function(){
     return data;
 });
 
+// RSS Data: Antique Feeds configuration
+sensationApp.factory('FeedData_antique', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=8' };
+    
+    return data;
+});
+
+// RSS Data: Travertan Feeds configuration
+sensationApp.factory('FeedData_trav', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=7' };
+    
+    return data;
+});
+
+// RSS Data: Travonix Feeds configuration
+sensationApp.factory('FeedData_travonix', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=9' };
+    
+    return data;
+});
+
+// RSS Data: Tazini Feeds configuration
+sensationApp.factory('FeedData_tazini', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=10' };
+    
+    return data;
+});
+
+// RSS Data: Chini Feeds configuration
+sensationApp.factory('FeedData_chini', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=11' };
+    
+    return data;
+});
+
+// RSS Data: Granit Feeds configuration
+sensationApp.factory('FeedData_granit', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=12' };
+    
+    return data;
+});
+
+// RSS Data: Giotin Feeds configuration
+sensationApp.factory('FeedData_giotin', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=13' };
+    
+    return data;
+});
+
+// RSS Data: Limestone Feeds configuration
+sensationApp.factory('FeedData_limestone', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=14' };
+    
+    return data;
+});
+
+// RSS Data: Malon Feeds configuration
+sensationApp.factory('FeedData_malon', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=15' };
+    
+    return data;
+});
+
+// RSS Data: Marmar Feeds configuration
+sensationApp.factory('FeedData_marmar', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=16' };
+    
+    return data;
+});
+
+// RSS Data: Marmarit Feeds configuration
+sensationApp.factory('FeedData_marmarit', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=17' };
+    
+    return data;
+});
+
+// RSS Data: Varedati Feeds configuration
+sensationApp.factory('FeedData_varedati', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=18' };
+    
+    return data;
+});
+
+// RSS Data: Sotoon Feeds configuration
+sensationApp.factory('FeedData_sotoon', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=20' };
+    
+    return data;
+});
+
+// RSS Data: Shomine Feeds configuration
+sensationApp.factory('FeedData_shomine', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=21' };
+    
+    return data;
+});
+
+// RSS Data: Abnama Feeds configuration
+sensationApp.factory('FeedData_abnama', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=22' };
+    
+    return data;
+});
+
+// RSS Data: Sayer Feeds configuration
+sensationApp.factory('FeedData_sayer', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=23' };
+    
+    return data;
+});
 
 // RSS Data: Akhbar Feeds configuration
 sensationApp.factory('FeedData_akhbar', function(){
     
-    var data = { url: 'http://isf-maliat.ir/feed/?cat=15' };
-    
-    return data;
-});
-
-// RSS Data: Akhbar  moadi Feeds configuration
-sensationApp.factory('FeedData_akhbar_moadi', function(){
-    
-    var data = { url: 'http://isf-maliat.ir/feed/?cat=16' };
-    
-    return data;
-});
-
-// RSS Data: Akhbar Tasviri Feeds configuration
-sensationApp.factory('FeedData_akhbar_tasv', function(){
-    
-    var data = { url: 'http://isf-maliat.ir/feed/?cat=4' };
-    
-    return data;
-});
-
-// RSS Data: Akhbar Aza Feeds configuration
-sensationApp.factory('FeedData_akhbar_aza', function(){
-    
-    var data = { url: 'http://salmandfarzanegan.com/feed/?cat=8' };
-    
-    return data;
-});
-
-// RSS Data: Akhbar Aza Feeds configuration
-sensationApp.factory('FeedData_akhbar_arts', function(){
-    
-    var data = { url: 'http://salmandfarzanegan.com/feed/?cat=9' };
+    var data = { url: 'http://mehregansang.com/feed/?cat=19' };
     
     return data;
 });

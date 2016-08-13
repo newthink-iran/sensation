@@ -1,316 +1,60 @@
-<ons-page ng-controller="ContactController">
+<ons-navigator title="Sensation" var="appNavigator">
+
+<ons-page ng-controller="HomeController">
     
-    <ons-toolbar fixed-style>
+
+     <ons-toolbar fixed-style>
             <div class="right">
             <ons-toolbar-button onclick="menu.toggleMenu()">
             <ons-icon icon="bars">
             </ons-toolbar-button>
             </div>
-            <div class="center">تماس با ما</div>
-    </ons-toolbar>
-
-        <div data-role="header" style="width:100%;top:0;">
-            <img src="img/header.jpg" style="display: block; margin: auto; margin-bottom:10px;" fixed-style/>
+            
+            <!--<div class="center">اپلیکیشن موبایل</div>-->
+            
+            <!--
+            <div class="left">
+            <ons-toolbar-button onclick="appNavigator.pushPage('settings.html',{title: 'Settings', animation: 'slide'})">
+            <ons-icon icon="gears">
+            </ons-toolbar-button>
+            </div>
+            -->
+        </ons-toolbar>
+    
+    <div data-role="header" style="width:100%;top:0;">
+        <img src="img/top.png" style="display:block; margin:auto;width:20%;" />
             <!--<img src="img/mehregan.png" style="width:100%; height:auto;" />-->
         </div> 
-        
     
-    <section style="padding: 10px;direction:rtl;">    
+    <section style="padding: 10px 10px 10px 10px;direction:rtl;">
     
-    <img src="img/001.jpg" style="border: 1px solid #510476; margin: auto; display: block;">
-    <ul>
-        <li>عنوان: اداره كل امور مالياتي استان اصفهان</li> 
-        <li>آدرس: اصفهان ، خيابان سپاه</li> 
-        <li>تلفن: ۸-۳۲۲۲۲۱۰۲ ، ۳۲۲۲۲۳۹۴ ، ۳۲۲۲۰۳۲۰</li> 
-    </ul>
-    <hr/>
+        <table class="profile-desc" style="width:100%; opacity: 0.7;">
+  <tr>
+    <td><div>َشرکت اصفهان بتن نما</div></td> 
+  </tr>
+  <tr>
+    <td><div>آدرس کارخانه: اصفهان- شهرک صنعتی محمود آباد - خیابان 24</div></td> 
+  </tr>
+  <tr>
+    <td><div>تلفکس: 33807457 - 031</div></td> 
+  </tr>
+  <tr>
+    <td><div>تلفن:  33808432 - 031</div></td> 
+  </tr>
+  <tr>
+    <td><div>همراه:09133129275-09133065837</div></td> 
+  </tr>
+  <tr>
+    <td><div>وب سایت: http://betonnema.ir</div></td> 
+  </tr>
+  
+</table>
+        
+    </section> 
     
-    <img src="img/002.jpg" style="border: 1px solid #510476; margin: auto; display: block;">
-    <ul>
-        <li>عنوان: روابط عمومي</li> 
-        <li>آدرس: اصفهان ، خيابان سپاه</li> 
-        <li>تلفکس: ۳۲۲۳۵۰۸۲</li> 
-        <li>سامانه پيام كوتاه: ۱۰۰۰۳۱۱۲۲۲۲۱۰۲</li> 
-        <li>پست الكترونيك: ravabetomomi@isf-maliat.ir</li> 
-    </ul>
-    <hr/> 
-        
-    <img src="img/003.jpg" style="border: 1px solid #510476; margin: auto; display: block;">
-    <ul>
-        <li>عنوان: معاونت ماليات برارزش افزوده</li> 
-        <li>آدرس: اصفهان ،خيابان چهارباغ پايين</li> 
-        <li>تلفن: ۲۰-۳۹۵۱۵۸۱۱</li> 
-    </ul>
-    <hr/>
-        
-    <img src="img/004.jpg" style="border: 1px solid #510476; margin: auto; display: block;">
-    <ul>
-        <li>عنوان: اداره امورمالياتي شعبه خیابان جي</li> 
-        <li>آدرس: اصفهان ،خيابان جي ،نبش چهارراه پروين</li> 
-        <li>تلفن: ۲-۳۲۳۰۴۰۰۱</li> 
-    </ul>
-    <hr/>
-        
-    <img src="img/005.jpg" style="border: 1px solid #510476; margin: auto; display: block;">
-    <ul>
-        <li>عنوان: اداره امورمالياتي شعبه خيابان ۲۲ بهمن</li> 
-        <li>آدرس: اصفهان ،خيابان ۲۲ بهمن ،مجموعه اداري غدير</li> 
-        <li>تلفن: ۳-۳۲۶۷۰۸۸۱</li> 
-    </ul>
-    <hr/>
-        
-    <img src="img/006.jpg" style="border: 1px solid #510476; margin: auto; display: block;">
-    <ul>
-        <li>عنوان: اداره امورمالياتي شعبه خيابان رباط</li> 
-        <li>آدرس: اصفهان ، خيابان رباط اول</li> 
-        <li>تلفن: ۱۸-۳۳۳۵۵۳۱۶</li> 
-    </ul>
-    <hr/>
-    
-
-    </section>
-        
-        <section style="padding: 10px;direction:rtl;">
-        
-        <ons-row><ons-col>
-شهرستان: آران وبیدگل -ابو زید آباد (موسوی)	
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس:  ابوزید آباد-خیابان امام خمینی - 54255590
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : آران و بیدگل(عموزاده)
-</ons-col></ons-row>
-<ons-row><ons-col>
- آدرس: آران وبیدگل - خ شهدا- جنب ستاد نماز جمعه-  54728504
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : آران و بیدگل - نوش آباد(تنهائی)	
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس: نوش آباد- میدان شهدا- جنب مخابرات - 54825111	
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اردستان  - اردستان (فرهادیان)			
-</ons-col></ons-row>
-<ons-row><ons-col>
- آدرس: اردستان-میدان امام – خ امام- روبروی امامزاده موسی - 54245017
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اردستان  - زواره (آموزگار)				
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس: زواره-خ امام خمینی – بالاتر از شهرداری-54375377
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - بهارستان (قربانی)	
-</ons-col></ons-row>
-<ons-row><ons-col>
- آدرس: بهارستان- خ فرشته- مجتمع تجاری رضا - طبقه 2-36818655-36811070
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - چهارراه عسگریه (ناصری)				
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس: اصفهان- چهارراه عسگریه نبش دبیرستان چمران - 32289540-32251802
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - حسن اباد (منصوری)				
-</ons-col></ons-row>
-<ons-row><ons-col>
- آدرس:  حسن آباد-خیابان آزادی- ساختمان اداره پست - 46533104
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - خوراسگان(صداقت پیشه)									
-</ons-col></ons-row>
-<ons-row><ons-col>
- آدرس:  اصفهان - خ جی نبش خ مسجدعلی - 35236363
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - رهنان(حسینی)										
-</ons-col></ons-row>
-<ons-row><ons-col>
- آدرس:  اصفهان- رهنان-خیابان ابوذر- جنب فروشگاه یاسر- 37392637-37393807
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - زینبیه(سعادت نوری)											
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس:  اصفهان- خ زینبیه-خ آیت اله غفاری -بعد از حرم- نبش کوچه مهر- 35512795 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - زیار (هدایت)												
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس:  زیار-فلکه امام رضا - 38674566
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : سه راه سیمین (صادقیان)													
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس:  اصفهان- سه راه سیمین _بعداز پمپ بنزین_ جنب بانک قوامین - 37765944-37753301
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - قهجاورستان(عبدالهی)			
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس:  قهجاورستان- بلوار غدیر - روبروی پمپ بنزین - 35248699
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - لاله (شرکت سفیر پارتاک لاله)				
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس:  اصفهان- ابتدای خ زینبیه شمالی- جنب خیابان گاز - 35671005-4-35670485 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - نصرآباد (نیکبخت)					
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس:  نصرآباد-بلوار امام رضا - روبروی قرض الحسنه امام رضا(ع) - 46655200 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : اصفهان - نیک آباد (شفیعی)					
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس:  نیک آباد-بلوار امام خمینی - 46622001
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : تیران -  تیران و کرون (صادقی)					
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس:  تیران- بلوار امام خمینی-جنب آموزش و پرورش - 42224960
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-شهرستان : تیران -  عسگران(جمالی)					
-</ons-col></ons-row>
-<ons-row><ons-col>
-آدرس:  عسگران- خ امام -جنب بخشداری - 42752500 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
-
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-				
-</ons-col></ons-row>
-<ons-row><ons-col>
-
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
- 
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-			
-</ons-col></ons-row>
-<ons-row><ons-col>
-
-</ons-col></ons-row>
-<hr/>
-<ons-row><ons-col>
-					
-</ons-col></ons-row>
-<ons-row><ons-col>
-
-</ons-col></ons-row>
-<hr/>
-        </section>
-   
-        
 </ons-page>
+    
+    </ons-navigator>
+
+
+

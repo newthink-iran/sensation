@@ -1,28 +1,33 @@
-<ons-page ng-controller="DarbareController">
+<ons-page ng-controller="ErtebatController">
     
-    <ons-toolbar fixed-style>
-        <div class="right">
-        <ons-toolbar-button onclick="menu.toggleMenu()">
-        <ons-icon icon="bars">
-        </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
     
+      <ons-toolbar fixed-style>
+            <div class="right">
+            <ons-toolbar-button onclick="menu.toggleMenu()">
+            <ons-icon icon="bars">
+            </ons-toolbar-button>
+            </div>
+            
+            <!--<div class="center">اپلیکیشن موبایل</div>-->
+            
+            <!--
+            <div class="left">
+            <ons-toolbar-button onclick="appNavigator.pushPage('settings.html',{title: 'Settings', animation: 'slide'})">
+            <ons-icon icon="gears">
+            </ons-toolbar-button>
+            </div>
+            -->
+        </ons-toolbar>
     
     <div data-role="header" style="width:100%;top:0;direction: rtl;">
         <img src="img/top.png" style="width:100%; height:auto;" />
+        <img src="img/ertebat_.png" style="width:30%;height:auto;" />
     </div> 
-
-    <section style="padding:0 10px; direction:rtl">
-        <h2 class="title" style="text-align:center;">ارتباط با فرزانگان</h2>
-        <!--<p ng-bind-html="description" style="text-align:center;"></p>-->
-        <ul>
-         <li>آدرس: اصفهان، خمینی شهر، جاده کانال آب اصغرآباد، جنب بام سبز، سرای سالمندان فرزانگان</li>
-         <li>تلفن: 70-33566610 (031)</li>
-         <li>فکس: 33566680 (031)</li>
-         <li>وب سایت: www.salmandfarzanegan.com</li>
-         <li>ایمیل: info@salmandfarzanegan.com</li>
-        </ul>
+    
+    <section style="padding: 0 10px 10px 10px;direction:rtl;">
+        <!--<h2 class="title" ng-bind-html="title" style="text-align:center;"></h2>-->
+        <p ng-bind-html="description" style="text-align:center;"></p>
+    </section>
     
 
 </ons-page>

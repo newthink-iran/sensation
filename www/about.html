@@ -1,26 +1,34 @@
 <ons-page ng-controller="DarbareController">
     
     
-    <ons-toolbar fixed-style>
-        <div class="right">
-        <ons-toolbar-button onclick="menu.toggleMenu()">
-        <ons-icon icon="bars">
-        </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
+      <ons-toolbar fixed-style>
+            <div class="right">
+            <ons-toolbar-button onclick="menu.toggleMenu()">
+            <ons-icon icon="bars">
+            </ons-toolbar-button>
+            </div>
+            
+            <!--<div class="center">اپلیکیشن موبایل</div>-->
+            
+            <!--
+            <div class="left">
+            <ons-toolbar-button onclick="appNavigator.pushPage('settings.html',{title: 'Settings', animation: 'slide'})">
+            <ons-icon icon="gears">
+            </ons-toolbar-button>
+            </div>
+            -->
+        </ons-toolbar>
     
     
     <div data-role="header" style="width:100%;top:0;direction: rtl;">
         <img src="img/top.png" style="width:100%; height:auto;" />
+        <img src="img/darbare_.png" style="width:30%;height:auto;padding-right:10px;" />
     </div> 
 
-    <section style="padding:0 10px; direction:rtl">
-        <h2 class="title"style="text-align:center;">درباره موسسه</h2>
-        <!--<p ng-bind-html="description" style="text-align:center;"></p>-->
-        <p>ایده تاسیس این موسسه در راستای حمایت و تعالی بخشی .جایگاه پدران ، مادران سال خورده و ارائه خدمات نگهداری ضمن حفظ کرامت انسانی آنها ،درسال۹۲ توسط جمعی از خیرین شهرستان خمینی شهر با مشارکت و همکاری عده ای از روحانیون،فرهنگیان و صاحبان صنعت و تجارت ایجاد شدسپس طی جلسات مشورتی و پیگیری های لازم با تعیین هیئت موسس ،هیئت امنا و هیئت مدیره با کسب مجوز از سازان بهزیستی و ارائه آن به اداره ثبت خمینی شهر طی شماره۲۶۶ مورخ ۱۵/۵/۹۳ به عنوان یک موسس خیریه غیر انتفاعی و غیر دولتی  و غیر سیاسی به ثبت رسیده و با همت خیرین محترم سند مالکیت باغ مشجری به ساحت ۲۰ هزار متر مربع دربهترین نقطه شهر به موسس واگذار و با همت و یاری مسئولین محترم به ویژه فرمانداری ،شهردای و شورای شهر محترم شهر ،بهزیستی ،جهاد کشاورزی و مسکن و شهر سازی اصفهان مجوز تغییر کاربری و پروانه ساخت آن اخذ و توسط یک شرکت معتبر مشاوره و نقشه کشی های معماری و اجرائی تهیه و آماده شده است.</p>
-        <p>در ضمن با تلاش مدیر عامل محترم موسسه  و همکاری بی دریغ مسئولین مربوطه نسبت به خرید و نصب انشعابات گاز و آب  اقدام و هم اکنون آماده بهره بر داری است.</p>
-    <p>شروع عملیات اجرایی فاز اول این پروژه ساختمانی ۴ با طراحی زیبا با توکل به خداوند متعال و به برکت روز مبارک بعثت حضرت رسول (ص)آغاز میگردد که ظرفیت پذیرش آن ۲۰۰ نفر خواهد بود وکلیه امکانات اداری،رفاهی و درمانی در آن  پیش بینی شده است در فازهای بعدی  دو ساختمان چهار طبقه آپارتمانی درنظر گرفته شده است که حدود ۱۰۰نفر را پذیرا خواهد بود ک با تکمیل فاز نهایی امکانات رفاهی ،تفریحی و ورزشی آماده بهره برداری  قرار خواهد گرفت.</p>
-    <p>امید است با همت شما مردم  خیر اندیش  و شریف شاهد ایجاد یک دهکده  مجهز و دلپذیر نمونه در این منطقه باشیم.</p>
-     </section>
+    <section style="padding: 0 10px 10px 10px; direction:rtl">
+        <!--<h2 class="title" ng-bind-html="title" style="text-align:center;"></h2>-->
+        <p ng-bind-html="description" style="text-align:center;"></p>
+    </section>
+    
 
 </ons-page>
